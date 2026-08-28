@@ -1,76 +1,94 @@
-# Game AI Benchmarks & Papers
+# Game Generation Benchmarks & Papers
 
 English · [简体中文](README.zh-CN.md)
 
-A researched, bilingual map of benchmarks and primary-source papers for **building games with AI** and **building agents that play games**.
+> A bilingual, primary-source-verified bibliography of **AI that generates games**—not AI that plays them.
 
-This repository currently covers **66 curated entries** and more than **150 primary-source links**. It distinguishes reproducible benchmarks from datasets, environments, papers, tools, and demos—because a playable demo is not automatically a benchmark.
+This repository covers systems that create complete games, executable rules and mechanics, game code and engine projects, levels and playable content, or action-conditioned interactive worlds. It contains **82 detailed category records** (with intentional cross-listing) and more than **200 links to papers and official artifacts**.
 
 Last fully verified: **2026-08-29**.
 
-## Browse the collection
+## Browse by generation target
 
-| Area | English | 中文 | Coverage |
+| Collection | English | 中文 | Coverage |
 | --- | --- | --- | --- |
-| Game creation | [Benchmarks & papers](docs/en/game-creation.md) | [基准与论文](docs/zh-CN/game-creation.md) | 9 benchmarks/datasets, 7 generation or development-agent papers, 7 interactive-world systems |
-| Game agents | [Benchmarks & papers](docs/en/game-agents.md) | [基准与论文](docs/zh-CN/game-agents.md) | 25 benchmark/environment/platform rows and 18 selected agent papers |
-| Verification notes | [Game creation sources](research/game-generation-sources.md) | [Game-agent sources](research/game-agent-sources.md) | Detailed task definitions, metrics, artifact status, access restrictions, and provenance |
+| End-to-end games and code | [29 benchmarks and papers](docs/en/end-to-end.md) | [29 个 benchmark 与论文](docs/zh-CN/end-to-end.md) | Prompt-to-game, engine/project/code generation, game-development agents, verification, repair, and co-creation |
+| Automated design and PCG | [35 papers and resources](docs/en/pcg.md) | [35 篇论文与资源](docs/zh-CN/pcg.md) | Complete games, rules/mechanics, level generation, datasets, PCG benchmarks, and foundational surveys |
+| Interactive game worlds | [18 papers and resources](docs/en/interactive-worlds.md) | [18 篇论文与资源](docs/zh-CN/interactive-worlds.md) | Action-conditioned video worlds, learned game engines, explicit state/mechanics, multiplayer and long-horizon generation |
+| Detailed evidence | [Research notes](research/README.md) | [一手来源核验底稿](research/README.md) | Task definitions, evaluation protocols, artifact availability, boundary decisions, and primary-source evidence |
 
-## Quick map
+Read the exact inclusion and exclusion rules in [SCOPE.md](SCOPE.md).
 
-| If you want to evaluate… | Good starting points |
-| --- | --- |
-| Agents editing real game-engine repositories | [GameDevBench](https://github.com/waynchi/gamedevbench) (Godot, deterministic tests), [GameEngineBench](https://github.com/Nitrode-Research/GameEngineBench) (Unreal C++, behavioral tests) |
-| End-to-end game generation | [GameCraft-Bench](https://github.com/FreedomIntelligence/gamecraft-bench) (Godot), [V-GameGym](https://github.com/alibaba/SKYLENAGE-GameCodeGym) (Pygame) |
-| Procedural level/content generation | [PCG Benchmark](https://github.com/amidos2006/pcg_benchmark), [VGLC](https://github.com/TheVGLC/TheVGLC), [GVGAI](https://github.com/GAIGResearch/GVGAI) |
-| LLM/VLM agents across several games | [BALROG](https://github.com/balrog-ai/BALROG), [VideoGameBench](https://github.com/alexzhang13/videogamebench), [SmartPlay](https://github.com/microsoft/SmartPlay), [GameBench](https://github.com/Joshuaclymer/GameBench) |
-| Minecraft and open-world agents | [MineDojo](https://github.com/MineDojo/MineDojo), [MineRL](https://github.com/minerllabs/minerl), [BEDD](https://github.com/minerllabs/basalt-benchmark), [Crafter](https://github.com/danijar/crafter) |
-| Generalization in classic RL/game suites | [ALE](https://github.com/Farama-Foundation/Arcade-Learning-Environment), [Procgen](https://github.com/openai/procgen), [NLE](https://github.com/NetHack-LE/nle), [MiniHack](https://github.com/NetHack-LE/minihack) |
-| Competitive or multi-agent play | [SMACv2](https://github.com/oxwhirl/smacv2), [Melting Pot](https://github.com/google-deepmind/meltingpot), [OpenSpiel](https://github.com/google-deepmind/open_spiel), [Honor of Kings Arena](https://github.com/tencent-ailab/hok_env) |
-| Action-conditioned interactive worlds | [DIAMOND](https://github.com/eloialonso/diamond), [Oasis](https://github.com/etched-ai/open-oasis), [GameGen-X](https://github.com/GameGen-X/GameGen-X), [Matrix-Game](https://github.com/SkyworkAI/Matrix-Game), [Hunyuan-GameCraft](https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0) |
+## What counts as game generation?
 
-## Labels used in this repository
+| Layer | Output | Representative work |
+| --- | --- | --- |
+| Complete game | A runnable project containing gameplay, rules, scenes, code, and assets | [AutoUE](https://arxiv.org/abs/2603.07106), [OpenGame](https://arxiv.org/abs/2604.18394), [GameCraft-Bench](https://arxiv.org/abs/2606.17861), [V-GameGym](https://arxiv.org/abs/2509.20136) |
+| Rules and mechanics | An executable game description or program defining new gameplay | [Ludi](https://eprints.qut.edu.au/17025/), [ANGELINA](https://doi.org/10.1109/CIG.2011.6032019), [GAVEL](https://arxiv.org/abs/2407.09388), [GGDG](https://arxiv.org/abs/2407.17404) |
+| Levels and playable content | Maps, puzzles, dungeons, attack patterns, or tutorial levels under fixed or partly generated rules | [MarioGAN](https://doi.org/10.1145/3205455.3205517), [TOAD-GAN](https://arxiv.org/abs/2008.01531), [PCGRL](https://doi.org/10.1609/aiide.v16i1.7416), [MarioGPT](https://arxiv.org/abs/2302.05981) |
+| Learned interactive world | Action-conditioned pixels, geometry, and/or explicit state that can be controlled in real time | [Genie](https://proceedings.mlr.press/v235/bruce24a.html), [GameNGen](https://arxiv.org/abs/2408.14837), [GameFactory](https://arxiv.org/abs/2501.08325), [StatePlay](https://arxiv.org/abs/2607.26754) |
 
-### Resource kind
+The fourth layer is deliberately kept separate: generating a controllable video world is not the same as authoring explicit code, rules, and assets in a conventional engine.
+
+## Benchmark quick start
+
+| Benchmark | Generation task | Evaluation | Availability at cutoff |
+| --- | --- | --- | --- |
+| [V-GameGym](https://arxiv.org/abs/2509.20136) | Natural language → runnable Pygame | Code, screenshot, and gameplay-video evidence | **Open** |
+| [GameDevBench](https://arxiv.org/abs/2602.11103) | Edit real Godot repositories | Deterministic runtime tests | **Open** |
+| [GameCraft-Bench](https://arxiv.org/abs/2606.17861) | Brief → complete Godot game | Replay, build gate, mechanics/content/visual rubric | **Open; environment-heavy** |
+| [GameEngineBench](https://arxiv.org/abs/2607.03525) | Implement native C++ tasks in UE5 repositories | Hidden Unreal behavioral tests | **Open; environment-heavy** |
+| [PlayGen-20 / AutoUE](https://arxiv.org/abs/2603.07106) | Brief → complete UE5 3D game | Scene, gameplay, visual, graph/module, and runtime checks | **Open; environment-heavy** |
+| [PCG Benchmark](https://arxiv.org/abs/2503.21474) | Generate levels/content across many domains | Quality, diversity, and controllability | **Open** |
+| [OpenGame-Bench](https://arxiv.org/abs/2604.18394) | Prompt → browser game | Build health, visual usability, intent alignment | **Partial** |
+| [PlaytestArena](https://arxiv.org/abs/2605.28258) | Prompt → browser game with GUI playtesting | Observable rubric pass rate | **Partial** |
+| [GameXpert-Bench](https://arxiv.org/abs/2608.21833) | Generate, fix, and optimize games | Lifecycle-specific rubrics and tests | **Closed; release scaffold only** |
+
+## Historical path
+
+- **2008–2014 — automated game design:** Ludi, ANGELINA, Game-o-Matic, Mechanic Miner, and formal mechanic generation established the idea of generating rules and complete games.
+- **2016–2021 — PCGML and learned levels:** VGLC, LSTM level generation, MarioGAN, DoomGAN, TOAD-GAN, PCGRL, and controllable PCGRL made data-driven content generation reproducible.
+- **2023–2025 — language models for games:** MarioGPT, GameGPT, GAVEL, grammar-guided rule generation, ScriptDoctor, Cardiverse, GameFactory, and newer text-to-game systems expanded generation from maps to code and mechanics.
+- **2026 — engine-native agents and stateful worlds:** Godot/Unreal/browser benchmarks, AutoUE, long-horizon world models, explicit mechanics/state generation, and automatic playtest-repair loops became central.
+
+## Explicitly excluded: playing games
+
+The following are important Game AI research, but they do not belong in a generation-only bibliography:
+
+- DQN, AlphaGo, AlphaZero, MuZero, Agent57, AlphaStar, OpenAI Five, Voyager, SIMA, and other game-playing agents;
+- BALROG, VideoGameBench, MineRL/BASALT, MineDojo agent tasks, ALE, Procgen, NLE, Crafter, and other gameplay/control benchmarks;
+- Dreamer, SimPLe, IRIS, and **DIAMOND**, because their central result is policy learning or game-playing return rather than a human-controllable generated game world;
+- GameWAM and similar action-generating policies whose primary metric is task success;
+- standalone NPC AI, player modelling, matchmaking, game analytics, and asset-only generation.
+
+Automated players can still appear as **evaluators** of generated designs, and RL can appear when the policy itself is the **content generator**, as in PCGRL.
+
+## Availability labels
 
 | Label | Meaning |
 | --- | --- |
-| `Benchmark` / `B` | A repeatable task with an evaluation protocol or metric |
-| `Environment` / `Platform` / `P` | An interactive research interface, possibly without one fixed task set or score |
-| `Dataset` | Reusable data that may not define a complete evaluation |
-| `Paper` | A research method or result, not necessarily reusable as a benchmark |
-| `Tool` | Development or evaluation infrastructure |
+| **Open** | The official core code/data/tasks and meaningful evaluation or runnable weights are available |
+| **Partial** | Useful official artifacts exist, but an essential task set, evaluator, training stack, data, model, or output set is missing |
+| **Closed / Paper-only** | No reproducible official implementation or benchmark package was verified at the cutoff |
 
-### Reproducibility
-
-| Label | Meaning |
-| --- | --- |
-| **Yes** | Public tasks/data plus runnable evaluation or training/inference code make the same score definition obtainable in principle |
-| **Partial** | Some artifacts are public, but required tasks, tests, outputs, scorer, data, weights, or licensed assets are missing |
-| **No** | No public, fixed benchmark protocol plus usable artifacts was available at the verification cutoff |
-
-## Important cautions
-
-- **World models and game-building agents are separate tasks.** One predicts pixels or latents under actions; the other edits code, scenes, and assets inside an engine. Their scores should not share a leaderboard.
-- **Model-judge and deterministic-test scores are not equivalent.** Record the judge model/version, seeds, game/engine version, interaction budget, and aggregation rule.
-- **Commercial games and assets have separate licenses.** A public repository does not grant rights to ROMs, game clients, engine SDKs, videos, or training data.
-- **Artifact status changes.** At the cutoff, GameXpert-Bench was only a release scaffold and no verifiable JamBench artifact URL could be located; both are marked **No**, despite their papers describing full benchmarks.
+These labels describe artifact availability, not licensing, cost, deterministic reproducibility, or research quality.
 
 ## Repository map
 
 ```text
 .
 ├── README.md / README.zh-CN.md
+├── SCOPE.md
 ├── docs/
-│   ├── en/       # English curated tables
-│   └── zh-CN/    # 中文完整对照表
-├── research/     # Primary-source verification notes
-└── .github/      # Resource suggestion template
+│   ├── en/{end-to-end,pcg,interactive-worlds}.md
+│   └── zh-CN/{end-to-end,pcg,interactive-worlds}.md
+├── research/          # detailed primary-source evidence
+└── .github/           # scoped resource-suggestion template
 ```
 
 ## Contributing
 
-Corrections and additions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and include at least one primary-source link, a resource type, task, metrics, artifact status, and matching English/Chinese descriptions.
+Corrections and additions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md). Every proposal must identify what the system **generates**, provide a primary-source link, state its evaluation and artifact availability, and include matching English and Chinese descriptions.
 
 ## License
 

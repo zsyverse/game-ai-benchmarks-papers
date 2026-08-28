@@ -1,8 +1,21 @@
-name: Suggest a resource / 推荐资源
-description: Propose a benchmark, environment, dataset, paper, or tool
+name: Suggest a game-generation resource / 推荐游戏生成资源
+description: Propose a paper, benchmark, dataset, or tool that generates games
 title: "[Resource]: "
 labels: [resource]
 body:
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Generation scope / 生成范围
+      options:
+        - Complete game / 完整游戏
+        - Code or engine project / 代码或引擎工程
+        - Rules or mechanics / 规则或机制
+        - Level or playable content / 关卡或可玩内容
+        - Interactive world model / 交互世界模型
+        - Survey or taxonomy / 综述或分类
+    validations:
+      required: true
   - type: dropdown
     id: type
     attributes:
@@ -37,3 +50,10 @@ body:
     id: links
     attributes:
       label: Code and data links / 代码与数据链接
+  - type: checkboxes
+    id: scope_check
+    attributes:
+      label: Scope check / 范围确认
+      options:
+        - label: This work generates a game or playable content; it is not primarily a game-playing agent paper. / 本工作生成游戏或可玩内容，不是以玩游戏为主的智能体论文。
+          required: true
