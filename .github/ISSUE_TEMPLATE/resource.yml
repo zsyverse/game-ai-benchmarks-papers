@@ -1,0 +1,39 @@
+name: Suggest a resource / 推荐资源
+description: Propose a benchmark, environment, dataset, paper, or tool
+title: "[Resource]: "
+labels: [resource]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type / 资源类型
+      options:
+        - Benchmark / 基准
+        - Environment / 环境
+        - Dataset / 数据集
+        - Paper / 论文
+        - Tool / 工具
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Canonical title / 正式标题
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary-source URL / 一手来源链接
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Task, metrics, and evidence / 任务、指标与依据
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Code and data links / 代码与数据链接
