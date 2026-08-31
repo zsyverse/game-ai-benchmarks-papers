@@ -1,0 +1,107 @@
+# Primary-source recheck of the public index
+
+> Audit cutoff: **2026-08-29 (Asia/Shanghai)**. This is an independent recheck of the public English index against arXiv/PDF metadata, official proceedings, author project pages, and official code/model/data repositories. It does not modify the index.
+
+**Resolution (2026-08-31):** The four confirmed issues were corrected in the expanded index. GameEngineBench changed again after this audit: its paper-linked repository, which exposed 15/110 task packages on Aug 29, returned 404 on Aug 31 and is now labelled Closed/unavailable at cutoff. This file preserves the evidence as observed during the original audit.
+
+## Result and coverage
+
+I rechecked **24 unique 2026 works or series** in the public tables, counting a benchmark and its system paper once when they are the same work (for example, OpenGame/OpenGame-Bench, AutoUE/PlayGen-20, and Play2Code/PlaytestArena). I also rechecked the two requested non-2026 high-risk items (V-GameGym and UniGen), seven ICML/ACL/ICCV-family venue claims, and 14 classic DOI records.
+
+Across these **47 audit units**:
+
+- **Confirmed: 42**
+- **Issue: 4**
+- **Uncertain: 1**
+
+`Confirmed` means the indexed claim is supported by a first-party source. `Issue` means a public claim should be corrected or qualified. `Uncertain` means the conservative wording in the index should remain because an archival status cannot be independently established. Severity describes the consequence for the index, not the quality of the research.
+
+This is full coverage of the 2026 rows and named high-risk items, not a fresh line-by-line audit of every descriptive sentence in all 82 records. For the older literature, the audit is a 14-DOI spot check.
+
+## Confirmed hard issues
+
+These four findings are the only corrections supported by hard first-party evidence in this pass.
+
+| Indexed claim | Primary evidence | Verdict | Severity | Required correction |
+| --- | --- | --- | --- | --- |
+| **GameEngineBench is Open**, with all 110 tasks, runner, and results public. | The [paper](https://arxiv.org/abs/2607.03525) and [README](https://github.com/Nitrode-Research/GameEngineBench) describe 110 tasks, but the public [`tasks_unreal/`](https://github.com/Nitrode-Research/GameEngineBench/tree/main/tasks_unreal) tree contains only `ue_task_0001` through `ue_task_0015`; [`results/`](https://github.com/Nitrode-Research/GameEngineBench/tree/main/results) contains progress notes/utilities rather than the reported run artifacts. `tasks.yaml` enumerates 110 IDs but is not 110 released task packages. | **Issue** | **High** | Keep the reported paper scale of 110, but change artifact status from **Open** to **Partial** and state that only 15 task packages were observable at cutoff. |
+| **V-GameGym has 2,219 released test samples.** | The [paper](https://arxiv.org/abs/2509.20136) and [official README](https://github.com/alibaba/SKYLENAGE-GameCodeGym) say 2,219. The official Hugging Face file `pygame_seeds_2500_filtered.jsonl` contains **2,218 records**; the official [dataset-size endpoint](https://datasets-server.huggingface.co/size?dataset=alibabagroup%2FSKYLENAGE-GameCodeGym) also reports `num_rows: 2218`. | **Issue** | **Low** | Distinguish **2,219 reported by the paper** from **2,218 currently downloadable rows**. The overall Open label can remain. |
+| **`cardinal-preview` includes a preview checkpoint.** | The official [release README](https://github.com/LanceZPF/cardinal-preview) says checkpoint files are staged locally and “planned for a separate Hugging Face upload”; the repository contains audit scripts and sanitized results, not a downloadable checkpoint. | **Issue** | **Medium** | Replace “preview code/checkpoint” with “preview audit/reproduction code and sanitized result artifacts; checkpoint not publicly downloadable at cutoff.” |
+| The journal DOI `10.1109/TG.2021.3060005` is a **2021** article titled *Automated Game Design via Conceptual Expansion*. | The publisher-deposited [DOI record](https://doi.org/10.1109/TG.2021.3060005) is titled *Conceptual Game Expansion*, IEEE Transactions on Games 14(1), pp. 93–106, formally issued **2022**. The DOI contains `2021` because of its early-access/registration history, not the final issue year. | **Issue** | **Medium** | Separate the 2018 conference/arXiv work from the journal expansion: *Conceptual Game Expansion* (online/DOI 2021; formal issue 2022). |
+
+## All 2026 entries
+
+The claim column compresses title/year, task scale, evaluation, and artifact status. Duplicate benchmark/system rows are audited together.
+
+| Work or series | Indexed claim | Primary evidence | Verdict | Severity |
+| --- | --- | --- | --- | --- |
+| GameDevBench | 333 Godot 4.4.1 repository-editing tasks; deterministic behavioral tests; Open. | The [arXiv record](https://arxiv.org/abs/2602.11103), [official ICML page](https://icml.cc/virtual/2026/poster/64919), and [repository](https://github.com/waynchi/gamedevbench) agree on 333 tasks. The repository exposes 333 task archives, 333 ground-truth archives, validators, tests, and results. | **Confirmed** | None |
+| GameCraft-Bench | 140 from-scratch tasks in 15 families; submitted traces are replayed before rubric scoring; Open but environment-heavy. | The [paper](https://arxiv.org/abs/2606.17861) and [repository](https://github.com/FreedomIntelligence/gamecraft-bench) state 140/15 and expose task directories, per-task rubrics, verifier, scripts, and a pinned Godot 4.6.2 setup. | **Confirmed** | None |
+| GameEngineBench | Paper scale is 110 native-C++ tasks across nine UE5 repositories; runtime tests; indexed as Open. | The [paper](https://arxiv.org/abs/2607.03525) supports the scale/method, but the [official release](https://github.com/Nitrode-Research/GameEngineBench) exposes only 15 `ue_task_*` packages and no complete result bundle. | **Issue** — scale confirmed, openness overstated. | **High** |
+| GameXpert-Bench | 97 GameGen tasks, 100 GameFix tasks, and 17 six-turn GameOpt chains/102 requests; Closed at cutoff. | The [paper](https://arxiv.org/abs/2608.21833) states exactly these counts and metrics. The [official repository](https://github.com/Kwen-Chen/GameXpert-Bench) explicitly calls itself a public-release scaffold and says paper/data/evaluation/model artifacts will be added later. | **Confirmed** | None |
+| JAMER / JamBench / JamSet | 8,133 verified projects: 300 in JamBench and 7,833 in JamSet; L1/L2/L3a, SCS, and BAS; Closed at cutoff despite the paper's release assertion. | The [paper](https://arxiv.org/abs/2606.19830) supports the counts and metrics and says all data/code are public, but its arXiv HTML/PDF supplies no artifact URL and no first-party release was observable. The index correctly reports observed availability rather than repeating the paper's unsupported release sentence. | **Confirmed** | None |
+| GameGen-Verifier / VeriGame | 100 specifications across seven genres; Acc/Prec/Rec/F1/Time@5; Partial. | The [paper](https://arxiv.org/abs/2605.07442) supports the scale and metrics. The [official repository](https://github.com/NetX-lab/GameGen-Verifier) releases the harness/specifications but explicitly says generated games, runs, logs, and screenshots are intentionally omitted. | **Confirmed** | None |
+| OpenGame / OpenGame-Bench | 150 prompts across five web-game genres, three seeds per task, BH/VU/IA evaluation; framework/demo source public but benchmark, evaluator, model, and training data missing; Partial. | The [paper](https://arxiv.org/abs/2604.18394) supports the protocol. The [official repository](https://github.com/leigest519/OpenGame) contains the framework and six downloadable demo sources but states: “The evaluation pipeline will be released soon.” No GameCoder-27B weights or 150-task package are present. | **Confirmed** | None |
+| Play2Code / PlaytestArena | 200 tasks across eight genres, up to five rounds; human agreement on 32 games; official release is eight demos only; Partial. | The [paper](https://arxiv.org/abs/2605.28258) supports 200/8, five rounds, and the 32-game validation. The [official repository](https://github.com/RunRiotComeOn/gui-agents-for-continual-game-generation) describes itself as a static gallery with eight playable games and does not contain the arena/system/evaluator. | **Confirmed** | None |
+| AutoUE / PlayGen-20 | 20 UE5 briefs, weighted scene/gameplay/visual and engine-native checks; Findings of ACL 2026; Open but environment-heavy. | The [ACL Anthology paper](https://aclanthology.org/2026.findings-acl.111/), [code](https://github.com/Pluto156/AutoUE), and [official dataset](https://huggingface.co/datasets/Pluto156/AutoUE_DataSet) agree. The dataset exposes 20 input briefs and 20 `demo_*` output directories, experiment data, assets, and embeddings. | **Confirmed** | None |
+| CreativeGame | 71 lineages, 88 nodes, 774 mechanics in the reported system; public artifact is four four-version HTML5 lineages, not the pipeline/evaluator; Partial demo only. | The [paper](https://arxiv.org/abs/2604.19926) supports the reported study. The [official repository](https://github.com/yiweishi-cn/CreativeEvolutionGame) contains 16 game HTML files (four lineages × four versions) and a static site, but not the claimed 6,181-line Python pipeline or full archive. | **Confirmed** | None |
+| Agentic Game Development / `cardinal-preview` | UnitySceneBench and cross-engine audit materials are Partial; index additionally says a preview checkpoint is released. | The [paper](https://arxiv.org/abs/2608.25518) and [repository](https://github.com/LanceZPF/cardinal-preview) support the audit scripts/results. The repository explicitly says checkpoints are local and only planned for a separate upload. | **Issue** — Partial is right; checkpoint wording is not. | **Medium** |
+| Lottery and Sprint Arcade | Voice-driven edits to roughly 100 fields of a fixed arcade game; user/NASA-TLX study; Journal of the Society for Art and Science 25(2); Closed. | The [arXiv record](https://arxiv.org/abs/2607.10711) supplies journal reference and DOI `10.3756/artsci.25.12_1`. No official system, study dataset, or evaluator is linked. | **Confirmed** | None |
+| Matrix-Game 3.0 | Memory-augmented 720p real-time generation, reported up to about 40 FPS; Partial because selected 5B weights/inference are public while training data/code and strongest models are not. | The [paper](https://arxiv.org/abs/2604.08995), [official code](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-3), and [official weights](https://huggingface.co/Skywork/Matrix-Game-3.0) support the claim. The README says mixed Unreal/real and 28B models are still forthcoming. | **Confirmed** | None |
+| Hunyuan-GameCraft-2 | 2025 arXiv work with a 2026 revision; instruction-following interactive game-world model; Closed while 1.0 is Partial. | The [2.0 paper](https://arxiv.org/abs/2511.23429), [2.0 project](https://hunyuan-gamecraft-2.github.io/), and hosted demo provide no downloadable 2.0 code/checkpoint. The [1.0 repository](https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0) and weights remain separately available. | **Confirmed** | None |
+| Solaris | Two synchronized Minecraft streams; Movement/Grounding/Memory/Building/Consistency episodes and FID/VLM metric; Open with a separately distributed VPT dependency. | The [paper](https://arxiv.org/abs/2602.22208), [training/inference/evaluation code](https://github.com/solaris-wm/solaris), [collection engine](https://github.com/solaris-wm/solaris-engine), and official Hugging Face model/training/evaluation datasets are present. The README documents all four training stages and the VPT prerequisite. | **Confirmed** | None |
+| WorldCam | 6-DoF camera-pose conditioning and long-term revisitation metrics; Partial. | The [paper](https://arxiv.org/abs/2603.16871), [inference repository](https://github.com/cvlab-kaist/WorldCam), [checkpoint](https://huggingface.co/worldcam/worldcam), and [recordings](https://huggingface.co/datasets/worldcam/worldcam-dataset) exist. The README explicitly says the released recordings were not used in the paper and omit poses/captions; training code is absent. | **Confirmed** | None |
+| ReactiveGWM | Player actions plus prompt-level NPC strategy; Move/Attack, instruction, visual, transfer, and user metrics; Open. | The [paper](https://arxiv.org/abs/2605.15256), [official repository](https://github.com/INV-WZQ/ReactiveGWM), [models](https://huggingface.co/INV-WZQ/ReactiveGWM-Models), and [datasets](https://huggingface.co/datasets/INV-WZQ/ReactiveGWM-Datasets) are present. The repository contains bidirectional and three-stage causal training plus inference. | **Confirmed** | None |
+| SCOPE | 480×832, 81-frame generation from 10-DoF signals; seven-game CrossFPS and 1,378-clip evaluation; Partial because training code is absent. | The [paper](https://arxiv.org/abs/2605.23345), [inference repository](https://github.com/z2tong/SCOPE), [checkpoint](https://huggingface.co/zizhaotong/SCOPE), and official [CrossFPS train/validation collection](https://huggingface.co/collections/zizhaotong/crossfps) support the indexed claims. The repository contains inference but no trainer. | **Confirmed** | None |
+| StatePlay | Five explicit state variables, mechanics-fidelity metrics, 10K-clip dataset; Open. | The [paper](https://arxiv.org/abs/2607.26754), [training/inference code](https://github.com/Jimntu/StatePlay), [11.5 GB checkpoint](https://huggingface.co/onepiece1999/StatePlay), and [dataset](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset) are public; Hugging Face reports exactly 10,000 rows. | **Confirmed** | None |
+| ForgeWM | Four-stage training, 1/2/4-step models, Minecraft and CrossFPS artifacts; Open. | The [paper](https://arxiv.org/abs/2608.14022), [full training/inference code](https://github.com/asdfo123/ForgeWM), [seven released checkpoints](https://huggingface.co/ForgeWM/ForgeWM), and [ten LMDB data shards](https://huggingface.co/datasets/ForgeWM/ForgeWM-data) are present. The shard total is about 95 GB decimal / 88.5 GiB, consistent with the README's “~89 GB.” | **Confirmed** | None |
+| WorldMind | BOSS-140K, roughly 20 FPS, and approximately 70% pairwise preference are paper claims; Closed. | The [paper](https://arxiv.org/abs/2608.21439) supports the scale/metrics. The [official repository](https://github.com/TeaWhiteBro/WorldMind) says code and weights are being prepared; it contains a README/assets only, with no BOSS-140K or evaluator. | **Confirmed** | None |
+| Marionette | 276-D state, explicit geometry bridge, observation model; full inference/weights but no training code/full 2,241-segment derived corpus; Partial. | The [paper](https://arxiv.org/abs/2608.14530), [inference/runtime repository](https://github.com/AlayaLab/Marionette), and [three model files](https://huggingface.co/AlayaLab/Marionette) are present. The README says only two selected seed segments ship and training code remains unreleased. | **Confirmed** | None |
+| PhysEditWorld | 100+ hours/60M+ frames reported; paired gravity interventions; only schema/page demos currently public, while full data, UE5 pipeline, and evaluator are planned; Partial. | The [paper](https://arxiv.org/abs/2606.26694), [official release-status table](https://github.com/yizhiqianbi/physeditworld), and [ModelScope entry](https://www.modelscope.cn/datasets/GelerCAT/PhysicalWorld) support the conservative wording. The repository explicitly marks the full dataset, pipeline, and evaluation scripts Planned. | **Confirmed** | None |
+| From Pixels to States | Perspective/data-engine paper rather than a new generator; 90+ hours reported; Closed. | The [paper](https://arxiv.org/abs/2607.14076) is the only first-party artifact linked and presents a framing/data-engine contribution, not a downloadable generator. No official code, Wukong data, model, or evaluator was identifiable from the paper record. | **Confirmed** | None |
+
+## Requested non-2026 high-risk items
+
+| Work | Claim | Primary evidence | Verdict | Severity |
+| --- | --- | --- | --- | --- |
+| V-GameGym | 2025 arXiv preprint; 2,219 samples/100 clusters; weighted code, screenshot, and gameplay-video judging; Open. | The [paper](https://arxiv.org/abs/2509.20136), [code](https://github.com/alibaba/SKYLENAGE-GameCodeGym), and [dataset](https://huggingface.co/datasets/alibabagroup/SKYLENAGE-GameCodeGym) support the date, task, metrics, and general Open status. The released JSONL has 2,218 rather than 2,219 records. | **Issue** — one-record release mismatch. | **Low** |
+| UniGen | 2025 arXiv preprint; evaluated on three prototypes; Partial; no accepted venue asserted. | The [paper](https://arxiv.org/abs/2509.26161) supports the three reported completeness values and 140-to-≤12-minute comparison. Its PDF labels itself ICSE 2026 but contains placeholder DOI/ISBN fields and 2018 copyright/reference metadata; the [four-file code release](https://github.com/yxwan123/UniGen) omits evaluated projects, assets, matrices, and evaluator and is not turnkey from a clean clone. | **Uncertain** — ICSE acceptance cannot be established; the index is right not to claim it. | **Medium** |
+
+## Venue claims
+
+| Venue claim | Primary proceedings evidence | Verdict | Severity |
+| --- | --- | --- | --- |
+| Genie — ICML 2024 | [PMLR ICML paper](https://proceedings.mlr.press/v235/bruce24a.html) | **Confirmed** | None |
+| GameDevBench — ICML 2026 | [Official ICML paper/poster record](https://icml.cc/virtual/2026/poster/64919) | **Confirmed** | None |
+| AutoUE — Findings of ACL 2026 | [ACL Anthology 2026.findings-acl.111](https://aclanthology.org/2026.findings-acl.111/) | **Confirmed** | None |
+| Game Development as Human–LLM Interaction — ACL 2025 Long Paper | [ACL Anthology 2025.acl-long.218](https://aclanthology.org/2025.acl-long.218/) | **Confirmed** | None |
+| Automatic Bug Detection in LLM-Powered Text-Based Games — Findings of ACL 2024 | [ACL Anthology 2024.findings-acl.907](https://aclanthology.org/2024.findings-acl.907/) | **Confirmed** | None |
+| Cardiverse — EMNLP 2025 main conference | [ACL Anthology 2025.emnlp-main.1511](https://aclanthology.org/2025.emnlp-main.1511/) | **Confirmed** | None |
+| GameFactory — ICCV 2025 Highlight | [CVF proceedings](https://openaccess.thecvf.com/content/ICCV2025/html/Yu_GameFactory_Creating_New_Games_with_Generative_Interactive_Videos_ICCV_2025_paper.html) and [official ICCV record showing Highlight](https://iccv.thecvf.com/virtual/2025/poster/107) | **Confirmed** | None |
+
+## Classic DOI spot check
+
+| Indexed bibliographic claim | Publisher-deposited DOI evidence | Verdict | Severity |
+| --- | --- | --- | --- |
+| *An Experiment in Automatic Game Design* (2008, IEEE CIG) | [10.1109/CIG.2008.5035629](https://doi.org/10.1109/CIG.2008.5035629) | **Confirmed** | None |
+| *Multi-faceted Evolution of Simple Arcade Games* (2011, IEEE CIG) | [10.1109/CIG.2011.6032019](https://doi.org/10.1109/CIG.2011.6032019) | **Confirmed** | None |
+| *The Micro-Rhetorics of Game-o-Matic* (2012, FDG) | [10.1145/2282338.2282347](https://doi.org/10.1145/2282338.2282347) | **Confirmed** | None |
+| *Mechanic Miner* (2013, EvoApplications/LNCS) | [10.1007/978-3-642-37192-9_29](https://doi.org/10.1007/978-3-642-37192-9_29) | **Confirmed** | None |
+| *Automatic Game Design via Mechanic Generation* (2014, AAAI) | [10.1609/aaai.v28i1.8788](https://doi.org/10.1609/aaai.v28i1.8788) | **Confirmed** | None |
+| *A Rogue Dream* (2014, AIIDE) | [10.1609/aiide.v10i3.12745](https://doi.org/10.1609/aiide.v10i3.12745) | **Confirmed** | None |
+| Journal expansion described as 2021 *Automated Game Design via Conceptual Expansion* | [10.1109/TG.2021.3060005](https://doi.org/10.1109/TG.2021.3060005) resolves to *Conceptual Game Expansion*, IEEE Transactions on Games 14(1), formal issue 2022. | **Issue** | **Medium** |
+| *Ludii — The Ludemic General Game System* (2020, ECAI/FAIA) | [10.3233/FAIA200120](https://doi.org/10.3233/FAIA200120) | **Confirmed** | None |
+| *The 2010 Mario AI Championship: Level Generation Track* (2011) | [10.1109/TCIAIG.2011.2166267](https://doi.org/10.1109/TCIAIG.2011.2166267) | **Confirmed** | None |
+| *General Video Game AI: A Multitrack Framework...* (2019) | [10.1109/TG.2019.2901021](https://doi.org/10.1109/TG.2019.2901021) | **Confirmed** | None |
+| *Evolving Mario Levels in the Latent Space of a DCGAN* (2018, GECCO) | [10.1145/3205455.3205517](https://doi.org/10.1145/3205455.3205517) | **Confirmed** | None |
+| *TOAD-GAN* (2020, AIIDE) | [10.1609/aiide.v16i1.7401](https://doi.org/10.1609/aiide.v16i1.7401) | **Confirmed** | None |
+| *PCGRL* (2020, AIIDE) | [10.1609/aiide.v16i1.7416](https://doi.org/10.1609/aiide.v16i1.7416) | **Confirmed** | None |
+| *World-GAN* (2021, IEEE CoG) | [10.1109/COG52621.2021.9619133](https://doi.org/10.1109/COG52621.2021.9619133) | **Confirmed** | None |
+
+## Recommended correction order
+
+1. Downgrade **GameEngineBench** from Open to Partial and disclose the observable 15/110 release gap.
+2. Remove “checkpoint” from the **cardinal-preview** artifact description.
+3. Qualify the **V-GameGym** sample count as 2,219 reported / 2,218 released.
+4. Split the **Conceptual Expansion** conference and journal metadata, using the journal's actual title and formal 2022 issue year.
+5. Keep the current conservative labels for OpenGame, GameXpert-Bench, JAMER, CreativeGame, UniGen, WorldMind, Marionette, and PhysEditWorld; their first-party release pages support those cautions.

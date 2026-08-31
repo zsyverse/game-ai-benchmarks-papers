@@ -28,6 +28,16 @@ body:
         - Tool / 工具
     validations:
       required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Entry role / 条目角色
+      options:
+        - Core generator / 核心生成器
+        - Generation benchmark, dataset, or evaluator / 生成专用 benchmark、数据集或评测器
+        - Boundary, infrastructure, or field framing / 边界、基础设施或领域框架
+    validations:
+      required: true
   - type: input
     id: title
     attributes:
@@ -50,10 +60,23 @@ body:
     id: links
     attributes:
       label: Code and data links / 代码与数据链接
+  - type: dropdown
+    id: availability
+    attributes:
+      label: Verified artifact availability / 已核验工件可用性
+      options:
+        - Open / 核心工件已公开
+        - Partial / 仅部分工件公开
+        - Closed / 未核验到可复现发布
+        - Paper-only by design / 有意仅提供论文
+    validations:
+      required: true
   - type: checkboxes
     id: scope_check
     attributes:
       label: Scope check / 范围确认
       options:
         - label: This work generates a game or playable content; it is not primarily a game-playing agent paper. / 本工作生成游戏或可玩内容，不是以玩游戏为主的智能体论文。
+          required: true
+        - label: I checked the paper or official project rather than relying only on a blog, list, or repository name. / 我已核对论文或官方项目，而非只依据博客、榜单或仓库名称。
           required: true

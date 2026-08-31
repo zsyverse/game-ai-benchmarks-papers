@@ -8,7 +8,17 @@ These notes preserve the primary-source evidence used to build the generation-on
 - [Automated game design and procedural content generation](pcg-automated-design-sources.md) / [自动游戏设计与程序化内容生成](pcg-automated-design-sources.md)
 - [Game-specific interactive world generation](interactive-world-generation-sources.md) / [游戏专用可交互世界生成](interactive-world-generation-sources.md)
 
-Last full verification / 最近一次完整核验：**2026-08-29**.
+Independent audit trail / 独立审计记录：
+
+- [Generation-only scope recheck](recheck-scope.md) / [纯游戏生成范围复核](recheck-scope.md)
+- [Primary-source and artifact recheck](recheck-primary-sources.md) / [一手来源与工件复核](recheck-primary-sources.md)
+- [Omission audit](recheck-omissions.md) / [漏项复核](recheck-omissions.md)
+- [Repository QA recheck](recheck-repo-qa.md) / [仓库质量复核](recheck-repo-qa.md)
+- [PCG records 96–99 artifact audit](pcg-96-99-primary-sources.md) / [PCG 来源 96–99 工件复核](pcg-96-99-primary-sources.md)
+- [Procedural-content metageneration lineage](pcg-metageneration-primary-sources.md) / [程序化内容元生成谱系](pcg-metageneration-primary-sources.md)
+- [Final generation-only audit](final-generation-only-audit.md) / [最终纯生成复核](final-generation-only-audit.md)
+
+Last full verification / 最近一次完整核验：**2026-09-01**.
 
 Availability labels describe what was actually accessible on that date. A paper saying “we release” is not treated as an open benchmark unless its artifacts can be located and used.
 
