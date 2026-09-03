@@ -1,65 +1,61 @@
-name: Suggest a game-generation resource / 推荐游戏生成资源
-description: Propose a paper, benchmark, dataset, or tool that generates games
-title: "[Resource]: "
+name: Suggest a game-generation paper / 推荐游戏生成论文
+description: Propose a direct generation method paper or a formal generation benchmark paper
+title: "[Paper]: "
 labels: [resource]
 body:
   - type: dropdown
-    id: scope
-    attributes:
-      label: Generation scope / 生成范围
-      options:
-        - Complete game / 完整游戏
-        - Code or engine project / 代码或引擎工程
-        - Rules or mechanics / 规则或机制
-        - Level or playable content / 关卡或可玩内容
-        - Interactive world model / 交互世界模型
-        - Survey or taxonomy / 综述或分类
-    validations:
-      required: true
-  - type: dropdown
-    id: type
-    attributes:
-      label: Resource type / 资源类型
-      options:
-        - Benchmark / 基准
-        - Environment / 环境
-        - Dataset / 数据集
-        - Paper / 论文
-        - Tool / 工具
-    validations:
-      required: true
-  - type: dropdown
     id: role
     attributes:
-      label: Entry role / 条目角色
+      label: Paper role / 论文角色
       options:
-        - Core generator / 核心生成器
-        - Generation benchmark, dataset, or evaluator / 生成专用 benchmark、数据集或评测器
-        - Boundary, infrastructure, or field framing / 边界、基础设施或领域框架
+        - Generation method paper / 生成方法论文
+        - Generation benchmark paper / 生成 Benchmark 论文
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Generated output / 生成产物
+      options:
+        - Complete runnable game / 完整可运行游戏
+        - Executable code or engine project / 可执行代码或引擎工程
+        - Executable rules or mechanics / 可执行规则或机制
+        - Playable level, map, task, or chart / 可玩关卡、地图、任务或谱面
+        - Player-controllable generated game world / 玩家可控制的生成式游戏世界
     validations:
       required: true
   - type: input
     id: title
     attributes:
-      label: Canonical title / 正式标题
+      label: Canonical paper title / 论文正式标题
     validations:
       required: true
   - type: input
     id: source
     attributes:
-      label: Primary-source URL / 一手来源链接
+      label: Primary paper URL / 论文一手来源链接
+      description: Proceedings, DOI, arXiv, or OpenReview; a project page alone is insufficient.
     validations:
       required: true
   - type: textarea
-    id: evidence
+    id: generation_evidence
     attributes:
-      label: Task, metrics, and evidence / 任务、指标与依据
+      label: Direct-generation evidence / 直接生成依据
+      description: Cite the primary-source passage showing that generation is the paper's central contribution.
     validations:
       required: true
   - type: textarea
-    id: links
+    id: evaluation
     attributes:
-      label: Code and data links / 代码与数据链接
+      label: Task and evaluation / 任务与评测
+      description: For a benchmark, include the generation task, protocol, metrics, and empirical generator experiments.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Official artifacts / 官方工件
+      description: Add official code, data, models, demos, and verified availability if they exist.
   - type: dropdown
     id: availability
     attributes:
@@ -67,16 +63,19 @@ body:
       options:
         - Open / 核心工件已公开
         - Partial / 仅部分工件公开
-        - Closed / 未核验到可复现发布
-        - Paper-only by design / 有意仅提供论文
+        - Closed / 未核验到可运行核心发布
     validations:
       required: true
   - type: checkboxes
     id: scope_check
     attributes:
-      label: Scope check / 范围确认
+      label: Scope and duplicate check / 范围与查重确认
       options:
-        - label: This work generates a game or playable content; it is not primarily a game-playing agent paper. / 本工作生成游戏或可玩内容，不是以玩游戏为主的智能体论文。
+        - label: The generated artifact—not agent playing performance—is the paper's central research object. / 论文核心研究对象是生成工件，而非智能体游玩表现。
           required: true
-        - label: I checked the paper or official project rather than relying only on a blog, list, or repository name. / 我已核对论文或官方项目，而非只依据博客、榜单或仓库名称。
+        - label: This is not dataset-only, a survey/position paper, infrastructure, standalone repair/QA/tuning, isolated asset generation, or an NPC/player-agent paper. / 本论文不是纯数据集、综述/立场、基础设施、独立修复/QA/调参、孤立资产生成或 NPC/玩家智能体论文。
+          required: true
+        - label: I searched all three public categories and found no canonical record for this paper or version family. / 我已搜索三个公开分类，未发现该论文或版本族的 canonical 记录。
+          required: true
+        - label: I checked the paper itself rather than relying on a blog, list, or repository name. / 我已核对论文本身，而非只依据博客、榜单或仓库名称。
           required: true

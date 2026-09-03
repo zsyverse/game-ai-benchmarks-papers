@@ -1,42 +1,36 @@
 # Contributing / 参与贡献
 
-Thanks for helping keep this map accurate and useful. 感谢你帮助维护这份准确、实用的资料索引。
+This repository accepts only papers that pass the strict rules in [SCOPE.md](SCOPE.md): direct game-generation methods or formal benchmarks for those generation tasks.
 
-This repository covers **systems that generate games**, not systems that play them. Read [SCOPE.md](SCOPE.md) before proposing an entry.
+本仓库只接受通过 [SCOPE.md](SCOPE.md) 严格规则的论文：直接生成游戏的方法，或正式评测这些生成任务的 benchmark。
 
-本仓库收录的是**生成游戏的系统**，而不是玩游戏的智能体。提交条目前请先阅读 [SCOPE.md](SCOPE.md)。
+## Before proposing an entry / 提交前
 
-## Add or correct an entry / 新增或修正条目
+Search all three public collections first. The same paper must not be added to multiple categories, and a preprint must not be duplicated when its published version is already present.
 
-Please open an issue or pull request with:
+请先搜索三个公开分类。同一论文不能添加到多个分类；已有正式发表版时，也不能再重复添加预印本。
 
-- canonical title and year;
-- one primary-source link (paper page, proceedings, project page, or official repository);
-- type: benchmark, environment, dataset, paper, or tool;
-- entry role: core generator, generation-specific resource, or explicitly labelled boundary/framing work;
-- generation scope: complete game, code/project, rules/mechanics, level/playable content, or interactive world;
-- task and evaluation metric, if it is a benchmark;
-- code/data availability and license, if known;
-- a concise English and Chinese description.
+## Required information / 必填信息
 
-请通过 Issue 或 Pull Request 提供：
+- Canonical paper title and year. / 论文正式标题与年份。
+- One primary paper source: proceedings page, DOI, arXiv, or OpenReview. / 一个论文一手来源：正式论文集、DOI、arXiv 或 OpenReview。
+- Exactly one role: **generation method paper** or **generation benchmark paper**. / 只能选择一种角色：**生成方法论文**或**生成 benchmark 论文**。
+- The eligible generated output: complete game, code/project, rules/mechanics, playable content, or interactive game world. / 合格生成产物：完整游戏、代码/工程、规则/机制、可玩内容或交互式游戏世界。
+- Primary-source evidence that generation is the paper's central contribution. / 一手来源证据，证明生成是论文核心贡献。
+- For a benchmark: generation task, protocol, metrics, and empirical generator experiments. / 对 benchmark：需提供生成任务、协议、指标及生成器实证实验。
+- Official code/data/model links and verified availability, if any. / 如有，请提供官方代码、数据、模型链接及已核验可用性。
+- Concise, semantically aligned English and Chinese descriptions. / 简洁且语义一致的中英文描述。
 
-- 正式标题与年份；
-- 至少一个一手来源链接（论文页、正式论文集、项目主页或官方仓库）；
-- 类型：基准、环境、数据集、论文或工具；
-- 条目角色：核心生成器、生成专用资源，或明确标注的边界/领域框架；
-- 生成范围：完整游戏、代码/工程、规则/机制、关卡/可玩内容或交互世界；
-- 如果是基准，请写明任务和评测指标；
-- 已知的代码、数据可用性与许可证；
-- 简洁且语义一致的中英文说明。
+## Automatic rejection / 自动拒绝
+
+Do not propose dataset/corpus-only work, surveys, taxonomies, position papers, infrastructure, metric-only studies, standalone repair/QA/tuning, isolated asset generation, NPC/player agents, or policy/planning-centered world models.
+
+不要提交纯数据集/语料库、综述、分类、立场论文、基础设施、纯指标研究、独立修复/QA/调参、孤立资产生成、NPC/玩家智能体，或以策略/规划为核心的 world model。
 
 ## Quality rules / 质量规则
 
-- Prefer primary sources over blogs and listicles. / 优先引用一手来源，不以博客或二手榜单代替。
-- Do not label a demo or dataset as a benchmark without an evaluation protocol. / 没有评测协议的演示或数据集不要标为基准。
-- Verify artifact status from the official repository or hosting page; a paper's “we release” statement is not sufficient by itself. / 必须在官方仓库或托管页面核验工件状态；不能只依据论文中的“我们已发布”。
-- Avoid duplicated links and marketing claims. / 避免重复链接和未经验证的宣传性描述。
-- Merge preprints, conference/journal extensions, and renamed releases of the same system into one version family unless the generated task or system is materially different. / 同一系统的预印本、会议/期刊扩展和更名版本应合并为一个版本族；只有生成任务或系统有实质差异时才分开计数。
-- Keep both READMEs semantically aligned. / 保持中英文 README 的语义一致。
-- Exclude game-playing agents, NPC AI, and gameplay benchmarks unless they directly evaluate generated games or content. / 排除玩游戏的智能体、NPC AI 和游玩 benchmark，除非它们直接用于评测生成的游戏或内容。
-- When a work mixes generation and gameplay, state what is scored: the generated artifact may qualify, while policy return, win rate, or agent task success does not. / 当工作同时包含生成与游玩时，必须说明评分对象：生成工件可以收录，策略回报、胜率或智能体任务成功率本身不构成收录理由。
+- Verify claims from the paper and official artifacts, not blogs, listicles, or repository names. / 根据论文和官方工件核验，不依赖博客、二手榜单或仓库名称。
+- Do not call a dataset a benchmark unless the paper defines a fixed generation task, evaluator, and empirical protocol. / 没有固定生成任务、evaluator 与实证协议时，不要把数据集称为 benchmark。
+- Merge versions of the same paper, but do not merge distinct follow-up papers merely because they share a system name. / 合并同一论文的不同版本，但不要仅因系统同名就合并实质不同的后续论文。
+- Keep numbering, titles, years, URLs, availability labels, and section membership aligned across English and Chinese pages. / 保持中英文页面的编号、标题、年份、URL、可用性标签和分区一致。
+- Run `python3 scripts/validate_index.py` and Markdown lint before opening a pull request. / 提交 PR 前运行 `python3 scripts/validate_index.py` 和 Markdown lint。

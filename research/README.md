@@ -1,29 +1,25 @@
-# Research notes / 研究底稿
+# Research evidence / 研究依据
 
-These notes preserve the primary-source evidence used to build the generation-only bilingual index. They are intentionally more detailed than the public tables.
+The public index contains only canonical game-generation methods and formal generation benchmarks. These files preserve the primary-source evidence used to make those decisions.
 
-这些文件保留纯游戏生成双语索引所依据的一手来源与核验细节，内容有意比公开表格更完整。
+公开索引只包含 canonical 游戏生成方法与正式生成 benchmark。以下文件保留判定所依据的一手来源证据。
 
-- [End-to-end game and game-code generation](end-to-end-generation-sources.md) / [端到端游戏与游戏代码生成](end-to-end-generation-sources.md)
-- [Automated game design and procedural content generation](pcg-automated-design-sources.md) / [自动游戏设计与程序化内容生成](pcg-automated-design-sources.md)
-- [Game-specific interactive world generation](interactive-world-generation-sources.md) / [游戏专用可交互世界生成](interactive-world-generation-sources.md)
+## Source dossiers / 一手来源底稿
 
-Independent audit trail / 独立审计记录：
+- [End-to-end game and game-code generation](end-to-end-generation-sources.md)
+- [Automated game design and PCG](pcg-automated-design-sources.md)
+- [Interactive game-world generation](interactive-world-generation-sources.md)
 
-- [Generation-only scope recheck](recheck-scope.md) / [纯游戏生成范围复核](recheck-scope.md)
-- [Primary-source and artifact recheck](recheck-primary-sources.md) / [一手来源与工件复核](recheck-primary-sources.md)
-- [Omission audit](recheck-omissions.md) / [漏项复核](recheck-omissions.md)
-- [Repository QA recheck](recheck-repo-qa.md) / [仓库质量复核](recheck-repo-qa.md)
-- [PCG records 96–99 artifact audit](pcg-96-99-primary-sources.md) / [PCG 来源 96–99 工件复核](pcg-96-99-primary-sources.md)
-- [Procedural-content metageneration lineage](pcg-metageneration-primary-sources.md) / [程序化内容元生成谱系](pcg-metageneration-primary-sources.md)
-- [Final generation-only audit](final-generation-only-audit.md) / [最终纯生成复核](final-generation-only-audit.md)
+The dossiers correspond one-to-one with accepted public records and contain no extra candidates. Removal decisions and concise evidence for rejected candidates are retained only in the strict audit.
 
-Last full verification / 最近一次完整核验：**2026-09-01**.
+三份底稿与公开收录条目一一对应，不含额外候选。被拒候选的删除决定与简要依据只保留在严格审计中。
 
-Availability labels describe what was actually accessible on that date. A paper saying “we release” is not treated as an open benchmark unless its artifacts can be located and used.
+## Strict scope audit / 严格范围审计
 
-可用性标签以该日期实际能够访问的工件为准。即使论文写有“已开放”，如果无法定位和使用相关工件，也不会标为公开 benchmark。
+- [Method/benchmark-only audit of all 198 pre-cleanup rows](strict-method-benchmark-scope-audit.md)
 
-Game-playing agents and papers whose main result is policy return, task success, or win rate are explicitly outside the repository's scope. See [SCOPE.md](../SCOPE.md).
+The audit applies one rule to every former row: keep only a direct generation method or a formal benchmark of an eligible generation task, then merge duplicate paper records globally.
 
-以动作策略、任务成功率或胜率为主要结果的游戏智能体论文明确不在收录范围内，详见 [SCOPE.md](../SCOPE.md)。
+该审计对清理前全部条目使用同一规则：只保留直接生成方法或合格生成任务的正式 benchmark，并在全仓库合并重复论文记录。
+
+Last full verification / 最近一次完整核验：**2026-09-04**.

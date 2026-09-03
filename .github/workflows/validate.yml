@@ -23,5 +23,8 @@ jobs:
       - name: Validate bilingual index
         run: python scripts/validate_index.py
 
+      - name: Validate YAML syntax
+        run: ruby -e 'require "yaml"; YAML.load_file(".github/ISSUE_TEMPLATE/resource.yml"); YAML.load_file(".github/workflows/validate.yml")'
+
       - name: Lint Markdown
         run: npx --yes markdownlint-cli2@0.23.2 "**/*.md"

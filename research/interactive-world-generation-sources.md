@@ -1,24 +1,18 @@
-# Game-specific interactive world generation — verified primary sources
+# Interactive game-world generation: verified primary sources
 
-> **Cutoff / 检索截止：2026-08-31 (Asia/Shanghai).** This note covers systems and resources whose central purpose is **generating a game or its action-conditioned observations, geometry, or explicit state**. It excludes work whose primary evaluated product is a game-playing policy. / 本文只收录以“生成游戏、动作条件游戏画面、几何或显式状态”为核心的系统与资源，不收录主要评测对象是游戏策略的工作。
+> Research cutoff / 检索截止: **2026-09-04 (Asia/Shanghai)**.
 
-## Method and labels / 方法与标签
+This dossier contains exactly the **23 canonical records** in the public interactive-world index: 21 direct generation methods and two formal generation benchmarks.
 
-Claims were checked against primary sources: papers, author project pages, and official code/model/data releases. Submitted-date and last-updated-date arXiv searches for 2026-08-29 through 2026-08-31 found no additional paper family in scope. One artifact change did occur: Game2World's training, inference, evaluation, model, and datasets became publicly verifiable during that interval.
+本底稿与公开交互世界索引严格一一对应，共 **23 条 canonical 记录**：21 条直接生成方法与 2 条正式生成 benchmark。
 
-事实以论文、作者项目页及官方代码/模型/数据发布为准。针对 2026-08-29 至 2026-08-31 的 arXiv 首发日期与更新日期增量检索没有发现新的范围内论文族；该时段唯一需要补记的工件变化是 Game2World 的训练、推理、评测、模型及数据已可公开核验。
+Every numbered dossier record corresponds to the same public ID. Only direct generation methods and formal generation benchmarks appear here; rejected candidates are documented solely in the strict audit.
 
-- **Open** — official core training and inference code, runnable weights, and meaningful data/evaluation artifacts are available.
-- **Partial** — official artifacts are useful, but a material component such as training code/data, the paper checkpoint, strongest model, or evaluator is missing.
-- **Closed** — no runnable official author checkpoint and core implementation were verified.
-- **Paper-only by design** — a position/taxonomy paper intentionally proposes no generator; this is not a failed release.
-- Labels describe availability, not commercial-use rights. Game footage, ROMs, engine assets, and upstream checkpoints may carry separate restrictions.
+每条底稿记录与同编号公开条目对应。这里只保留直接生成方法与正式生成 benchmark；被拒候选仅记录在严格审计中。
 
-The 33 entries are partitioned as **23 core action-controlled generators + 5 generation-specific datasets/benchmarks + 5 framing or boundary systems**. Series are counted once. The partition prevents data papers and game-agent boundary cases from inflating the generator count.
+## Interactive-world generation methods / 交互世界生成方法
 
-## A. Core action-controlled generators / 核心动作控制生成器（23）
-
-### 1. Promptable Game Models: Text-Guided Game Simulation via Masked Diffusion Models
+### 1. Promptable Game Models
 
 - **Year / venue / status:** 2023 preprint; published in ACM Transactions on Graphics in 2024, DOI 10.1145/3635705.
 - **EN:** Simulates Tennis and Minecraft video while accepting both atomic and compositional natural-language actions, predating the recent wave of neural game engines.
@@ -58,17 +52,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2408.14837), [author project](https://gamengen.github.io/), [official project-page source](https://github.com/GameNGen/GameNGen.github.io).
 - **Openness:** **Closed.** The repository contains presentation assets, not model code, data, training/inference implementation, or weights.
 
-### 5. Oasis — A Universe in a Transformer
-
-- **Year / venue / status:** 2024, Decart × Etched official technical release; no peer-reviewed paper accompanied the release.
-- **EN:** Autoregressively generates a Minecraft-like world from a prompt frame while responding to keyboard input, with a public 500M-parameter inference model.
-- **中文：** 从提示帧出发，根据键盘输入持续生成类似 Minecraft 的世界，并公开了 5 亿参数推理模型。
-- **Generates / action conditioning:** gameplay frames from the initial image, frame history, and discrete keyboard controls; the public model is smaller than the hosted system.
-- **Evaluation:** official evidence is live interaction and qualitative rollouts; there is no fixed paper test suite or reproducible leaderboard.
-- **Official artifacts:** [official technical page](https://oasis-model.github.io/), [official inference code](https://github.com/etched-ai/open-oasis), [official 500M weights](https://huggingface.co/Etched/oasis-500m).
-- **Openness:** **Partial.** The 500M model and inference are runnable, but the strongest hosted model, training stack/data, and evaluator are not public.
-
-### 6. GameFactory — Creating New Games with Generative Interactive Videos
+### 5. GameFactory — Creating New Games with Generative Interactive Videos
 
 - **Year / venue / status:** 2025, ICCV 2025 Highlight, peer-reviewed conference paper.
 - **EN:** Decouples Minecraft visual style from keyboard/mouse control so an open-domain video prior can transfer those controls into visually new game scenes.
@@ -78,7 +62,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2501.08325), [author project](https://yujiwen.github.io/gamefactory/), [official repository](https://github.com/KlingAIResearch/GameFactory), [GF-Minecraft dataset](https://huggingface.co/datasets/KwaiVGI/GameFactory-Dataset).
 - **Openness:** **Partial.** Roughly 70 hours of video/action data and small utilities are public, but model training/inference code and weights are not.
 
-### 7. MineWorld — a Real-Time and Open-Source Interactive World Model on Minecraft
+### 6. MineWorld — a Real-Time and Open-Source Interactive World Model on Minecraft
 
 - **Year / venue / status:** 2025, arXiv technical report.
 - **EN:** Uses interleaved visual/action tokens and parallel diagonal decoding to generate controllable Minecraft observations at 4–7 FPS.
@@ -88,7 +72,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2504.08388), [official code/evaluation](https://github.com/microsoft/mineworld), [official model location](https://huggingface.co/microsoft/mineworld).
 - **Openness:** **Partial.** Inference, demo, decoding, and metric code remain public, but the README says checkpoints were removed; training code/data are absent.
 
-### 8. Matrix-Game series
+### 7. Matrix-Game 1.0
 
 - **Year / venue / status:** 2025–2026, three arXiv technical reports.
 - **EN:** Progresses from Minecraft action-conditioned generation and GameWorld Score to multi-game real-time streaming, then memory-augmented 720p long-horizon generation.
@@ -98,7 +82,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [1.0 paper](https://arxiv.org/abs/2506.18701), [2.0 paper](https://arxiv.org/abs/2508.13009), [3.0 paper](https://arxiv.org/abs/2604.08995), [unified repository](https://github.com/SkyworkAI/Matrix-Game), [1.0 models](https://huggingface.co/Skywork/Matrix-Game), [2.0 models](https://huggingface.co/Skywork/Matrix-Game-2.0), [3.0 models](https://huggingface.co/Skywork/Matrix-Game-3.0), [1.0 project](https://matrix-game-homepage.github.io/), [2.0 project](https://matrix-game-v2.github.io/), [3.0 project](https://matrix-game-v3.github.io/).
 - **Openness:** **Partial.** Inference and selected weights exist for all versions, but full training/data are absent and the strongest mixed/28B 3.0 models remain withheld.
 
-### 9. Hunyuan-GameCraft series
+### 8. Hunyuan-GameCraft 1.0
 
 - **Year / venue / status:** 2025–2026, arXiv technical reports.
 - **EN:** GameCraft maps keyboard/mouse input into camera-aware long game-video rollouts; GameCraft-2 adds mid-rollout natural-language interactions such as opening doors or triggering explosions.
@@ -108,7 +92,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [1.0 paper](https://arxiv.org/abs/2506.17201), [2.0 paper](https://arxiv.org/abs/2511.23429), [1.0 project](https://hunyuan-gamecraft.github.io/), [1.0 code](https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0), [1.0 weights](https://huggingface.co/tencent/Hunyuan-GameCraft-1.0), [2.0 project](https://hunyuan-gamecraft-2.github.io/), [official 2.0 demo](https://hunyuan.tencent.com/game/game-craft).
 - **Openness:** **Partial (1.0) / Closed (2.0).** Version 1.0 provides inference and checkpoints but not its full trainer/corpus; 2.0 provides no downloadable code or checkpoint.
 
-### 10. Scalable Generative Game Engine: Breaking the Resolution Wall via Hardware-Algorithm Co-Design
+### 9. Scalable Generative Game Engine
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Co-designs the generation algorithm and hardware execution path to move neural racing/platformer gameplay beyond low-resolution real-time generation.
@@ -118,7 +102,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2602.00608).
 - **Openness:** **Closed.** No official project, repository, model, data, or evaluator was found by the cutoff.
 
-### 11. Solaris — Building a Multiplayer Video World Model in Minecraft
+### 10. Solaris — Building a Multiplayer Video World Model in Minecraft
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Generates synchronized Minecraft observations for two players so movement, building, memory, and shared-world consistency can be judged from multiple viewpoints.
@@ -128,7 +112,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2602.22208), [project](https://solaris-wm.github.io/), [training/inference/evaluation](https://github.com/solaris-wm/solaris), [collection engine](https://github.com/solaris-wm/solaris-engine), [model/data collections](https://huggingface.co/collections/nyu-visionx/solaris-models).
 - **Openness:** **Open.** The trainer, GPU/TPU inference, weights, multiplayer data, and metric are public; full pretraining additionally depends on separately distributed VPT data.
 
-### 12. MultiGen — Level-Design for Editable Multiplayer Worlds in Diffusion Game Engines
+### 11. MultiGen — Editable Multiplayer Worlds
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Adds editable top-down level structure and persistent external memory to a diffusion game engine, making multiplayer spaces reproducible instead of trapped in recent video context.
@@ -138,7 +122,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2603.06679), [author project](https://ryanpo.com/multigen/).
 - **Openness:** **Closed.** The paper and project demonstrations are public, but no official code, model, data, or evaluator is downloadable.
 
-### 13. WorldCam — Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation
+### 12. WorldCam — Interactive Autoregressive 3D Gaming Worlds
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Grounds immediate controls and long-term revisitation in one 6-DoF camera-pose representation to reduce geometric drift.
@@ -148,7 +132,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2603.16871), [project](https://cvlab-kaist.github.io/WorldCam/), [official inference](https://github.com/cvlab-kaist/WorldCam), [official weights](https://huggingface.co/worldcam/worldcam), [open-game recordings](https://huggingface.co/datasets/worldcam/worldcam-dataset).
 - **Openness:** **Partial.** A CS:GO-tuned checkpoint and inference are public, but training code and the paper's training corpus are not; the open Xonotic/Unvanquished recordings are a different release.
 
-### 14. ActionParty — Multi-Subject Action Binding in Generative Video Games
+### 13. ActionParty — Multi-Subject Action Binding
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Extends action-conditioned video generation from one controllable subject to as many as seven, preserving which action belongs to which player.
@@ -158,17 +142,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2604.02330), [project](https://action-party.github.io/), [official repository](https://github.com/action-party/action-party).
 - **Openness:** **Closed.** The repository states “Code coming soon” and provides no model, dataset, trainer, or evaluator.
 
-### 15. ReactiveGWM — Steering NPC in Reactive Game World Models
-
-- **Year / venue / status:** 2026, arXiv preprint.
-- **EN:** Generates fighting-game rollouts in which low-level player controls and high-level NPC strategies are separately conditioned, enabling prompt-steerable reactions.
-- **中文：** 分离玩家底层控制与 NPC 高层策略条件，生成可由“进攻、控制、防守”等提示引导对手反应的格斗游戏过程。
-- **Generates / action conditioning:** Street Fighter II/Alpha 3 video; player movement/attack enters as action bias while NPC strategy prompts enter through cross-attention and transfer across games.
-- **Evaluation:** player Move/Attack accuracy, Gemini/Qwen instruction accuracy, SSIM/LPIPS, zero-shot strategy transfer, and a 19-person action/strategy study.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2605.15256), [project](https://inv-wzq.github.io/ReactiveGWM/), [training/inference](https://github.com/INV-WZQ/ReactiveGWM), [models](https://huggingface.co/INV-WZQ/ReactiveGWM-Models), [datasets](https://huggingface.co/datasets/INV-WZQ/ReactiveGWM-Datasets).
-- **Openness:** **Open.** Bidirectional and causal training, inference, SF2/SF3/transfer checkpoints, examples, and strategy-aligned data are public.
-
-### 16. SCOPE — Simulating Cross-game Operations in Playable Environments for FPS World Models
+### 14. SCOPE — Simulating Cross-game Operations
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Learns spatially selective responses to dense simultaneous FPS controls across seven games, separating local weapon effects from global movement/camera motion.
@@ -178,7 +152,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2605.23345), [project](https://z2tong.github.io/SCOPE/), [official inference](https://github.com/z2tong/SCOPE), [official weights](https://huggingface.co/zizhaotong/SCOPE), [CrossFPS collection](https://huggingface.co/collections/zizhaotong/crossfps).
 - **Openness:** **Partial.** Checkpoint, inference examples, dependencies, and CrossFPS data are released, but training code is not.
 
-### 17. MIRA — Multiplayer Interactive World Models with Representation Autoencoders
+### 15. MIRA — Multiplayer Interactive World Models
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Introduces a 5B representation-autoencoder world model for highly dynamic four-player Rocket League rather than treating other players as uncontrolled scenery.
@@ -188,7 +162,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2607.05352), [project](https://mira-wm.com/), [official training/inference/evaluation repository](https://github.com/mira-wm/mira), [Rocket Science dataset](https://huggingface.co/datasets/kyutai/rocket-science).
 - **Openness:** **Partial.** Training, inference, evaluation, and data are public, but no downloadable official model checkpoint was found; the live demo alone is not a reproducible weight release.
 
-### 18. StatePlay — State-Aware Game World Models for Mechanics-Consistent Generation
+### 16. StatePlay — State-Aware Game World Models
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Jointly predicts video and explicit timers, health, and skill meters so fighting-game outcomes follow mechanics rather than only looking plausible.
@@ -198,7 +172,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2607.26754), [project](https://jimntu.github.io/stateplay_page/), [training/inference](https://github.com/Jimntu/StatePlay), [model](https://huggingface.co/onepiece1999/StatePlay), [dataset](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset).
 - **Openness:** **Open.** Model, 10K-clip data, trainer, inference, and examples are public; VLM judging still depends on proprietary judge versions.
 
-### 19. WanToFight — Real-Time Generative Game Engine for Multi-Player Combat Interaction
+### 17. WanToFight — Real-Time Multi-Player Combat
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Generates full two-player The King of Fighters '97 matches from both players' keyboard input at consumer-GPU frame rates.
@@ -208,7 +182,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2607.12592), [project](https://humanaigc.github.io/wantofight/), [official repository](https://github.com/HumanAIGC/wantofight).
 - **Openness:** **Closed.** The repository contains the project-page source/assets only; training/inference code, model, data, and evaluator are absent.
 
-### 20. MASS — Multiplayer World Models with Authoritative Shared State
+### 18. MASS — Multiplayer World Models with Authoritative Shared State
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Predicts one typed authoritative world state from joint actions, then renders any requested camera, avoiding inconsistent per-view latent worlds.
@@ -218,7 +192,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2608.06257), [project](https://alaya-lab.github.io/MASS/).
 - **Openness:** **Closed.** No official code, weights, matched benchmark data, or evaluator are downloadable.
 
-### 21. ForgeWM — Progressive Causal Training for Few-Step Action-Conditioned Video World Models
+### 19. ForgeWM — Progressive Causal Training
 
 - **Year / venue / status:** 2026, arXiv technical report.
 - **EN:** Fully releases a four-stage recipe that turns a game-conditioned video generator into 1-, 2-, and 4-step real-time Minecraft/FPS world models.
@@ -228,7 +202,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2608.14022), [project](https://asdfo123.github.io/ForgeWM/), [full code](https://github.com/asdfo123/ForgeWM), [models](https://huggingface.co/ForgeWM/ForgeWM), [prepared data](https://huggingface.co/datasets/ForgeWM/ForgeWM-data).
 - **Openness:** **Open.** Training/inference, stage 0–3 checkpoints, few-step students, CrossFPS checkpoint, and roughly 89 GB of prepared data are public; upstream licenses still apply.
 
-### 22. Marionette — Predicting World States, Rendering Geometry, Painting Appearance
+### 20. Marionette — Predicting World States, Rendering Geometry, Painting Appearance
 
 - **Year / venue / status:** 2026, arXiv preprint.
 - **EN:** Predicts an explicit 276-D articulated multi-character state, renders geometry deterministically, then uses diffusion only to paint appearance.
@@ -238,19 +212,20 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2608.14530), [project](https://alayalab.github.io/Marionette/), [official inference/runtime](https://github.com/AlayaLab/Marionette), [official weights](https://huggingface.co/AlayaLab/Marionette), [source WildWorld corpus](https://github.com/AlayaLab/WildWorld).
 - **Openness:** **Partial.** The three-stage inference path, weights, and reproducibility seeds are public, but training code and the full 2,241-segment derived corpus are not; assets are research-only.
 
-### 23. Magpie — Real-Time World Renderer for Interactive Games
+### 21. Playable Game Generation
 
-- **Year / venue / status:** 2026, arXiv preprint.
-- **EN:** Leaves rules, physics, and reproducible state transitions in a conventional engine while a learned renderer converts white-box frames into high-fidelity game visuals.
-- **中文：** 把规则、物理与可复现状态转移留在传统引擎中，再由学习式渲染器把 white-box 帧转成高保真游戏画面。
-- **Generates / action conditioning:** RGB video conditioned on stripped white-box engine frames; user input first advances the authoritative engine, so the learned model renders rather than invents logic.
-- **Evaluation:** visual fidelity and persistence, mismatch to white-box conditions, compute throughput, and end-to-end interaction latency; the paper reports 32.2 FPS at 1024×768 and about 1.6 s input-to-visual latency. Training uses about 300 hours of paired 1080p/60-FPS recordings from 30+ Unreal scenes.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2608.27168), [author project](https://zhanxy.xyz/Magpie-website/).
-- **Openness:** **Closed.** Project buttons do not lead to code, data, or weights; no runnable checkpoint or evaluator was released.
+- **Year / venue / status:** 2024, arXiv preprint.
+- **EN:** Learns an action-conditioned latent-dynamics engine from game video and action data and emits real-time, player-controllable game frames.
+- **中文：** 从游戏视频与动作数据学习动作条件 latent-dynamics 引擎，实时生成可由玩家控制的游戏画面。
+- **Generates / action conditioning:** player actions advance an autoregressive learned game world step by step; the output is a playable visual experience rather than source code or a conventional engine project.
+- **Evaluation:** visual fidelity, dynamics/action alignment, long-horizon consistency, and real-time playability experiments.
+- **Official artifacts:** [paper](https://arxiv.org/abs/2412.00887), [official implementation](https://github.com/GreatX3/Playable-Game-Generation).
+- **Openness:** **Partial.** Implementation material is public, but the complete training-data and reproduction path is not.
+- **Strict-scope decision:** **KEEP.** The player controls the generated world directly, so this is an interactive-world generation method rather than a game-playing policy.
 
-## B. Generation-specific datasets and benchmarks / 生成专用数据集与评测（5）
+## Generation benchmarks / 生成 Benchmark
 
-### 24. WildWorld / WildBench
+### 22. WildWorld / WildBench
 
 - **Year / venue / status:** 2026, arXiv dataset/benchmark preprint.
 - **EN:** Builds a large action/state-aligned ARPG corpus and a benchmark that directly checks whether generated worlds follow actions and preserve explicit state.
@@ -260,27 +235,7 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Official artifacts:** [paper](https://arxiv.org/abs/2603.23497), [correct author project](https://alaya-studio.github.io/wildworld-project/), [official repository](https://github.com/AlayaLab/WildWorld), [official dataset](https://huggingface.co/datasets/AlayaLab/WildWorld).
 - **Openness:** **Partial.** Gated Part 1 currently exposes 574 hours, 3,434 samples, and 13,740 files; Parts 2/3 and WildBench code are pending. The older `shandaai.github.io` URL in the arXiv comment was unavailable at the cutoff.
 
-### 25. EgoCS-400K — An Egocentric Gameplay Dataset for World Models
-
-- **Year / venue / status:** 2026, arXiv dataset preprint.
-- **EN:** Aligns egocentric CS/CS2 video with controls, camera motion, language, state, and events for training models that predict how gameplay changes next.
-- **中文：** 对齐 CS/CS2 第一人称视频、控制、相机运动、语言、状态与事件，用于训练预测游戏下一步变化的世界模型。
-- **Generation/action task:** announced scale is 400K videos, 10K hours, 1K matches, 40K rounds, and 13 maps, with temporal segments and action/event annotations for future-video generation.
-- **Evaluation:** dataset scale, action/event/map coverage, temporal-alignment inspection, and downstream world-model motivation; no downloadable fixed benchmark/evaluator was available.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2606.18180), [project](https://egocs-400k.github.io/), [official processing repository](https://github.com/EgoCS-400K/Dataset), [official annotation viewer](https://huggingface.co/spaces/Cooler-Master/cs2-action-annotation-viewer-preview).
-- **Openness:** **Partial.** Parsing, action extraction, and segment-processing code are substantive, but the project still says “Data coming soon” and no official Hugging Face dataset was found.
-
-### 26. PhysEditWorld — A Large-Scale Dataset Toward Physics-Editable World Models
-
-- **Year / venue / status:** 2026, arXiv dataset/resource preprint.
-- **EN:** Replays identical UE5 initial states and actions under edited gravity so a model can be tested on following a requested physical rule, not just matching appearance.
-- **中文：** 在 UE5 中固定初始状态与动作、只改变重力重放，从而检验模型是否真正遵循指定物理规则，而不只是复刻外观。
-- **Generation/action task:** paired RGB, depth, normals, audio, actions, camera, engine state, and gravity supervision for gravity-conditioned video and action-conditioned first-person rollouts.
-- **Evaluation:** proposed gravity-conditioned video, action-conditioned world-model, and gravity-aware video-language tasks; initial utility studies exist, but the fixed evaluator is not released.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2606.26694), [project](https://yizhiqianbi.github.io/physeditworld/), [official repository](https://github.com/yizhiqianbi/physeditworld), [official ModelScope entry](https://www.modelscope.cn/datasets/GelerCAT/PhysicalWorld).
-- **Openness:** **Partial.** Schema and demo subsets are public; the full 100+ hour/60M-frame corpus, UE5 pipeline, and evaluation scripts remain planned and subject to asset-license review.
-
-### 27. PlayWorld — Benchmarking World Models with Agent Players over Long-Horizon Objectives
+### 23. PlayWorld
 
 - **Year / venue / status:** 2026, arXiv benchmark preprint.
 - **EN:** Uses agent players as test probes that pursue long-horizon objectives inside a generated world; it evaluates the world model, not whether a new game-playing policy is strong.
@@ -289,89 +244,3 @@ The 33 entries are partitioned as **23 core action-controlled generators + 5 gen
 - **Evaluation:** scenario execution plus geometry, interaction, insight-evolution, and world-evolution judging; the benchmark packages prompts, assets, runners, and leaderboard logic.
 - **Official artifacts:** [paper](https://arxiv.org/abs/2608.13552), [project](https://kxding.github.io/project/PlayWorld/), [official code](https://github.com/hku-sail/PlayWorld), [official benchmark data](https://huggingface.co/datasets/jocelynd/playworld-bench), [official leaderboard](https://huggingface.co/spaces/jocelynd/PlayWorld-Leaderboard).
 - **Openness:** **Open.** Code, 178-file benchmark data, and evaluator/leaderboard assets are public; full execution and judging still depend on proprietary world services plus Claude/Gemini APIs.
-
-### 28. Game2World Engine — Unlocking In-the-Wild Gameplay Videos for World Model Training
-
-- **Year / venue / status:** 2026, arXiv data-engine preprint.
-- **EN:** Removes game UI from raw gameplay while preserving the underlying world, turning abundant in-the-wild clips into cleaner training material for generative world models.
-- **中文：** 从原始游戏视频中移除界面、保留底层世界，把大量野外 gameplay 片段转成更干净的生成式世界模型训练材料。
-- **Generation/action task:** UI taxonomy, 96K paired HUD/no-HUD training examples, and a learned cleaning engine; it prepares downstream world-model data rather than training the world model itself.
-- **Evaluation:** 1,079 clips from 303 games and a released 100-synthetic/100-wild benchmark; the paper reports +6.83% VideoReward, AAR 95.36 synthetic/80.05 wild, and 99.8 background preservation.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2608.24680), [official full code](https://github.com/Dongping-Chen/Game2World), [official LoRA models](https://huggingface.co/shuaishuaicdp/Game2World), [official benchmark](https://huggingface.co/datasets/shuaishuaicdp/Game2World-Benchmark), [official HUD-video data](https://huggingface.co/datasets/shuaishuaicdp/hud-video).
-- **Openness:** **Open.** Training, inference, evaluation, two LoRAs, benchmark data, and 17 HUD-video archives were verified on 2026-08-31; this is an artifact-status change after the original 2026-08-29 audit.
-
-## C. Field framing and boundary systems / 领域框架与边界系统（5）
-
-### 29. Position: Interactive Generative Video as Next-Generation Game Engine
-
-- **Year / venue / status:** 2025, arXiv position paper.
-- **EN:** Defines interactive generative video's role in a game-engine stack and proposes an L0–L4 roadmap from passive clips to controllable, persistent worlds.
-- **中文：** 界定交互式生成视频在游戏引擎栈中的位置，并提出从被动片段到可控、持久世界的 L0–L4 路线。
-- **Generates / action conditioning:** no generator is introduced; the paper decomposes future systems into generation, control, memory/state, interaction, and production components.
-- **Evaluation:** conceptual maturity levels and research requirements, not an empirical leaderboard.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2503.17359).
-- **Openness:** **Paper-only by design.** It is included as field framing; there is no claimed model, dataset, code, weight, or evaluator to reproduce.
-
-### 30. GameGen-X — Interactive Open-world Game Video Generation
-
-- **Year / venue / status:** 2025, ICLR 2025, peer-reviewed conference paper.
-- **EN:** Combines open-domain text-to-game-video synthesis with structured instruction/event-conditioned continuation for diverse game scenes.
-- **中文：** 同时支持开放域文本生成游戏视频，以及依据结构化指令/事件继续生成多样游戏场景。
-- **Generates / action conditioning:** text-to-video clips and context-video continuation; InstructNet uses structured events rather than a universal low-level keyboard schema, so it is a boundary system rather than a core low-level-action engine here.
-- **Evaluation:** FID/FVD, text-video alignment, motion/quality/consistency, OGameEval-Gen/OGameEval-Ins, user preference, and instruction/control success.
-- **Official artifacts:** [OpenReview](https://openreview.net/forum?id=8VG8tpPZhe), [arXiv](https://arxiv.org/abs/2411.00769), [project](https://gamegen-x.github.io/), [official repository/OGameData metadata](https://github.com/GameGen-X/GameGen-X).
-- **Openness:** **Partial.** OGameData URL/timestamp/caption metadata are public, but model code/weights and the internally recorded 140K instruction subset are not.
-
-### 31. From Pixels to States — Rethinking Interactive World Models as Game Engines
-
-- **Year / venue / status:** 2026, arXiv perspective/survey and data-engine paper.
-- **EN:** Frames a generative game engine as an action–state–observation loop and audits the field across control, state dynamics, persistence, and real-time generation.
-- **中文：** 用“动作—状态—观察”闭环重新界定生成式游戏引擎，并从控制、状态动力学、持续性与实时生成四方面梳理缺口。
-- **Generates / action conditioning:** no model is proposed; its concrete resource claim is a Black Myth: Wukong collection engine producing 90+ hours of aligned actions, states, observations, and semantics.
-- **Evaluation:** conceptual four-axis comparison, useful for separating responsive-looking pixels from rule/state preservation; no model leaderboard is introduced.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2607.14076).
-- **Openness:** **Closed.** No official repository, downloadable Wukong data, weights, or evaluator were linked by the cutoff.
-
-### 32. Position: Profiling Game Worlds by Transition Complexity
-
-- **Year / venue / status:** 2026, ICML 2026 position paper/poster.
-- **EN:** Argues that game-world datasets and models should report how hard the underlying transition process is before comparing prediction quality.
-- **中文：** 主张在比较游戏世界模型预测质量前，先报告底层状态转移过程本身有多难。
-- **Generates / action conditioning:** no generator is proposed; the Transition Complexity Profile characterizes intrinsic branching, hidden interaction/opponent uncertainty, and temporal/spatial dependency at the declared interface.
-- **Evaluation:** TCP metadata and temporal/spatial probe curves rather than a model score or playing return.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2608.18079), [official ICML record](https://icml.cc/virtual/2026/poster/67074).
-- **Openness:** **Paper-only by design.** The paper provides framing and does not claim a model, dataset package, or evaluator release.
-
-### 33. WorldMind — Decoupled Game World Model for State-Aware NPC Behavior
-
-- **Year / venue / status:** 2026, arXiv preprint.
-- **EN:** Separates state reconstruction, NPC planning, action translation, and visual generation so boss behavior reacts to the generated world's changing state.
-- **中文：** 将状态重建、NPC 决策、动作转换与画面生成分层并闭环连接，使 Boss 行为随生成世界状态变化而反应。
-- **Generates / action conditioning:** about-20-FPS boss-fight video; player input and a state-aware internal NPC planner produce aligned action text for the visual generator. It is a boundary entry because planning is integral, although the displayed output is generated world behavior.
-- **Evaluation:** boss/player state reconstruction, decision sensitivity/validity, pairwise preference, action validity, and tactical sequence fit; BOSS-140K provides internal annotations in the paper.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2608.21439), [project](https://teawhite.cn/WorldMind/), [official release stub](https://github.com/TeaWhiteBro/WorldMind).
-- **Openness:** **Closed.** Code, weights, BOSS-140K, and evaluator remain unavailable; the repository says release materials are being prepared.
-
-## Explicit exclusions and boundary decisions / 明确排除与边界判断
-
-### Excluded because playing or planning is the core objective
-
-- **DIAMOND — Diffusion for World Modeling: Visual Details Matter in Atari** ([paper](https://arxiv.org/abs/2405.12399), [official code](https://github.com/eloialonso/diamond)): its diffusion model produces observations, but the central product is an RL agent and the headline comparison is Atari-100k return.
-- **SimPLe, IRIS, Dreamer / DreamerV2/V3, and related imagination-based RL:** the predictive model is a means to improve policy learning, sample efficiency, or control return; the evaluated product is the policy.
-- **GameWAM — A World Action Model for Video Games** ([paper](https://arxiv.org/abs/2608.26200)): it predicts future observations and executable controls, but its central contribution is a closed-loop gameplay/GUI policy evaluated by task success.
-- **ActSWM and similar planning models:** excluded when action selection or planning success, rather than a human-controllable generated environment, is the main result.
-
-### Excluded because the domain is not specifically game generation
-
-- **Driving:** GAIA-1, DriveDreamer/Drive-WM, Waymo World Model, and related autonomous-driving simulators.
-- **Robotics/embodiment:** UniSim, DreamGen, DreamDojo, Cosmos robot/physical-AI models, and manipulation world models.
-- **General interactive video/world models:** YUME, WorldPlay/HY-World, AlayaWorld, DreamX-World, LingBot-World, ReWorld, ActWorld, and comparable systems may show game-like demos or train partly on gameplay, but their declared scope and principal evaluations span real, stylized, or embodied scenes rather than specifically generating games.
-- **Genie 2 / Genie 3:** relevant DeepMind demonstrations, but at the cutoff they remain announcements without a citable technical paper and reproducible artifacts. The peer-reviewed Genie entry is the defensible paper record.
-
-## Comparison cautions / 横向比较注意事项
-
-1. **New-world creation, existing-game simulation, and learned rendering differ.** Genie/GameFactory can transfer prompts or appearance; GameNGen/MineWorld/MIRA simulate existing titles; Magpie keeps logic in a conventional engine. They should not share one “best game creator” ranking.
-2. **Pixel responsiveness is not game logic.** Keyboard/mouse accuracy may coexist with impossible health, cooldown, collision, or multiplayer state; StatePlay, MASS, Marionette, WorldMind, and PhysEditWorld expose these gaps.
-3. **Reported scores are rarely directly comparable.** Resolution, rollout length, action vocabulary, initial conditions, proprietary games, and judge models differ. GameWorld Score, InterBench, CrossFPS, WildBench, and PlayWorld are separate protocols.
-4. **Open inference is not open training.** Oasis, Matrix-Game, Hunyuan-GameCraft, and WorldCam run from official checkpoints but withhold headline training data or full trainers. MIRA is the reverse case: training/inference and data are open, but an author checkpoint was not found.
-5. **Rights remain separate from artifact access.** YouTube IDs can link-rot; ROMs, AAA footage, Minecraft/Doom assets, UE5 marketplace scenes, and derived WildWorld checkpoints may restrict redistribution or commercial use even when code is public.
