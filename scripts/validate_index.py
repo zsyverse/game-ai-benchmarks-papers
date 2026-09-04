@@ -16,15 +16,15 @@ COLLECTIONS = (
         "docs/en/end-to-end.md",
         "docs/zh-CN/end-to-end.md",
         "research/end-to-end-generation-sources.md",
-        39,
-        (10, 29),
+        34,
+        (8, 26),
     ),
     (
         "docs/en/pcg.md",
         "docs/zh-CN/pcg.md",
         "research/pcg-automated-design-sources.md",
-        89,
-        (13, 76),
+        86,
+        (12, 74),
     ),
     (
         "docs/en/interactive-worlds.md",
@@ -34,23 +34,34 @@ COLLECTIONS = (
         (21, 2),
     ),
 )
-EXPECTED_TOTAL = 151
+EXPECTED_TOTAL = 143
+BANNED_PUBLIC_IDENTITIES = {
+    "arxiv:2310.08067",  # GameGPT: framework-only, no generation experiment
+    "arxiv:2410.01791",  # DreamGarden: zero-player simulation
+    "arxiv:2602.06232",  # RuleSmith: fixed-parameter balancing
+    "arxiv:2602.11103",  # GameDevBench: existing-repository coding tasks
+    "arxiv:2604.25482",  # From World-Gen to Quest-Line: narrative JSON only
+    "arxiv:2607.03525",  # GameEngineBench: existing-repository coding tasks
+    "doi:10.1145/2282338.2282347",  # Game-o-Matic analysis, not method paper
+    "doi:10.1609/aiide.v10i3.12745",  # A Rogue Dream: fixed-game reskin
+    "doi:10.1609/aiide.v2i1.18755",  # incomplete level-pattern prototype
+}
 EXPECTED_SECTION_HEADINGS = {
     "docs/en/end-to-end.md": (
-        "## 1. Generation benchmarks (10)",
-        "## 2. Generation methods (29)",
+        "## 1. Generation benchmarks (8)",
+        "## 2. Generation methods (26)",
     ),
     "docs/zh-CN/end-to-end.md": (
-        "## 1. 生成 Benchmark（10 条）",
-        "## 2. 生成方法（29 条）",
+        "## 1. 生成 Benchmark（8 条）",
+        "## 2. 生成方法（26 条）",
     ),
     "docs/en/pcg.md": (
-        "## 1. Complete-game, rule, and mechanic generation methods (13)",
-        "## 2. Level/playable-content methods and generation benchmarks (76)",
+        "## 1. Complete-game, rule, and mechanic generation methods (12)",
+        "## 2. Level/playable-content methods and generation benchmarks (74)",
     ),
     "docs/zh-CN/pcg.md": (
-        "## 1. 完整游戏、规则与机制生成方法（13 条）",
-        "## 2. 关卡/可玩内容生成方法与 Benchmark（76 条）",
+        "## 1. 完整游戏、规则与机制生成方法（12 条）",
+        "## 2. 关卡/可玩内容生成方法与 Benchmark（74 条）",
     ),
     "docs/en/interactive-worlds.md": (
         "## 1. Interactive-world generation methods (21)",
@@ -372,6 +383,12 @@ def validate_canonical_uniqueness(
             seen_titles[normalized_title] = (path, line_number, title)
 
         for identity in paper_identity_keys(cells[2]):
+            if identity in BANNED_PUBLIC_IDENTITIES:
+                fail(
+                    f"out-of-scope paper identity reintroduced: {identity} at "
+                    f"{path}:{line_number} '{title}'",
+                    errors,
+                )
             previous = seen_identities.get(identity)
             if previous:
                 fail(

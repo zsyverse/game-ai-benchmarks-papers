@@ -16,10 +16,10 @@ The dossiers correspond one-to-one with accepted public records and contain no e
 
 ## Strict scope audit / 严格范围审计
 
-- [Method/benchmark-only audit of all 198 pre-cleanup rows](strict-method-benchmark-scope-audit.md)
+- [Two-pass method/benchmark-only audit: 198 candidates to 143 canonical records](strict-method-benchmark-scope-audit.md)
 
-The audit applies one rule to every former row: keep only a direct generation method or a formal benchmark of an eligible generation task, then merge duplicate paper records globally.
+The audit applies one rule to every former row, then rechecks every survivor: keep only a direct generation method or a formal benchmark of an eligible generation task, and merge duplicate paper records globally.
 
-该审计对清理前全部条目使用同一规则：只保留直接生成方法或合格生成任务的正式 benchmark，并在全仓库合并重复论文记录。
+该审计先对清理前全部条目使用同一规则，再逐篇复核所有保留项：只保留直接生成方法或合格生成任务的正式 benchmark，并在全仓库合并重复论文记录。
 
 Last full verification / 最近一次完整核验：**2026-09-04**.

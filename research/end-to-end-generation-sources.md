@@ -2,9 +2,9 @@
 
 > Research cutoff / 检索截止: **2026-09-04 (Asia/Shanghai)**.
 
-This dossier contains exactly the **39 canonical records** in the public end-to-end index: 10 formal generation benchmarks and 29 direct generation methods.
+This dossier contains exactly the **34 canonical records** in the public end-to-end index: eight formal generation benchmarks and 26 direct generation methods.
 
-本底稿与公开端到端索引严格一一对应，共 **39 条 canonical 记录**：10 条正式生成 benchmark 与 29 条直接生成方法。
+本底稿与公开端到端索引严格一一对应，共 **34 条 canonical 记录**：8 条正式生成 benchmark 与 26 条直接生成方法。
 
 Every numbered dossier record corresponds to the same public ID. Only direct generation methods and formal generation benchmarks appear here; rejected candidates are documented solely in the strict audit.
 
@@ -23,18 +23,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 用三模态执行证据评测大模型从需求生成完整 Pygame 游戏的能力；论文报告 2,219 条，当前发布数据为 2,218 行。
 - **English:** *V-GameGym evaluates requirement-to-runnable-Pygame generation with code, screenshot, and gameplay-video evidence; the paper reports 2,219 samples and the release contains 2,218 rows.*
 
-### 2. GameDevBench
-
-- **Year / venue:** 2026, ICML 2026 (as stated by the official repository).
-- **Input → output:** 333 repository-editing tasks from web/video tutorials → modifications to Godot 4.4.1 projects across gameplay logic, UI, 2D/3D graphics and animation.
-- **Evaluation:** deterministic Godot behavioral tests; primary reporting is pass@1 / task success.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2602.11103), [project](https://waynechi.com/gamedevbench), [tasks, runner and results](https://github.com/waynchi/gamedevbench).
-- **Availability:** **Open.** Task archives, validator, results and fixed engine version are public.
-- **纳入理由 / Inclusion:** 是真实游戏工程中的 coding-agent benchmark；目标是实现/修改游戏，不是游玩得分。
-- **中文：** 用确定性 Godot 测试衡量 coding agent 能否完成真实游戏工程任务。
-- **English:** *GameDevBench tests coding agents on 333 real Godot repository tasks with deterministic runtime checks.*
-
-### 3. GameCraft-Bench
+### 2. GameCraft-Bench
 
 - **Year / status:** 2026, arXiv preprint.
 - **Input → output:** 140 natural-language briefs across 15 game families → complete Godot games plus replayable input traces.
@@ -45,18 +34,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 要求 agent 同时交付完整 Godot 游戏和可回放操作轨迹，用真实运行验证可玩性。
 - **English:** *GameCraft-Bench evaluates end-to-end Godot game creation by replaying agent-submitted input traces before scoring the result.*
 
-### 4. GameEngineBench
-
-- **Year / status:** 2026, arXiv preprint.
-- **Input → output:** 110 scoped native-C++ tasks in nine real Unreal Engine 5 repositories → engine-compatible code changes spanning gameplay, networking, animation, UI, persistence, XR and rendering.
-- **Evaluation:** pass@1 on hidden Unreal automation behavioral tests; compilation alone is insufficient.
-- **Official artifacts/timeline:** [paper](https://arxiv.org/abs/2607.03525), [paper-linked repository](https://github.com/Nitrode-Research/GameEngineBench), [task-tree URL](https://github.com/Nitrode-Research/GameEngineBench/tree/main/tasks_unreal), [results-tree URL](https://github.com/Nitrode-Research/GameEngineBench/tree/main/results). On Aug 29 the repository exposed 15 `ue_task_*` packages and no complete result bundle; on Aug 31 the repository and both tree URLs returned 404 through the Web, GitHub API and repository search.
-- **Availability:** **Closed — official repository unavailable at the cutoff.** The 15/110 partial snapshot is retained as a dated observation, not presented as an artifact that remained downloadable on Aug 31.
-- **纳入理由 / Inclusion:** 衡量 agent 对真实商业引擎 runtime contracts 的实现能力，不是普通算法题。
-- **中文：** 在真实 UE5 C++ 仓库中用运行时行为测试检验游戏引擎 coding agent。
-- **English:** *GameEngineBench measures coding agents on real Unreal C++ repositories using runtime behavioral tests rather than build success alone.*
-
-### 5. GameXpert-Bench
+### 3. GameXpert-Bench
 
 - **Year / status:** 2026, arXiv preprint.
 - **Input → output:** three lifecycle tracks: GameGen (97 from-scratch tasks, 11 genres), GameFix (100 tasks built from 50 human-verified levels with 19–27 injected bugs each), and GameOpt (17 six-round chains, 102 requests).
@@ -67,7 +45,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 把完整游戏生成、密集缺陷修复和多轮体验优化放进同一个生命周期基准。
 - **English:** *GameXpert-Bench spans from-scratch generation, dense game repair, and iterative optimization, but its benchmark artifacts are not yet released.*
 
-### 6. JamBench / JamSet (JAMER)
+### 4. JamBench / JamSet (JAMER)
 
 - **Year / status:** 2026, arXiv preprint.
 - **Input → output:** project-level Godot data from game-jam repositories; the paper reports 8,133 verified projects, with 300 in JamBench and 7,833 in JamSet, supporting theme-driven creation and function/script/full-script completion.
@@ -78,7 +56,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 用真实 game-jam Godot 工程构建项目级生成与补全基准，并比较运行时行为。
 - **English:** *JAMER derives project-level Godot generation and completion tasks from game-jam repositories, with structural and behavioral scoring.*
 
-### 7. OpenGame / OpenGame-Bench — Open Agentic Coding for Games
+### 5. OpenGame / OpenGame-Bench — Open Agentic Coding for Games
 
 - **Year / status:** 2026, introduced in the OpenGame arXiv report.
 - **Input → output:** 150 natural-language prompts in five web-game genres → complete browser games from empty workspaces; three random seeds per task.
@@ -89,7 +67,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 在真实浏览器中同时评测生成游戏的构建健康、视觉可用性与需求对齐。
 - **English:** *OpenGame-Bench scores browser-game agents on build health, visual usability, and intent alignment, though its full task/evaluator release is pending.*
 
-### 8. Play2Code / PlaytestArena — GUI Agents for Continual Game Generation
+### 6. Play2Code / PlaytestArena — GUI Agents for Continual Game Generation
 
 - **Year / status:** 2026, introduced in *GUI Agents for Continual Game Generation* (arXiv preprint).
 - **Input → output:** 200 browser-game generation prompts across eight genres plus observable gameplay rubrics → generated games and GUI-agent playtest verdicts.
@@ -100,7 +78,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 用 GUI 代理实际游玩 200 个浏览器游戏任务，以可观察 rubric 评测并驱动持续修复。
 - **English:** *PlaytestArena evaluates 200 browser-game tasks through real GUI play, and its feedback powers iterative code repair in Play2Code.*
 
-### 9. AutoUE / PlayGen-20 — Automated Generation of 3D Games in Unreal Engine via Multi-Agent Systems
+### 7. AutoUE / PlayGen-20 — Automated Generation of 3D Games in Unreal Engine via Multi-Agent Systems
 
 - **Year / venue:** 2026, Findings of ACL 2026 (acceptance stated in the paper's arXiv record).
 - **Input → output:** 20 natural-language 3D-game briefs (5 easy, 7 medium, 8 hard) → complete Unreal Engine scenes, PCG graphs, C++ gameplay/interaction modules and runnable games.
@@ -111,7 +89,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 在 UE5 中端到端生成场景、C++ 玩法代码和交互对象，并用运行时证据评测。
 - **English:** *PlayGen-20 evaluates natural-language-to-complete-UE5 generation, including scenes, C++ gameplay code, interactions, and runtime playtests.*
 
-### 10. WebGameBench
+### 8. WebGameBench
 
 - **Priority / year:** P0; 2026, arXiv preprint.
 - **Input → output:** 111 frozen Structured WebGame Specifications → source artifacts that must build, serve and run as browser-accessible games; the paper evaluates 12 coding agents under 14 configurations.
@@ -124,7 +102,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 
 ## Generation methods / 生成方法
 
-### 11. Game Generation via Large Language Models
+### 9. Game Generation via Large Language Models
 
 - **Year / venue:** 2024, IEEE Conference on Games (CoG 2024).
 - **Input → output:** prompts with different context combinations → Video Game Description Language (VGDL) rules and levels generated together.
@@ -135,7 +113,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 用 LLM 一次生成 VGDL 游戏规则和配套关卡，而非只为固定规则生成地图。
 - **English:** *This work uses LLMs to generate both VGDL game rules and levels instead of levels for a fixed game.*
 
-### 12. Grammar-Based Game Description Generation Using Large Language Models (GGDG)
+### 10. Grammar-Based Game Description Generation Using Large Language Models (GGDG)
 
 - **Year / venue:** 2024, IEEE Transactions on Games.
 - **Input → output:** natural-language game intent plus a dynamically extracted grammar → valid Ludii game-description programs.
@@ -146,7 +124,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 通过动态语法约束把自然语言转成可执行、语法正确的 Ludii 游戏程序。
 - **English:** *GGDG constrains LLMs with extracted grammars to produce executable Ludii game descriptions from natural-language intent.*
 
-### 13. GAVEL — Generating Games via Evolution and Language Models
+### 11. GAVEL — Generating Games via Evolution and Language Models
 
 - **Year / venue:** 2024, NeurIPS 2024.
 - **Input → output:** Ludii descriptions and fill-in-the-middle mutations → novel executable board-game programs through MAP-Elites quality-diversity search.
@@ -157,18 +135,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 将代码语言模型和质量多样性搜索结合，进化出可执行的新 Ludii 棋盘游戏。
 - **English:** *GAVEL evolves novel executable Ludii board games by combining a code model with MAP-Elites quality-diversity search.*
 
-### 14. GameGPT — Multi-agent Collaborative Framework for Game Development
-
-- **Year / status:** 2023, revised 2025, arXiv preprint.
-- **Input → output:** high-level game-development request → planned tasks and implementation artifacts through planning, task-identification and coding agents with layered lexicons.
-- **Evaluation:** framework and case studies; no standardized released task/evaluator suite.
-- **Official source:** [paper](https://arxiv.org/abs/2310.08067).
-- **Availability:** **Closed.** No author implementation was verified; unrelated repositories with the same name are not official artifacts.
-- **纳入理由 / Inclusion:** 早期明确把多智能体软件开发流程专门用于游戏工程。
-- **中文：** 用分工协作的 LLM agents 规划并实现游戏工程，同时针对幻觉和重复工作设计约束。
-- **English:** *GameGPT applies a role-specialized multi-agent workflow to game planning and implementation while targeting hallucination and redundancy.*
-
-### 15. ScriptDoctor — Automatic Generation of PuzzleScript Games via LLMs and Tree Search
+### 12. ScriptDoctor — Automatic Generation of PuzzleScript Games via LLMs and Tree Search
 
 - **Year / venue:** 2025, IEEE CoG 2025.
 - **Input → output:** textual generation prompts and prior failure feedback → complete PuzzleScript games repaired over as many as ten trials using compiler, control-flow-graph and BFS-solver feedback.
@@ -179,7 +146,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** LLM 生成 PuzzleScript 后，根据编译、控制流和求解失败反复自修，直到获得可解游戏。
 - **English:** *ScriptDoctor repeatedly repairs generated PuzzleScript games using compiler, CFG, and BFS-solver feedback.*
 
-### 16. Cardiverse — Harnessing LLMs for Novel Card Game Prototyping
+### 13. Cardiverse — Harnessing LLMs for Novel Card Game Prototyping
 
 - **Year / venue:** 2025, EMNLP 2025.
 - **Input → output:** graph-indexed mechanic variations → executable card-game code and prototypes; gameplay records are used to validate implementations.
@@ -190,7 +157,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 从机制图谱提出新卡牌规则，生成可执行代码，再用运行记录和锦标赛验证原型。
 - **English:** *Cardiverse proposes novel card mechanics, generates executable prototypes, and validates them with gameplay records and tournaments.*
 
-### 17. A Text-to-Game Engine for UGC-Based Role-Playing Games (Zagii)
+### 14. A Text-to-Game Engine for UGC-Based Role-Playing Games (Zagii)
 
 - **Year / status:** 2024, revised 2025, arXiv preprint.
 - **Input → output:** simple text → RPG narrative, characters, environment, visual/audio assets and game mechanics generated at runtime.
@@ -201,7 +168,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 从简短文本实时生成 RPG 的故事、角色、场景、视听资产和玩法机制。
 - **English:** *Zagii turns short text into runtime-generated RPG narratives, characters, environments, assets, and mechanics.*
 
-### 18. CreativeGame — Toward Mechanic-Aware Creative Game Generation
+### 15. CreativeGame — Toward Mechanic-Aware Creative Game Generation
 
 - **Year / status:** 2026, arXiv report/preprint; no accepted venue is claimed here.
 - **Input → output:** prompt or source-game concept plus parent version and lineage memory → a new HTML5 game, explicit mechanic plan/delta and version trace.
@@ -212,7 +179,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 通过机制增量规划、运行时验证和谱系记忆，让 HTML5 游戏跨版本持续演化。
 - **English:** *CreativeGame evolves HTML5 games across versions by planning mechanic deltas, validating runtime behavior, and reusing lineage memory.*
 
-### 19. UniGen — 90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development
+### 16. UniGen — 90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development
 
 - **Year / status:** 2025, arXiv preprint; the PDF labels an ICSE 2026 manuscript but contains placeholder DOI/bibliographic fields, so no venue acceptance is asserted here.
 - **Input → output:** natural-language requirement → Unity blueprint, C# runtime/editor scripts, bound components, constructed scene and runnable 3D prototype via planning, generation, automation and debugging agents.
@@ -223,7 +190,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 四类 agents 把文字需求转成已装配、可运行的 Unity 3D 游戏原型。
 - **English:** *UniGen converts a natural-language brief into a runnable Unity prototype by generating C# code and automating scene/component assembly.*
 
-### 20. Boardwalk — Towards a Framework for Creating Board Games with LLMs
+### 17. Boardwalk — Towards a Framework for Creating Board Games with LLMs
 
 - **Year / venue:** 2025, SBGames 2025.
 - **Input → output:** anonymized natural-language rules for 12 board games → Python implementations, both free-form and against the Boardwalk API; models also adapt free-form code to the API.
@@ -234,7 +201,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 要求 LLM 把匿名化桌游规则实现成可玩 Python 游戏，并检查规则一致性。
 - **English:** *Boardwalk tests whether LLMs can implement playable Python board games from anonymized natural-language rules.*
 
-### 21. Instruction-Driven Game Engines on Large Language Models (IDGE)
+### 18. Instruction-Driven Game Engines on Large Language Models (IDGE)
 
 - **Priority / year:** P0; 2024, with the later [Poker case study](https://arxiv.org/abs/2410.13441) treated as the same family.
 - **Input → output:** free-form poker rules, current state and player actions → autoregressive next states for customizable poker variants.
@@ -245,7 +212,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** IDGE 从自然语言扑克规则和动作生成下一游戏状态，但官方仓库目前只给训练数据压缩包，不能复现引擎。
 - **English:** *IDGE executes natural-language poker rules through next-state generation, but its official repository releases only a training-data archive rather than the engine pipeline.*
 
-### 22. Word2World
+### 19. Word2World
 
 - **Priority / year:** P0; 2024, arXiv preprint.
 - **Input → output:** story prompt → story, narrative objectives, tile placement and a runnable 2D tile game through iterative feedback.
@@ -256,7 +223,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Word2World 把故事分步变成叙事目标、连贯 tile 世界和可运行 2D 游戏，并用 LLM 与路径检查迭代修正。
 - **English:** *Word2World turns stories into coherent tile worlds and playable 2D games through LLM feedback and conventional path checks.*
 
-### 23. Mechanic Maker — Accessible Game Development Via Symbolic Learning Program Synthesis
+### 20. Mechanic Maker — Accessible Game Development Via Symbolic Learning Program Synthesis
 
 - **Priority / year:** P0; 2024, AIIDE 2024.
 - **Input → output:** continuous valid example-frame sequences supplied by a user → symbolically synthesized rules that reproduce the demonstrated state transitions.
@@ -267,7 +234,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Mechanic Maker 让用户用状态帧示例而非代码表达机制，再由符号程序合成系统生成规则。
 - **English:** *Mechanic Maker synthesizes executable mechanics from user-demonstrated frame transitions, lowering the programming barrier to game design.*
 
-### 24. Grammar and Gameplay-Aligned RL for Game Description Generation (RLGDG)
+### 21. Grammar and Gameplay-Aligned RL for Game Description Generation (RLGDG)
 
 - **Priority / year:** P0; 2025, IEEE Conference on Games 2025.
 - **Input → output:** natural-language game descriptions → executable Ludii programs via SFT followed by GRPO.
@@ -278,7 +245,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** RLGDG 用语法奖励和玩法概念奖励后训练 LLM，使自然语言到 Ludii 游戏描述同时更可编译、更忠于玩法。
 - **English:** *RLGDG combines SFT and grammar/gameplay rewards to generate Ludii programs that are both executable and concept-faithful.*
 
-### 25. STORY2GAME
+### 22. STORY2GAME
 
 - **Priority / year:** P0; 2025, arXiv preprint.
 - **Input → output:** generated story → populated world state, action preconditions/effects and engine action code; player-requested unseen actions can trigger new state attributes and revisions of prior actions.
@@ -289,7 +256,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** STORY2GAME 从故事自动建立世界状态与动作代码，还能在玩家提出新动作时动态扩展引擎。
 - **English:** *STORY2GAME generates an interactive-fiction world and executable action logic, then extends both when players request unseen actions.*
 
-### 26. Multi-Agent Game Generation and Evaluation via Audio-Visual Recordings
+### 23. Multi-Agent Game Generation and Evaluation via Audio-Visual Recordings
 
 - **Priority / year:** P0; 2025, arXiv preprint.
 - **Input → output:** a content description and multimedia asset bank → multiple JavaScript games/animations, audio-visual recordings, relative evaluations and iteratively revised candidates.
@@ -300,7 +267,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** AVR-Agent 生成多版 JavaScript 游戏，再让全模态 evaluator 看带声音的实际录屏选优并反馈迭代。
 - **English:** *AVR-Agent generates JavaScript games and uses omni-modal comparisons of recorded gameplay audio/video to select and revise candidates.*
 
-### 27. Automated Unity Game Template Generation from GDDs
+### 24. Automated Unity Game Template Generation from GDDs
 
 - **Priority / year:** P0; 2025, arXiv preprint.
 - **Input → output:** Game Design Documents → extracted specifications and Unity-compatible C# templates implementing core mechanics, systems and architecture.
@@ -311,7 +278,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 该框架把 GDD 解析成结构化规格并生成 Unity C# 模板；两套数据公开，但模型匿名访问为 401，整套生成器也未发布。
 - **English:** *The work maps GDDs to Unity C# templates; two datasets are public, while the tuned-model endpoint rejects anonymous access and the generator is unreleased.*
 
-### 28. Real-Time World Crafting
+### 25. Real-Time World Crafting
 
 - **Priority / year:** P0; 2025, Wordplay @ EMNLP 2025.
 - **Input → output:** natural-language behavior request → a constrained DSL that safely configures a custom ECS at runtime for spells or cellular automata.
@@ -322,7 +289,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Real-Time World Crafting 用受限 DSL 和 ECS 把自然语言安全地变成运行时法术或元胞行为。
 - **English:** *Real-Time World Crafting compiles natural language into a constrained DSL that safely creates new ECS game behaviors at runtime.*
 
-### 29. Mortar — Evolving Mechanics for Automatic Game Design
+### 26. Mortar — Evolving Mechanics for Automatic Game Design
 
 - **Priority / year:** P0; 2026, arXiv preprint.
 - **Input → output:** archived mechanics plus LLM mutations → a quality-diversity archive whose candidates are composed by tree search into complete games.
@@ -333,18 +300,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Mortar 用 LLM 与质量多样性搜索演化机制，再把机制组合成完整游戏，以技能排序和人评检验。
 - **English:** *Mortar evolves mechanics with an LLM/QD loop and evaluates them inside complete games through skill ordering and human feedback.*
 
-### 30. RuleSmith
-
-- **Priority / year:** P0; 2026, arXiv preprint.
-- **Input → output:** CivMini's multidimensional rule space and self-play traces → interpretable parameter configurations that reduce faction win-rate disparities.
-- **Evaluation:** Bayesian-optimization convergence, acquisition-based sample allocation, balance metrics and evaluation of a pre-optimized configuration.
-- **Official artifacts:** [paper](https://arxiv.org/abs/2602.06232), [project](https://adonis-galaxy.github.io/RuleSmith-website/), [code](https://github.com/Adonis-galaxy/RuleSmith).
-- **Availability:** **Open.** MIT code includes CivMini, LLM agents, self-play, optimization/evaluation scripts, visualization and an optimized `theta.json` example.
-- **纳入理由 / Inclusion:** multi-agent play 是规则设计 evaluator；核心输出是可直接应用的平衡规则配置。
-- **中文：** RuleSmith 用 LLM 自博弈估计平衡度，再以贝叶斯优化寻找可解释、可落地的 CivMini 规则参数。
-- **English:** *RuleSmith uses LLM self-play as a design evaluator and Bayesian optimization to emit directly applicable balanced-rule parameters.*
-
-### 31. GamED.AI
+### 27. GamED.AI
 
 - **Priority / year:** P0; 2026, ACL 2026 System Demonstrations.
 - **Input → output:** instructor-provided educational question → game concept, mechanic contract, scenes/content/assets and an assembled playable web game through six hierarchical phases.
@@ -355,7 +311,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** GamED.AI 用分阶段 agents、机制契约和确定性质量门，在一分钟内把问题生成网页教育游戏。
 - **English:** *GamED.AI turns educational questions into playable web games through hierarchical agents, mechanic contracts and deterministic quality gates.*
 
-### 32. Distilling Game Code World Model Generation into Lightweight LLMs
+### 28. Distilling Game Code World Model Generation into Lightweight LLMs
 
 - **Priority / year:** P0; 2026, arXiv preprint.
 - **Input → output:** natural-language rules for 30 perfect/imperfect-information games → executable Python GameCWMs implementing legal actions, transitions, observations and rewards.
@@ -366,7 +322,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 该工作把 30 款游戏的自然语言规则蒸馏进小模型，使其生成可执行 Python 状态转移环境。
 - **English:** *This work distills natural-language-to-executable GameCWM generation into a 3B model and releases the 30-game data and verifier pipeline.*
 
-### 33. The Verifier is the Curriculum
+### 29. The Verifier is the Curriculum
 
 - **Priority / year:** P0; 2026, arXiv preprint.
 - **Input → output:** GameCraft briefs and strict-launch-filtered candidates → successive LoRA-distilled 14B generators for complete Godot projects.
@@ -377,7 +333,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 该方法只用 Godot 严格启动信号做自蒸馏，显著提高未见游戏族的干净启动率，但方法工件尚未公开。
 - **English:** *Strict-launch-gated self-distillation improves out-of-family Godot generation, but the trained adapters, data and method code are unreleased.*
 
-### 34. MAGIC
+### 30. MAGIC
 
 - **Priority / year:** P0; 2026, arXiv preprint.
 - **Input → output:** one natural-language prompt → transition-aware IR, furnished scenes, portal scripts and one runnable multi-scene Unity project.
@@ -388,7 +344,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** MAGIC 从一个提示生成连通多场景 Unity 工程，并让 evaluator 实际穿越 portal；代码公开但 100-case 基准未直接下载。
 - **English:** *MAGIC builds runnable connected multi-scene Unity projects and executes portal transitions, while its full 100-case benchmark remains request-only.*
 
-### 35. General Video Game Rule Generation
+### 31. General Video Game Rule Generation
 
 - **Priority / year:** P0; 2019, arXiv/competition-framework paper.
 - **Input → output:** a fixed game level → VGDL rules via random, constructive or search-based generators in the GVGAI rule-generation track.
@@ -399,7 +355,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** 该工作给定关卡生成 VGDL 规则，并公开 random、constructive、search 三种规则生成器。
 - **English:** *General Video Game Rule Generation defines a level-to-VGDL-rule task and releases the exact random, constructive and search generators.*
 
-### 36. Mechanic Maker 2.0
+### 32. Mechanic Maker 2.0
 
 - **Priority / year:** P0; 2023, AIIDE 2023.
 - **Input → output:** an open Unity automatic-game-design environment → generated platform-game rules evaluated by learned RL or static A* player approximators.
@@ -410,7 +366,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Mechanic Maker 2.0 重建开放 Unity 规则生成框架，并比较 RL 与 A* 评价器如何改变生成规则分布。
 - **English:** *Mechanic Maker 2.0 releases a Unity rule generator and studies how learned RL versus A* evaluators shape its generated mechanics.*
 
-### 37. Open Role-Playing with Delta-Engines
+### 33. Open Role-Playing with Delta-Engines
 
 - **Priority / year:** P1; 2024, arXiv preprint.
 - **Input → output:** a fixed base engine and natural-language growth choices → incremental role-code deltas produced by an LLM neural proxy.
@@ -421,18 +377,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文：** Delta-Engine 在固定 base engine 上按玩家语言逐步添加角色代码，实现可扩展的运行时机制共创。
 - **English:** *Delta-Engine incrementally adds role code and mechanics from natural-language growth choices within the released Free Pokémon case study.*
 
-### 38. DreamGarden — A Designer Assistant for Growing Games from a Single Prompt
-
-- **Year / venue:** 2025, ACM CHI 2025.
-- **Input → output:** one high-level dream/memory/idea → a hierarchical plan and implemented Unreal Engine game environment; designers can seed, prune and give feedback.
-- **Evaluation:** HCI system analysis and user study rather than an automatic coding benchmark.
-- **Official sources:** [paper](https://arxiv.org/abs/2410.01791), [ACM DOI](https://doi.org/10.1145/3706598.3714233).
-- **Availability:** **Closed.** No complete official Unreal system, fixed tasks or evaluator release was verified.
-- **纳入理由 / Inclusion:** 直接研究单提示到 Unreal 游戏环境的规划、实现与人机共创工作流。
-- **中文：** 把一个高层创意拆成层级计划，并由专门模块在 Unreal 中逐步长成游戏环境。
-- **English:** *DreamGarden decomposes one high-level prompt into a hierarchical plan whose modules grow an Unreal game environment with designer feedback.*
-
-### 39. Game Development as Human–LLM Interaction (ChatGE)
+### 34. Game Development as Human–LLM Interaction (ChatGE)
 
 - **Year / venue:** 2025, ACL 2025 Long Paper.
 - **Input → output:** multi-turn designer conversation → code segments progressively assembled into a complete `CustomGame` and executed for play, demonstrated on poker-family games.

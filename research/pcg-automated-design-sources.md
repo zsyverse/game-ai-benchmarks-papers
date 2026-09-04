@@ -2,9 +2,9 @@
 
 > Research cutoff / 检索截止: **2026-09-04 (Asia/Shanghai)**.
 
-This dossier contains exactly the **89 canonical records** in the public PCG index: 13 complete-game/rule/mechanic methods and 76 playable-content methods or formal generation benchmarks.
+This dossier contains exactly the **86 canonical records** in the public PCG index: 12 complete-game/rule/mechanic methods and 74 playable-content methods or formal generation benchmarks.
 
-本底稿与公开 PCG 索引严格一一对应，共 **89 条 canonical 记录**：13 条完整游戏/规则/机制方法，以及 76 条可玩内容方法或正式生成 benchmark。
+本底稿与公开 PCG 索引严格一一对应，共 **86 条 canonical 记录**：12 条完整游戏/规则/机制方法，以及 74 条可玩内容方法或正式生成 benchmark。
 
 Every numbered dossier record corresponds to the same public ID. Only direct generation methods and formal generation benchmarks appear here; rejected candidates are documented solely in the strict audit.
 
@@ -92,17 +92,17 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [IEEE DOI](https://doi.org/10.1109/CIG.2011.6032019)
 - **Open status:** **Closed.** No complete official release of this historical ANGELINA version was located.
 
-### 8. The Micro-Rhetorics of Game-o-Matic
+### 8. Game-O-Matic: Generating Videogames That Represent Ideas
 
-- **Year / venue:** 2012, Foundations of Digital Games (FDG).
+- **Year / venue:** 2012, Third Workshop on Procedural Content Generation in Games.
 - **Scope:** `full-game`
 - **Generated content:** small playable arcade games intended to express relationships between real-world concepts.
 - **Method:** Game-o-Matic maps a user-authored concept/relation graph to game-mechanic patterns, entities, rules, and presentation choices.
-- **Evaluation:** close readings and generated examples assess whether the resulting interaction communicates the intended idea; there is no common automatic score.
+- **Evaluation:** generated examples assess whether the resulting interaction communicates the intended idea; there is no common automatic score.
 - **中文说明:** Game-o-Matic 从概念关系图直接装配可玩的表达性小游戏，目标是让机制本身“表达观点”。
 - **English summary:** Game-o-Matic turns conceptual relationship graphs into small playable, rhetorically expressive games.
-- **Primary sources:** [ACM DOI](https://doi.org/10.1145/2282338.2282347)
-- **Open status:** **Partial.** Primary paper and project evidence are public, but a maintained end-to-end generator/evaluator is not.
+- **Primary sources:** [ACM DOI](https://doi.org/10.1145/2538528.2538537)
+- **Open status:** **Closed.** No official maintained end-to-end generator, source, or evaluator was verified.
 
 ### 9. Mechanic Miner: Reflection-Driven Game Mechanic Discovery and Level Design
 
@@ -128,19 +128,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [AAAI proceedings](https://doi.org/10.1609/aaai.v28i1.8788)
 - **Open status:** **Closed.** The evaluation is documented, but no official complete code/data package was located.
 
-### 11. A Rogue Dream: Automatically Generating Meaningful Content for Games
-
-- **Year / venue:** 2014, AIIDE.
-- **Scope:** `full-game`
-- **Generated content:** complete small games whose mechanics, content, and framing are derived from topical source material.
-- **Method:** ANGELINA selects concepts from news/current-affairs input, searches game designs, and assembles playable artifacts around a chosen theme.
-- **Evaluation:** generated games are presented as creative case studies and assessed qualitatively rather than through a reusable benchmark.
-- **中文说明:** 这一代 ANGELINA 会从现实主题出发自动选择概念、做机制并产出带意义表达的完整小游戏。
-- **English summary:** ANGELINA converts topical source material into themed, playable games through autonomous design search.
-- **Primary sources:** [AIIDE proceedings](https://doi.org/10.1609/aiide.v10i3.12745)
-- **Open status:** **Closed.** Generated examples are documented, but the complete system is not released as a reproducible package.
-
-### 12. Automated Game Design via Conceptual Expansion
+### 11. Automated Game Design via Conceptual Expansion
 
 - **Year / venue:** *Automated Game Design via Conceptual Expansion*, AIIDE 2018; journal expansion *Conceptual Game Expansion*, registered/online in 2021 and formally published in IEEE Transactions on Games 14(1), 2022.
 - **Scope:** `full-game`
@@ -152,7 +140,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [AIIDE paper](https://doi.org/10.1609/aiide.v14i1.13022), [arXiv](https://arxiv.org/abs/1809.02232), [journal article](https://doi.org/10.1109/TG.2021.3060005)
 - **Open status:** **Closed.** No official end-to-end artifact package was located.
 
-### 13. Puck: A Slow and Personal Automated Game Designer
+### 12. Puck: A Slow and Personal Automated Game Designer
 
 - **Year / venue:** 2022, AIIDE.
 - **Scope:** `full-game`
@@ -166,7 +154,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 
 ## Playable-content methods and benchmarks / 可玩内容方法与 Benchmark
 
-### 14. The Procedural Content Generation Benchmark
+### 13. The Procedural Content Generation Benchmark
 
 - **Year / venue:** 2025, FDG.
 - **Scope:** `levels`
@@ -178,7 +166,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [paper](https://arxiv.org/abs/2503.21474), [ACM DOI](https://doi.org/10.1145/3723498.3723794), [official framework](https://github.com/amidos2006/pcg_benchmark), [official experiments](https://github.com/amidos2006/benchmark_experiments)
 - **Open status:** **Open.** MIT-licensed problems, evaluator, baselines, and experiments are public.
 
-### 15. The 2010 Mario AI Championship: Level Generation Track
+### 14. The 2010 Mario AI Championship: Level Generation Track
 
 - **Year / venue:** 2011, IEEE Transactions on Computational Intelligence and AI in Games.
 - **Scope:** `levels`
@@ -190,7 +178,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [IEEE DOI](https://doi.org/10.1109/TCIAIG.2011.2166267)
 - **Open status:** **Partial.** The protocol and results are primary-source documented, but the original full competition service/submissions are not maintained as a turnkey package.
 
-### 16. General Video Game AI: A Multitrack Framework for Evaluating Agents, Games, and Content Generation Algorithms
+### 15. General Video Game AI: A Multitrack Framework for Evaluating Agents, Games, and Content Generation Algorithms
 
 - **Year / venue:** 2019, IEEE Transactions on Games.
 - **Scope:** `levels` benchmark; only the formally defined generation track is represented by this record.
@@ -202,7 +190,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [IEEE DOI](https://doi.org/10.1109/TG.2019.2901021), [2016 level-generation-track precursor](https://doi.org/10.1145/2908812.2908920), [official framework](https://github.com/GAIGResearch/GVGAI).
 - **Open status:** **Open.** The engine, sample games, and level-generation interfaces are publicly maintained. The playing-agent tracks remain excluded.
 
-### 17. Launchpad: A Rhythm-Based Level Generator for 2-D Platformers
+### 16. Launchpad: A Rhythm-Based Level Generator for 2-D Platformers
 
 - **Year / venue:** online 2010; IEEE Transactions on Computational Intelligence and AI in Games 3(1), 2011. The shorter precursor appeared at FDG 2009.
 - **Scope and task/method:** `levels`; a two-tier grammar first generates player-action rhythms and then geometry, joining rhythm groups into parameter-controlled complete 2-D platform levels that are playable by construction.
@@ -213,18 +201,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Launchpad 用节奏语法和几何语法自动装配保证可玩的完整平台关卡，并以 10,000 个样本分析生成空间；遗留 demo 尚在，但完整生成器源码缺失。
 - **English summary:** Launchpad generates guaranteed-playable platform levels from action rhythms and evaluates the generator's expressive range rather than a player's score.
 
-### 18. Procedural Level Design for Platform Games
-
-- **Year / venue:** 2006, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE).
-- **Scope and task/method:** `levels`; proposes a four-layer component/pattern/cell/structure representation, physics-aware difficulty estimation, and hill climbing toward requested difficulty for 2-D platform levels.
-- **Evaluation:** demonstrates a working pattern builder and example difficulty calculations; the paper explicitly states that the complete cell-and-structure architecture had not yet been implemented.
-- **Primary sources:** [AIIDE DOI and proceedings record](https://doi.org/10.1609/aiide.v2i1.18755).
-- **Open status:** **Closed.** No official implementation, generated-level corpus, or fixed evaluator package was verified.
-- **Scope decision:** it is retained as a foundational generator prototype with its incomplete implementation stated prominently, rather than represented as a finished benchmark.
-- **中文说明:** 论文提出平台关的四层生成结构与物理感知难度搜索，但当时只有 pattern builder 已实现，因此按“奠基原型”而非完整系统收录。
-- **English summary:** An early platform-level design architecture combines hierarchical patterns with target-difficulty search, although only its pattern-building stage was implemented.
-
-### 19. Towards Automatic Personalised Content Creation for Racing Games
+### 17. Towards Automatic Personalised Content Creation for Racing Games
 
 - **Year / venue:** 2006 precursor, *Making Racing Fun Through Player Modeling and Track Evolution*; expanded at the 2007 IEEE Conference on Computational Intelligence and Games.
 - **Scope and task/method:** `levels`; learns models of individual driving behavior and evolves smooth closed racing tracks whose challenge and speed profile target each modeled player.
@@ -235,7 +212,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文学习五名车手的行为，再进化与个人能力相匹配的闭合赛道；玩家模型和控制器只服务于赛道生成与评价。
 - **English summary:** Driver models guide evolutionary search toward personalized playable race tracks rather than toward a stronger driving agent.
 
-### 20. Towards Automatic Personalized Content Generation for Platform Games
+### 18. Towards Automatic Personalized Content Generation for Platform Games
 
 - **Year / venue:** 2010, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE).
 - **Scope and task/method:** `levels`; searches Mario level parameters using learned player-experience models and generates the next level for a particular playing style.
@@ -246,7 +223,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 与只建立玩家体验模型的前作不同，这篇论文实际搜索 Mario 关卡参数并生成个性化下一关，因此属于生成游戏内容。
 - **English summary:** Learned experience models are operationalized to search and emit personalized Mario levels, rather than being evaluated only as player models.
 
-### 21. Polymorph: A Model for Dynamic Level Generation
+### 19. Polymorph: A Model for Dynamic Level Generation
 
 - **Year / venue:** 2010, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE).
 - **Scope and task/method:** `levels`; learns difficulty and player-skill models, then generates short platform segments online so structural challenge follows current performance.
@@ -257,7 +234,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Polymorph 根据玩家当前表现在线生成下一段平台关几何；其核心产物是动态关卡，而不是控制角色的策略。
 - **English summary:** Polymorph continually generates platform segments whose structural difficulty follows an estimated player-skill trajectory.
 
-### 22. Tanagra: Reactive Planning and Constraint Solving for Mixed-Initiative Level Design
+### 20. Tanagra: Reactive Planning and Constraint Solving for Mixed-Initiative Level Design
 
 - **Year / venue:** a 2010 FDG expressive-range precursor; IEEE Transactions on Computational Intelligence and AI in Games, 2011.
 - **Scope and task/method:** `levels`; combines reactive planning with numerical constraints to autonomously generate or regenerate rhythm-paced 2-D platform levels around designer edits while preserving reachability.
@@ -268,7 +245,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Tanagra 既能响应设计师编辑，也能自主规划并约束求解出可达平台关；因包含实质自动生成器，归入关卡核心分区。
 - **English summary:** Reactive planning and constraint solving support both autonomous generation and responsive co-creation of reachable platform levels.
 
-### 23. Sentient Sketchbook: Computer-Aided Game Level Authoring
+### 21. Sentient Sketchbook: Computer-Aided Game Level Authoring
 
 - **Year / venue:** 2013, Foundations of Digital Games.
 - **Scope and task/method:** `levels`; feasible-infeasible novelty/objective search generates playable strategy-map alternatives in real time from the designer's current sketch.
@@ -279,7 +256,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Sentient Sketchbook 会从当前草图实时生成完整、可玩的策略地图备选，并非只提供手工编辑界面，因此列入关卡核心分区。
 - **English summary:** The tool automatically searches for playable strategy-map alternatives around a designer sketch and exposes them in a mixed-initiative workflow.
 
-### 24. Learning to Generate Video Game Maps Using Markov Models
+### 22. Learning to Generate Video Game Maps Using Markov Models
 
 - **Year / venue:** 2013–2016, AIIDE conference series and IEEE Transactions on Computational Intelligence and AI in Games.
 - **Scope and task/method:** `levels`; learns single-layer and hierarchical multi-dimensional Markov models from human-authored maps, then samples new Mario, Lode Runner, and Kid Icarus levels.
@@ -290,7 +267,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 这一版本族从单层多维 Markov 模型逐步扩展到自动学习层级结构，直接生成 Mario、Lode Runner 与 Kid Icarus 地图；五个版本合并计数一次。
 - **English summary:** A sequence of Markov-map papers progresses from flat to learned hierarchical models for sampling playable platform and puzzle levels.
 
-### 25. Procedural Level Generation Using Occupancy-Regulated Extension
+### 23. Procedural Level Generation Using Occupancy-Regulated Extension
 
 - **Year / venue:** 2010, IEEE Conference on Computational Intelligence and Games.
 - **Scope and task/method:** `levels`; iteratively attaches human-authored geometry chunks at possible player-occupancy anchors, supporting varied platform spaces and mixed-initiative extension at arbitrary scales.
@@ -301,7 +278,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** ORE 在玩家可能占据的锚点处拼接人工几何块，直接生成多样的平台关空间；论文明确说明当时尚不保证可玩。
 - **English summary:** ORE assembles authored chunks at player-occupancy anchors to generate varied platform spaces, without claiming a playability guarantee.
 
-### 26. Multiobjective Exploration of the StarCraft Map Space
+### 24. Multiobjective Exploration of the StarCraft Map Space
 
 - **Year / venue:** 2010, FDG PCGames workshop and IEEE Conference on Computational Intelligence and Games.
 - **Scope and task/method:** `levels`; multiobjective evolutionary search generates complete RTS maps including terrain, bases, and resources, with the expanded paper instantiating the representation for StarCraft.
@@ -312,7 +289,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 该版本族从通用策略地图扩展到完整 StarCraft 地图，用 Pareto 前沿呈现公平性、资源和地形目标的权衡。
 - **English summary:** Multiobjective evolution produces complete RTS maps and exposes design trade-offs as Pareto fronts for automatic or assisted selection.
 
-### 27. Generating Missions and Spaces for Adaptable Play Experiences
+### 25. Generating Missions and Spaces for Adaptable Play Experiences
 
 - **Year / venue:** 2010, FDG PCGames workshop; extended in IEEE Transactions on Computational Intelligence and AI in Games, 2011.
 - **Scope and task/method:** `levels`; generative grammars first rewrite mission graphs and then construct spatial layouts that make the generated action-adventure progression executable.
@@ -323,7 +300,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统先生成任务图，再生成能承载该任务进程的空间，把任务与关卡联合起来，而不是只写故事文本。
 - **English summary:** Coupled grammars generate an action-adventure mission graph and the spatial level needed to enact that mission.
 
-### 28. A Generic Approach to Challenge Modeling for the Procedural Creation of Video Game Levels
+### 26. A Generic Approach to Challenge Modeling for the Procedural Creation of Video Game Levels
 
 - **Year / venue:** 2010, EvoApplications; extended in IEEE Transactions on Computational Intelligence and AI in Games, 2011.
 - **Scope and task/method:** `levels`; feasible-infeasible two-population evolution separates hard play/connectivity constraints from optimization of a top-down target challenge model.
@@ -334,7 +311,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** FI-2Pop 把玩法硬约束与目标挑战度分开搜索，可跨游戏类型生成连通、可玩的目标难度关卡。
 - **English summary:** A generic FI-2Pop framework evolves feasible levels toward top-down challenge targets across multiple game genres.
 
-### 29. Search-Based Procedural Generation of Maze-Like Levels
+### 27. Search-Based Procedural Generation of Maze-Like Levels
 
 - **Year / venue:** 2011, IEEE Transactions on Computational Intelligence and AI in Games.
 - **Scope and task/method:** `levels`; evolutionary search constructs connected, solvable maze-like layouts under explicit path and structural objectives instead of sampling unconstrained random mazes.
@@ -345,7 +322,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文用进化搜索直接构造连通、可解的迷宫式关卡，并以路径和结构指标筛选，而不是训练走迷宫策略。
 - **English summary:** Evolutionary search generates solvable maze-like levels and evaluates their path and topology rather than an agent's return.
 
-### 30. Evolving Interesting Maps for a First Person Shooter
+### 28. Evolving Interesting Maps for a First Person Shooter
 
 - **Year / venue:** 2011, EvoApplications.
 - **Scope and task/method:** `levels`; evolves complete maps loadable in Cube 2 and uses bot matches plus average fighting time only as a proxy fitness for map interest.
@@ -356,7 +333,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统进化可载入 Cube 2 的完整 FPS 地图，并用 bot 平均交战时间评价地图趣味性；bot 只是评分器。
 - **English summary:** Evolution generates playable Cube 2 maps, while bot fighting time serves only as a map-quality estimate.
 
-### 31. Evolving Levels for Super Mario Bros Using Grammatical Evolution
+### 29. Evolving Levels for Super Mario Bros Using Grammatical Evolution
 
 - **Year / venue:** 2012, IEEE Conference on Computational Intelligence and Games; personalized extension at AIIDE 2012.
 - **Scope and task/method:** `levels`; grammatical evolution composes complete Mario levels from a compact design grammar, while the extension uses learned engagement, frustration, and challenge models as fitness functions for player-specific generation.
@@ -367,7 +344,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 这一族用设计语法进化完整 Mario 关卡，并在扩展版中用众包玩家体验模型优化个性化内容；它与来源 68 的小参数穷举适配器不同。
 - **English summary:** Grammatical evolution generates complete Mario levels and later optimizes them against learned player-experience models.
 
-### 32. Procedural Content Generation Using Patterns as Objectives
+### 30. Procedural Content Generation Using Patterns as Objectives
 
 - **Year / venue:** 2014, EvoApplications.
 - **Scope and task/method:** `levels`; represents Mario-like levels as sequences of micro-pattern slices extracted from human levels and evolves them toward meso-pattern objectives; the multi-level extension adds macro-pattern composition.
@@ -378,7 +355,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统把人工关卡切片作为微观模式，以更高层的中观设计模式作为进化目标，直接生成新的 Mario 风格关卡。
 - **English summary:** Evolution recombines human-level slices while optimizing for larger design patterns, retaining style without copying whole levels.
 
-### 33. Linear Levels Through N-Grams
+### 31. Linear Levels Through N-Grams
 
 - **Year / venue:** 2014, 18th International Academic MindTrek Conference (AcademicMindTrek 2014), pp. 200–206.
 - **Scope and task/method:** `levels`; learns n-gram transition models over vertical slices of human-authored Mario levels and samples new left-to-right levels at different history lengths.
@@ -389,7 +366,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文从 Mario 纵向切片学习 n-gram 并采样横向关卡；它与来源 72 的二维多维 Markov 模型不是同一系统。
 - **English summary:** Vertical-slice n-grams learn local sequence structure from Mario levels and sample new linear platform stages.
 
-### 34. MCMCTS PCG 4 SMB: Monte Carlo Tree Search to Guide Platformer Level Generation
+### 32. MCMCTS PCG 4 SMB: Monte Carlo Tree Search to Guide Platformer Level Generation
 
 - **Year / venue:** 2015, AIIDE Experimental AI in Games workshop.
 - **Scope and task/method:** `levels`; uses Mario-trained Markov transitions as MCTS moves and rollouts, pruning unsolvable branches while exposing designer controls for gaps, enemies, and rewards.
@@ -400,7 +377,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** MCMCTS 把通常用于玩游戏的 MCTS 改作关卡搜索，用 Markov 转移扩展并剪枝不可解 Mario 关卡。
 - **English summary:** MCTS guides a Markov generator toward solvable, designer-controlled Mario levels rather than toward stronger game play.
 
-### 35. Sampling Hyrule: Multi-Technique Probabilistic Level Generation for Action Role Playing Games
+### 33. Sampling Hyrule: Multi-Technique Probabilistic Level Generation for Action Role Playing Games
 
 - **Year / venue:** 2015, AIIDE Experimental AI in Games workshop; builds on the FDG 2015 paper *Data-Driven Learning of Level Topology*.
 - **Scope and task/method:** `levels`; samples Zelda dungeon topology from a Bayesian network, generates individual rooms by interpolation in a PCA-compressed space, and repairs or resamples constraint violations.
@@ -411,7 +388,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统从 Zelda 人工地牢学习拓扑和房间表示，再采样并修复成可通关地牢；前作与生成版合并为一个版本族。
 - **English summary:** A learned Bayesian topology and PCA room model are combined to sample constraint-valid, completable Zelda-style dungeons.
 
-### 36. Automatic Generation of Game Elements via Evolution
+### 34. Automatic Generation of Game Elements via Evolution
 
 - **Year / venue:** 2010, IEEE Conference on Computational Intelligence and Games.
 - **Scope and task/method:** `playable-content`; uses evolutionary search and dynamic programming to generate solvable chess-maze and chromatic-puzzle instances under fixed rules, creating new challenge layouts rather than cosmetic assets.
@@ -422,7 +399,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文进化新的 chess maze 和 chromatic puzzle 可玩实例；固定的是规则，生成的是决定挑战的谜题结构，因此不是纯资产。
 - **English summary:** Evolution produces complete playable instances in two puzzle domains and is evaluated as content search rather than game play.
 
-### 37. Alone We Can Do So Little, Together We Can Do So Much: A Combinatorial Approach for Generating Game Content
+### 35. Alone We Can Do So Little, Together We Can Do So Much: A Combinatorial Approach for Generating Game Content
 
 - **Year / venue:** 2014, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE).
 - **Scope and task/method:** `levels`; trains non-negative matrix factorization on 5,000 200×15 Mario levels from five dissimilar generators, then recombines learned component patterns into loadable new levels.
@@ -433,7 +410,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统学习五个差异明显的 Mario 生成器所产模式并重新组合，能覆盖比任一单独生成器更宽的新颖内容空间。
 - **English summary:** NMF learns from five Mario generators and recombines their component patterns into a broader joint generative space.
 
-### 38. Cellular Automata for Real-Time Generation of Infinite Cave Levels
+### 36. Cellular Automata for Real-Time Generation of Infinite Cave Levels
 
 - **Year / venue:** 2010, FDG PCGames workshop.
 - **Scope and task/method:** `levels`; generates Cave Crawler cave-map regions with cellular automata on demand, allowing an effectively infinite playable level to expand during play.
@@ -444,7 +421,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文在 Cave Crawler 游玩过程中按需生成洞穴区域，使地图近似无限扩展；耗时实验评价生成器能否实时运行。
 - **English summary:** Cellular automata generate cave regions online so a Cave Crawler level can expand indefinitely within real-time timing budgets.
 
-### 39. Controllable Procedural Content Generation via Constrained Multi-Dimensional Markov Chain Sampling
+### 37. Controllable Procedural Content Generation via Constrained Multi-Dimensional Markov Chain Sampling
 
 - **Year / venue:** 2016, Twenty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-16).
 - **Scope and task/method:** `levels`; adds global constraints and constrained sampling to learned multi-dimensional Markov chains so the generator can target structural requirements in Super Mario Bros. and Kid Icarus maps.
@@ -455,7 +432,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文把全局约束直接纳入多维 Markov 采样，在 Mario 与 Kid Icarus 上生成满足结构控制的地图；Lode Runner 只出现在未来工作中。
 - **English summary:** Global constraints steer MdMC sampling toward controllable Mario and Kid Icarus maps instead of merely filtering unconstrained samples afterward.
 
-### 40. An Approach to Domain Transfer in Procedural Content Generation of Two-Dimensional Videogame Levels
+### 38. An Approach to Domain Transfer in Procedural Content Generation of Two-Dimensional Videogame Levels
 
 - **Year / venue:** 2016, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE).
 - **Scope and task/method:** `levels`; learns tile mappings among Super Mario Bros., Kid Icarus, and Kid Kool so a probabilistic generator can train on level data from a structurally related game.
@@ -466,7 +443,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统自动学习 Mario、Kid Icarus 与 Kid Kool 间的瓷砖映射，让关卡生成器可以迁移使用另一款游戏的训练数据。
 - **English summary:** Learned cross-game tile mappings let a probabilistic generator transfer level structure among three 2-D platformers.
 
-### 41. Player Movement Models for Video Game Level Generation
+### 39. Player Movement Models for Video Game Level Generation
 
 - **Year / venue:** 2017, Twenty-Sixth International Joint Conference on Artificial Intelligence (IJCAI-17).
 - **Scope and task/method:** `levels`; learns action and surrounding-conditioned movement likelihoods from Mario gameplay video, then uses the movement model to guide MdMC/VLR level sampling toward plausible human traversal paths.
@@ -477,7 +454,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统从 Mario 游玩视频学习移动似然，再把它作为关卡采样约束；代码、训练数据与样例仍在 Bitbucket，但没有许可证或现代环境。
 - **English summary:** Movement patterns learned from video steer probabilistic generation toward Mario levels with plausible human traversal paths.
 
-### 42. Procedural Level Generation Using Multi-Layer Level Representations with MdMCs
+### 40. Procedural Level Generation Using Multi-Layer Level Representations with MdMCs
 
 - **Year / venue:** 2017, IEEE Conference on Computational Intelligence and Games; Lode Runner extension at the AIIDE Experimental AI in Games workshop.
 - **Scope and task/method:** `levels`; couples structural, path, and auxiliary semantic layers so MdMC sampling preserves relationships that one tile layer misses. Mario uses structural/path/height layers; the extension uses structural/path/section layers for Lode Runner.
@@ -488,7 +465,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 多层表示把结构、路径和高度/分区共同建模，在 Mario 与 Lode Runner 中保留单层瓷砖表示容易丢失的跨层关系。
 - **English summary:** Coupled semantic layers let MdMCs sample levels whose geometry remains consistent with traversable paths and higher-level structure.
 
-### 43. Game Level Generation from Gameplay Videos
+### 41. Game Level Generation from Gameplay Videos
 
 - **Year / venue:** 2015 workshop precursor *Toward Game Level Generation from Gameplay Videos*; expanded at AIIDE 2016.
 - **Scope and task/method:** `levels`; extracts Mario geometry and player movement from raw gameplay videos without source maps, learns a probabilistic graph over observed chunks, and assembles complete new levels.
@@ -499,7 +476,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 该版本族在没有原始地图文件的情况下，从九段 Mario 视频提取 13,492 个片段并学习概率图，再装配完整新关卡。
 - **English summary:** Geometry and motion recovered from raw Mario videos train a probabilistic graph that assembles full playable levels.
 
-### 44. Autoencoders for Level Generation, Repair, and Recognition
+### 42. Autoencoders for Level Generation, Repair, and Recognition
 
 - **Year / venue:** 2016, ICCC workshop paper.
 - **Scope and task/method:** `levels`; trains an autoencoder over small Mario tile windows and decodes noisy or incomplete inputs to generate new tiles, repair damaged regions, and recognize level style.
@@ -510,7 +487,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Autoencoder 从 Mario 小窗口学习表示，并通过解码含噪或缺失输入来生成与修复瓷砖；识别只是并列用途之一。
 - **English summary:** A small autoencoder proof of concept decodes noisy Mario windows for generation and repair as well as style recognition.
 
-### 45. Composing Video Game Levels with Music Metaphors through Functional Scaffolding
+### 43. Composing Video Game Levels with Music Metaphors through Functional Scaffolding
 
 - **Year / venue:** 2015, First Computational Creativity and Games Workshop.
 - **Scope and task/method:** `levels`; treats Mario tile types as musical voices, learns accompaniment relationships with NEAT, and composes the voices into complete playable levels through functional scaffolding.
@@ -521,7 +498,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文把 Mario 瓷砖类型视作音乐声部并学习其“伴奏”关系，最终产物仍是完整可玩关卡，而不是游戏音乐。
 - **English summary:** Learned accompaniment relations among tile “voices” scaffold the composition of complete Mario levels.
 
-### 46. Online Level Generation in Super Mario Bros via Learning Constructive Primitives
+### 44. Online Level Generation in Super Mario Bros via Learning Constructive Primitives
 
 - **Year / venue:** 2016, IEEE Conference on Computational Intelligence and Games; expanded online in 2017 and in IEEE Transactions on Games 10(2), 2018.
 - **Scope and task/method:** `levels`; learns short constructive primitives through active designer feedback, composes them online into quality-controlled Mario levels, and in the journal extension adapts generated difficulty from live player performance.
@@ -532,7 +509,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 系统从设计师反馈学习构造原语，实时组合 Mario 关卡并在扩展版中动态适配难度；历史可执行 demo 尚存，但源码受密码和非商业用途限制。
 - **English summary:** Learned constructive primitives support fast online Mario generation and later real-time difficulty adaptation, with only legacy demos still openly downloadable.
 
-### 47. Autoencoder and Evolutionary Algorithm for Level Generation in Lode Runner
+### 45. Autoencoder and Evolutionary Algorithm for Level Generation in Lode Runner
 
 - **Year / venue:** 2019, IEEE Conference on Games.
 - **Scope and task/method:** `levels`; decodes 16-dimensional AE/VAE latent vectors into Lode Runner layouts, then applies patch crossover and latent mutation to evolve connected maps in which A* can collect all gold.
@@ -543,7 +520,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** AE/VAE 先解码 Lode Runner 布局，再以进化和 A* 修复为连通、可收集全部黄金的关卡；作者关联仓库存在但无法精确复现实验。
 - **English summary:** Latent autoencoder samples are evolved into connected, gold-collectible Lode Runner levels, with a useful but incomplete legacy code/data release.
 
-### 48. Generating Game Levels for Multiple Distinct Games with a Common Latent Space
+### 46. Generating Game Levels for Multiple Distinct Games with a Common Latent Space
 
 - **Year / venue:** 2020, AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE), volume 16(1), pp. 109–115.
 - **Scope and task/method:** `levels`; a branched DCGAN maps one 128-dimensional latent vector through shared layers and four game-specific branches to aligned 16×16 Boulderdash, Link, Zelda, and Roguelike levels.
@@ -554,7 +531,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Branched GAN 从同一潜向量生成四款游戏中玩法对齐的完整关卡；重复 DOI 指向完全相同 PDF，只保留规范的 2020 记录。
 - **English summary:** A shared latent trunk and four output branches generate corresponding playable layouts for four distinct grid games.
 
-### 49. Learning to Generate Levels From Nothing
+### 47. Learning to Generate Levels From Nothing
 
 - **Year / venue:** arXiv precursor in 2020; IEEE Conference on Games, 2021.
 - **Scope and task/method:** `levels`; a Generative Playing Network co-trains a Zelda level generator and player from no human levels, adapting generated difficulty toward the player's learning frontier; a semi-supervised condition uses five authored levels.
@@ -565,7 +542,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** GPN 在没有人工关卡的条件下协同学习 Zelda 玩家和生成器，玩家只为生成器提供学习前沿信号；公开代码完整度尚不足以复现论文结果。
 - **English summary:** A co-evolving player supplies the learning signal for a Zelda generator trained from no authored levels, with a partial MIT-licensed implementation.
 
-### 50. Mutation Models: Learning to Generate Levels by Imitating Evolution
+### 48. Mutation Models: Learning to Generate Levels by Imitating Evolution
 
 - **Year / venue:** 2022, International Conference on the Foundations of Digital Games.
 - **Scope and task/method:** `levels`; a CNN learns successful mutations from evolutionary trajectories and iteratively edits 50/50 random 14×14 binary maps into connected mazes without evaluating fitness at inference.
@@ -576,7 +553,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 模型模仿进化中的成功 mutation，以约 20 倍速度把随机二值图修复为连通迷宫；代码公开但没有许可证、模型、轨迹数据或精确复现配置。
 - **English summary:** A learned mutation operator imitates evolutionary repair to generate connected mazes much faster at inference, with an incomplete author code release.
 
-### 51. Compositional Procedural Content Generation
+### 49. Compositional Procedural Content Generation
 
 - **Year / venue:** 2012, Third Workshop on Procedural Content Generation in Games.
 - **Scope and task/method:** `generator`; a μ+λ evolution strategy searches 17 parameters of an Answer Set Programming file that is itself a reusable generator of complete, well-formed, winnable roguelike dungeons.
@@ -587,7 +564,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 外层进化搜索 ASP 地牢生成器的参数，内层程序可反复生成受约束且可通关的 roguelike 地牢；A* 只负责评价生成内容。
 - **English summary:** Evolution tunes an ASP program into a reusable constrained dungeon generator rather than directly encoding one dungeon.
 
-### 52. A Procedural Procedural Level Generator Generator
+### 50. A Procedural Procedural Level Generator Generator
 
 - **Year / venue:** 2012, IEEE Conference on Computational Intelligence and Games.
 - **Scope and task/method:** `generator`; interactive evolution synthesizes stochastic Mario level generators made of roughly 14–24 parameterized drawing agents, while a human selects parents through cloud, sample-level, playable, and simulation views.
@@ -598,7 +575,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** PPLGG 通过交互进化合成多个绘制智能体组成的 Mario 关卡生成器；公开 Java 源码是无许可证、无构建说明的历史快照。
 - **English summary:** Users interactively evolve reusable agent-based Mario generators while A* only estimates the playability of their samples.
 
-### 53. Marahel: A Language for Constructive Level Generation
+### 51. Marahel: A Language for Constructive Level Generation
 
 - **Year / venue:** 2017, AIIDE Experimental AI in Games workshop.
 - **Scope and task/method:** `generator language`; declares entities, regions, neighborhoods, and sequential explorers whose conditions/actions form compact stochastic generators for 2-D tile maps.
@@ -609,7 +586,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Marahel 让人用 explorer、neighborhood、条件和动作编写紧凑的构造式关卡生成器，为后续自动搜索生成器程序提供表示语言。
 - **English summary:** Marahel is a public constructive-generator language and the explicit representation predecessor to later evolutionary metageneration.
 
-### 54. Optimising Level Generators for General Video Game AI
+### 52. Optimising Level Generators for General Video Game AI
 
 - **Year / venue:** 2019, IEEE Conference on Games.
 - **Scope and task/method:** `generator`; introduces parameterized GVGAI constructive generators and a genetic Meta Generator that searches their parameters for Butterflies, Freeway, and The Snowman.
@@ -620,7 +597,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Meta Generator 在三款 GVGAI 游戏上搜索构造式生成器参数；AI 试玩只构成生成关卡的复合适应度，论文特定实现未找到。
 - **English summary:** Genetic search optimizes reusable GVGAI level generators from playtest-derived content fitness rather than optimizing a player.
 
-### 55. Multi-Objective Level Generator Generation with Marahel
+### 53. Multi-Objective Level Generator Generation with Marahel
 
 - **Year / venue:** 2020, Foundations of Digital Games PCG Workshop; arXiv v2 and the ACM record are one publication family.
 - **Scope and task/method:** `generator`; NSGA-II and grammatical evolution map 102-integer chromosomes to compact Marahel programs that generate Binary, Zelda, and Sokoban maps.
@@ -631,7 +608,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 多目标进化把整数染色体翻译成 Binary、Zelda 与 Sokoban 的 Marahel 生成器程序；核心实验快照公开但缺许可证和复现封装。
 - **English summary:** Multiobjective evolution searches Marahel programs that are themselves reusable generators across three tile-map domains.
 
-### 56. Evolutionary Wave Function Collapse
+### 54. Evolutionary Wave Function Collapse
 
 - **Year / venue:** 2026, accepted short paper at IEEE Conference on Games; arXiv posted 2026-07-02.
 - **Scope and task/method:** `generator`; evolves a 4×4 tile example whose 2×2 patterns let WFC stochastically generate 8×8 connectivity mazes or 16×16 Zelda layouts.
@@ -642,7 +619,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 进化搜索可充当 WFC 生成器的微型样例，在迷宫上提升明显、Zelda 全局约束上提升有限；尚无论文特定工件。
 - **English summary:** Evolution searches tiny WFC examples as reusable game-level generators, with stronger results on local maze structure than global Zelda constraints.
 
-### 57. A Comparative Evaluation of Procedural Level Generators in the Mario AI Framework
+### 55. A Comparative Evaluation of Procedural Level Generators in the Mario AI Framework
 
 - **Year / venue:** 2014, Foundations of Digital Games.
 - **Scope and task/method:** `levels` benchmark; ports seven Mario generator families and original Super Mario Bros. levels into a shared framework and contributes two pattern-based measures alongside four existing expressive-range metrics.
@@ -653,7 +630,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文首次在统一 Mario 框架中量化比较七类生成器与原版关卡，并加入两项模式指标；历史代码/关卡压缩包已经不可用。
 - **English summary:** A shared Mario framework compares seven generator families with six expressivity measures and provides a historical generator-evaluation baseline.
 
-### 58. The 2017 AIBIRDS Level Generation Competition
+### 56. The 2017 AIBIRDS Level Generation Competition
 
 - **Year / venue:** competition held in 2017; article published online in 2018 and in IEEE Transactions on Games, 2019.
 - **Scope and task/method:** `levels` competition; Science Birds generators receive input constraints and must emit stable, solvable physics levels within a time limit.
@@ -664,7 +641,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** AIBIRDS 2017 要求五个参赛生成器在约束和时间内产生稳定、可解的物理关卡，再由 11 个评审小组从趣味、创造性和难度评价；GPL 获胜生成器已公开。
 - **English summary:** A generation-only Science Birds competition combines automatic validity constraints with three judging categories, and its winning generator is publicly released under GPL-3.0.
 
-### 59. Procedural Level Generation for Sokoban via Deep Learning: An Experimental Study
+### 57. Procedural Level Generation for Sokoban via Deep Learning: An Experimental Study
 
 - **Year / venue:** journal DOI registered in 2022; IEEE Transactions on Games, 2023.
 - **Scope and task/method:** `levels` benchmark study; reimplements bootstrapped conditional neural generators, controllable/uncontrollable PCGRL, and Generative Playing Networks on one Sokoban task.
@@ -675,7 +652,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文把多类深度 Sokoban 生成器放进统一协议，比较质量、多样性、可控性和 control confusion；求解只服务于生成评价。
 - **English summary:** A unified Sokoban study compares several deep level-generation families across output quality, diversity, and controllability rather than playing skill.
 
-### 60. Evolving Mario Levels in the Latent Space of a Deep Convolutional GAN
+### 58. Evolving Mario Levels in the Latent Space of a Deep Convolutional GAN
 
 - **Year / venue:** 2018, GECCO.
 - **Scope:** `levels`
@@ -687,7 +664,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [ACM DOI](https://doi.org/10.1145/3205455.3205517), [official experiment repository](https://github.com/icaros-usc/MarioGAN-LSI), [VGLC data](https://github.com/TheVGLC/TheVGLC)
 - **Open status:** **Open.** Author-maintained code and the public training corpus are available.
 
-### 61. TOAD-GAN: Coherent Style Level Generation from a Single Example
+### 59. TOAD-GAN: Coherent Style Level Generation from a Single Example
 
 - **Year / venue:** 2020, AIIDE.
 - **Scope:** `levels`
@@ -699,7 +676,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [AIIDE proceedings](https://doi.org/10.1609/aiide.v16i1.7401), [arXiv](https://arxiv.org/abs/2008.01531), [official code](https://github.com/Mawiszus/TOAD-GAN)
 - **Open status:** **Open.** Official training/generation code and examples are public.
 
-### 62. PCGRL: Procedural Content Generation via Reinforcement Learning
+### 60. PCGRL: Procedural Content Generation via Reinforcement Learning
 
 - **Year / venue:** 2020, AIIDE.
 - **Scope:** `levels`
@@ -711,7 +688,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [AIIDE proceedings](https://doi.org/10.1609/aiide.v16i1.7416), [official environment/code](https://github.com/amidos2006/gym-pcgrl)
 - **Open status:** **Open.** Environments, representations, metrics, and training code are public.
 
-### 63. Learning Controllable Content Generators
+### 61. Learning Controllable Content Generators
 
 - **Year / venue:** 2021, IEEE CoG.
 - **Scope:** `levels`
@@ -723,7 +700,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [arXiv](https://arxiv.org/abs/2105.02993), [IEEE DOI](https://doi.org/10.1109/COG52621.2021.9619159)
 - **Open status:** **Partial.** The paper is public and builds on open PCGRL, but no separately packaged official experiment release was located.
 
-### 64. Talakat: Bullet Hell Generation through Constrained MAP-Elites
+### 62. Talakat: Bullet Hell Generation through Constrained MAP-Elites
 
 - **Year / venue:** 2018, GECCO workshop/preprint.
 - **Scope:** `levels`
@@ -735,7 +712,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [arXiv](https://arxiv.org/abs/1806.04718), [official project/code](https://github.com/amidos2006/Talakat)
 - **Open status:** **Open.** The domain runtime and generation code are author-released.
 
-### 65. Generating Levels That Teach Mechanics
+### 63. Generating Levels That Teach Mechanics
 
 - **Year / venue:** 2018, FDG.
 - **Scope:** `levels`
@@ -747,7 +724,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [ACM DOI](https://doi.org/10.1145/3235765.3235820), [arXiv](https://arxiv.org/abs/1807.06734)
 - **Open status:** **Closed.** No official maintained implementation package was located.
 
-### 66. Level Generation Through Large Language Models
+### 64. Level Generation Through Large Language Models
 
 - **Year / venue:** 2023, FDG.
 - **Scope:** `levels`
@@ -759,7 +736,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [ACM DOI](https://doi.org/10.1145/3582437.3587211), [arXiv](https://arxiv.org/abs/2302.05817)
 - **Open status:** **Closed.** The paper/protocol is public, but no complete official training/evaluation package was located.
 
-### 67. MarioGPT: Open-Ended Text2Level Generation through Large Language Models
+### 65. MarioGPT: Open-Ended Text2Level Generation through Large Language Models
 
 - **Year / venue:** 2023, NeurIPS.
 - **Scope:** `levels`
@@ -771,7 +748,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [arXiv](https://arxiv.org/abs/2302.05981), [official code/models](https://github.com/shyamsn97/mario-gpt)
 - **Open status:** **Open.** Training/inference code and model artifacts are author-released.
 
-### 68. Super Mario as a String: Platformer Level Generation Via LSTMs
+### 66. Super Mario as a String: Platformer Level Generation Via LSTMs
 
 - **Year / venue:** 2016, DiGRA/FDG workshop publication; player-tailored extension at the AIIDE Experimental AI in Games workshop.
 - **Scope:** `levels`
@@ -783,7 +760,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [official proceedings DOI](https://doi.org/10.26503/dl.v2016i1.752), [arXiv](https://arxiv.org/abs/1603.00930), [player-tailored extension](https://doi.org/10.1609/aiide.v12i2.12895), [five tailored generated-level corpora](https://tinyurl.com/SMB-from-Video), [original SMBRNN generated-level corpus](https://tinyurl.com/SMBRNN).
 - **Open status:** **Partial, legacy outputs only.** The generated-level corpora remain downloadable, but no generator, trained model, video-processing pipeline, training code, or evaluation package was verified.
 
-### 69. DOOM Level Generation Using Generative Adversarial Networks
+### 67. DOOM Level Generation Using Generative Adversarial Networks
 
 - **Year / venue:** 2018, IEEE Games, Entertainment, and Media Conference (GEM).
 - **Scope:** `levels`
@@ -795,7 +772,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **Primary sources:** [IEEE DOI](https://doi.org/10.1109/GEM.2018.8516539), [arXiv](https://arxiv.org/abs/1804.09154), [official author code/data](https://github.com/edoardogiacomello/DoomGAN)
 - **Open status:** **Open.** The first author publishes preprocessing, models, generated data, and experiment code.
 
-### 70. PCGPT: Procedural Content Generation via Transformers
+### 68. PCGPT: Procedural Content Generation via Transformers
 
 - **Year / venue:** 2023, arXiv preprint.
 - **Scope and task/method:** `levels`; a return-conditioned causal transformer learns from offline PCGRL trajectories and iteratively predicts Sokoban items and positions.
@@ -805,7 +782,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** PCGPT 把造 Sokoban 关卡视为离线轨迹建模，但“数据公开”的文字声明没有对应可取得链接，因此不能标开放。
 - **English summary:** PCGPT generates Sokoban edits from offline PCGRL trajectories with a causal transformer, but its claimed public dataset could not be located.
 
-### 71. Using Unconditional Diffusion Models in Level Generation for Super Mario Bros
+### 69. Using Unconditional Diffusion Models in Level Generation for Super Mario Bros
 
 - **Year / venue:** 2023, 18th International Conference on Machine Vision and Applications (MVA), Hamamatsu, Japan, 23–25 July 2023, pp. 1–5.
 - **Scope and task/method:** `levels`; a DDPM-style unconditional UNet with Performer attention learns 5,925 unique 14×14, 11-channel windows extracted at stride one from 33 VGLC ground-level files (13 SMB and 20 SMB2(J)). It samples categorical Mario patches while comparing linear, quadratic, and sigmoid noise schedules and per-sprite temperature scaling. The repository's four underground files are outside the configured training path.
@@ -818,7 +795,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 无条件 DDPM 式 UNet 在 33 个地上关卡得到的 5,925 个去重 14×14 Mario 片段上训练；作者公开预处理、训练、采样和评价代码，但缺许可证、处理后训练数据、checkpoint、被评样本数组与结果包。
 - **English summary:** An unconditional categorical diffusion model generates Mario level patches from 5,925 unique training windows and is evaluated for diversity and simulator solvability, with useful but incomplete unlicensed author code.
 
-### 72. ChatGPT4PCG Competition
+### 70. ChatGPT4PCG Competition
 
 - **Year / venue:** 2023 and 2024, IEEE Conference on Games competition papers; treated as one evolving competition family.
 - **Scope and task/method:** `levels` benchmark; prompts or Python prompt programs make ChatGPT emit function calls that construct letter-shaped Science Birds levels.
@@ -828,7 +805,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 两届竞赛用同一 Science Birds 任务逐步完善稳定性、字符相似度与多样性评价，应合并成一个版本族。
 - **English summary:** The two ChatGPT4PCG editions form an open benchmark family for prompt-driven, physically stable Science Birds level generation.
 
-### 73. Procedural Level Generation in Educational Games From Natural Language Instruction
+### 71. Procedural Level Generation in Educational Games From Natural Language Instruction
 
 - **Year / venue:** 2024, IEEE Transactions on Games.
 - **Scope and task/method:** `levels`; natural-language instructional goals drive educational-game level generation and learned candidate selection.
@@ -838,7 +815,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 该工作直接从教学语言要求生成教育游戏关卡，不是完整教育游戏生成，但属于明确的自然语言条件关卡 PCG。
 - **English summary:** Natural-language learning goals condition the generation and selection of educational-game levels, without a public reproduction package.
 
-### 74. Improving Conditional Level Generation Using Automated Validation in Match-3 Games
+### 72. Improving Conditional Level Generation Using Automated Validation in Match-3 Games
 
 - **Year / venue:** 2024, IEEE Transactions on Games.
 - **Scope and task/method:** `levels`; a cVAE is conditioned on board size, symmetry, and bot-estimated move difficulty, with automated post-generation validation.
@@ -848,7 +825,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文把“需要多少步通关”的 bot 统计作为条件，提升 Match-3 关卡有效率，但数据与验证器并未开放。
 - **English summary:** Automated play statistics condition and validate Match-3 layout generation, though the proprietary data and pipeline are closed.
 
-### 75. Making New Connections: LLMs as Puzzle Generators
+### 73. Making New Connections: LLMs as Puzzle Generators
 
 - **Year / venue:** 2024, AIIDE.
 - **Scope and task/method:** `puzzles`; Tree of Thoughts prompting generates complete 16-word Connections puzzles, including seeded and deliberately misleading false groups.
@@ -858,7 +835,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 这篇论文研究的是“出 Connections 谜题”而不是解谜；作者公开了提示和谜题语料，但没有完整实验流水线。
 - **English summary:** LLMs generate complete Connections puzzles that humans compare with published puzzles; prompts and corpora are public, not the full study.
 
-### 76. Moonshine: Distilling Game Content Generators into Steerable Generative Models
+### 74. Moonshine: Distilling Game Content Generators into Steerable Generative Models
 
 - **Year / venue:** arXiv 2024; AAAI 2025.
 - **Scope and task/method:** `levels`; Brogue's constructive generator produces dungeon maps, an LLM labels them, and text-conditioned diffusion/feed-forward models distil the generator.
@@ -868,7 +845,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Moonshine 用传统生成器造海量地图，再用 LLM 补文本标签，最终学习可用自然语言控制的 text-to-map 模型。
 - **English summary:** Moonshine distils a black-box dungeon generator into steerable text-to-map models; only the synthetic dataset is released.
 
-### 77. PCGRL+: Scaling, Control and Generalization in Reinforcement Learning Level Generators
+### 75. PCGRL+: Scaling, Control and Generalization in Reinforcement Learning Level Generators
 
 - **Year / venue:** 2024, IEEE Conference on Games.
 - **Scope and task/method:** `levels`; JAX/GPU parallelization scales PCGRL training and adds randomized map sizes, frozen pinpoints, and OOD-size evaluation.
@@ -878,7 +855,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** PCGRL+ 把 PCGRL 完整迁移到 JAX/GPU，并把研究重点扩展到尺寸、固定关键点与超出训练尺度的泛化。
 - **English summary:** PCGRL+ makes RL level generation GPU-scalable and tests controllability and out-of-distribution map-size generalization.
 
-### 78. ChatPCG
+### 76. ChatPCG
 
 - **Year / venue:** ChatPCG, IEEE CoG 2024; PCGRLLM, IEEE Transactions on Games 2026.
 - **Scope and task/method:** `levels`; an LLM writes reward functions that steer PCGRL generators, while the extension adds feedback and reasoning-based prompts for story-to-reward generation.
@@ -888,7 +865,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 这一版本族不是让 LLM 直接画地图，而是让它写出 PCGRL 奖励，再由内容生成策略执行设计目标。
 - **English summary:** ChatPCG/PCGRLLM use language models to author rewards that turn natural-language design intent into controlled PCGRL content.
 
-### 79. Word2Minecraft: Generating 3D Game Levels through Large Language Models
+### 77. Word2Minecraft: Generating 3D Game Levels through Large Language Models
 
 - **Year / venue:** 2025, arXiv preprint.
 - **Scope and task/method:** `levels`; structured stories are converted into Minecraft levels with scaled spatial layouts, goals, obstacles, and gameplay constraints.
@@ -898,7 +875,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Word2Minecraft 从故事中的主角目标、反派挑战和环境设置构造带玩法约束的三维 Minecraft 关卡。
 - **English summary:** Word2Minecraft turns structured narratives into spatially coherent, goal-bearing Minecraft levels through an open API-dependent pipeline.
 
-### 80. IPCGRL: Language-Instructed Reinforcement Learning for Procedural Level Generation
+### 78. IPCGRL: Language-Instructed Reinforcement Learning for Procedural Level Generation
 
 - **Year / venue:** 2025, IEEE Conference on Games.
 - **Scope and task/method:** `levels`; task-specific sentence embeddings condition a PCGRL policy directly on natural-language requirements.
@@ -908,7 +885,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** IPCGRL 让关卡生成策略直接理解自然语言属性要求，并专门测量对未见指令的泛化能力。
 - **English summary:** IPCGRL learns instruction embeddings that let an RL content generator follow and generalize natural-language level constraints.
 
-### 81. Human-Aligned Procedural Level Generation RL via Text-Level-Sketch Shared Representation
+### 79. Human-Aligned Procedural Level Generation RL via Text-Level-Sketch Shared Representation
 
 - **Year / venue:** arXiv 2025; IEEE Transactions on Games 2026.
 - **Scope and task/method:** `levels`; quadruple contrastive learning aligns text, level states, sketches, and human/AI styles, then an embedding-similarity reward guides PCGRL.
@@ -918,7 +895,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** VIPCGRL 不只接受文本，还把关卡图和草图映射到共享空间，以更接近人类设计意图的奖励训练生成策略。
 - **English summary:** VIPCGRL aligns text, levels, and sketches in one representation and rewards an RL generator for matching human intent.
 
-### 82. A Database-Driven Framework for 3D Level Generation with LLMs
+### 80. A Database-Driven Framework for 3D Level Generation with LLMs
 
 - **Year / venue:** 2025, AIIDE.
 - **Scope and task/method:** `levels`; LLM-assisted offline construction of room, facility, and mechanic databases supports multi-floor assembly, constrained placement, progression, and two-stage navigation repair.
@@ -928,7 +905,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 该框架把三维关卡拆成可复用的房间、设施和机制数据库，并在装配后专门修复多层导航。
 - **English summary:** Reusable architectural and mechanic databases drive multi-floor 3D level assembly and navigation repair, but no artifacts are released.
 
-### 83. Zero-shot 3D Map Generation with LLM Agents
+### 81. Zero-shot 3D Map Generation with LLM Agents
 
 - **Year / venue:** 2025, arXiv preprint.
 - **Scope and task/method:** `levels`; an Actor maps natural-language intent to opaque PCG-tool parameters and a Critic iteratively checks tool names, ranges, ordering, alignment, and completeness.
@@ -938,7 +915,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 论文让双代理零样本配置三维 PCG 工具，但网上同名复刻没有作者身份链，不能当作官方开源。
 - **English summary:** Actor–Critic agents configure 3D PCG tools from language, but the reported benchmark and pipeline have no verified official release.
 
-### 84. From Generation to Gameplay: Authoring Race Tracks With Repulsive Curves
+### 82. From Generation to Gameplay: Authoring Race Tracks With Repulsive Curves
 
 - **Year / venue:** 2025, IEEE Transactions on Games.
 - **Scope and task/method:** `levels`; repulsive-curve energies optimize editable closed centerlines that are converted into drivable race-track geometry.
@@ -948,7 +925,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** 这篇论文不仅生成曲线，还把它们做成能驾驶的赛道并评价 gameplay，因此属于关卡生成而非赛车代理。
 - **English summary:** Repulsive curves are transformed into editable, drivable race tracks and evaluated through geometry and gameplay, with no public package.
 
-### 85. STRUM: End-to-End Generation of Playable Rhythm-Game Charts
+### 83. STRUM: End-to-End Generation of Playable Rhythm-Game Charts
 
 - **Year / venue:** 2026, arXiv preprint.
 - **Scope and task/method:** `playable-content`; source separation, onset/pitch models, ASR, and spectral rules convert raw audio into multi-instrument Clone Hero/YARG MIDI charts at four difficulties.
@@ -958,7 +935,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** STRUM 从一首原始录音直接生成决定玩法节奏的多乐器谱面，代码、权重和 benchmark manifest 都已发布。
 - **English summary:** STRUM openly converts raw songs into playable multi-instrument rhythm-game charts and releases code, weights, and benchmark metadata.
 
-### 86. Multiverse: Language-Conditioned Multi-Game Level Blending
+### 84. Multiverse: Language-Conditioned Multi-Game Level Blending
 
 - **Year / venue:** 2026, arXiv preprint.
 - **Scope and task/method:** `levels`; a shared text/level latent representation with multi-positive contrastive supervision supports blending across Mario, Zelda, Lode Runner, and dungeon domains.
@@ -968,17 +945,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** Multiverse 把四种游戏关卡放进共享表示，用自然语言指定跨游戏结构混合，并支持组合提示的零样本生成。
 - **English summary:** Multiverse learns a shared multi-game level space for language-guided blending and zero-shot composition across four domains.
 
-### 87. From World-Gen to Quest-Line
-
-- **Year / venue:** 2026, arXiv/SSRN preprint.
-- **Scope and task/method:** `playable-content`; schema-constrained JSON passes through world, NPC, player-character, campaign-quest, and detailed quest-expansion stages.
-- **Evaluation:** repeated-run human ratings of structural completeness, internal consistency, narrative coherence, diversity, and actionability.
-- **Official artifacts:** [arXiv](https://arxiv.org/abs/2604.25482), [official pipeline and run data](https://github.com/borawskiD/PCG_in_RPG_Systems_Using_LLM).
-- **Open status:** **Open, API-dependent.** The modular Python pipeline, prompts/configuration, dependencies, structured outputs, and sample experiments are public; GPT access is external.
-- **中文说明:** 该系统用显式 JSON 依赖把世界设定一路传递到战役和具体任务，生成的是可供 RPG 实作的结构化可玩内容。
-- **English summary:** A public staged pipeline preserves dependencies from RPG world generation through structured campaign and expanded quest content.
-
-### 88. Representing and Generating Levels Over Time through Playtrace Reconstructive Partitioning
+### 85. Representing and Generating Levels Over Time through Playtrace Reconstructive Partitioning
 
 - **Year / venue:** 2026, Foundations of Digital Games.
 - **Scope and task/method:** `levels`; a playtrace-derived “cake” representation captures a level over solution time, and PRP samples/reconstructs Sokoban levels from partitions.
@@ -988,7 +955,7 @@ Every numbered dossier record corresponds to the same public ID. Only direct gen
 - **中文说明:** PRP 用解题轨迹表达关卡随时间的结构，但截止日论文所链接仓库为空，所以必须按 Closed 标注。
 - **English summary:** PRP generates valid Sokoban levels from a playtrace-aware representation, but its linked repository was empty at the cutoff.
 
-### 89. Procedural Content Metageneration via Program Search and Continual Abstraction Discovery
+### 86. Procedural Content Metageneration via Program Search and Continual Abstraction Discovery
 
 - **Year / venue:** 2026, accepted at IEEE Conference on Games.
 - **Scope and task/method:** `generator`; an LLM mutates/crosses complete Python generators while Continual Abstraction Discovery extracts validated reusable helpers during search.

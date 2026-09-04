@@ -73,7 +73,7 @@ body:
       options:
         - label: The generated artifact—not agent playing performance—is the paper's central research object. / 论文核心研究对象是生成工件，而非智能体游玩表现。
           required: true
-        - label: This is not dataset-only, a survey/position paper, infrastructure, standalone repair/QA/tuning, isolated asset generation, or an NPC/player-agent paper. / 本论文不是纯数据集、综述/立场、基础设施、独立修复/QA/调参、孤立资产生成或 NPC/玩家智能体论文。
+        - label: This is not dataset-only, framework-only, an existing-repository coding benchmark, standalone repair/balancing, a non-playable scene/reskin, isolated asset/narrative generation, or an NPC/player-agent paper. / 本论文不是纯数据集、纯框架、既有仓库 coding benchmark、独立修复/平衡、不可玩场景/换皮、孤立资产/叙事生成或 NPC/玩家智能体论文。
           required: true
         - label: I searched all three public categories and found no canonical record for this paper or version family. / 我已搜索三个公开分类，未发现该论文或版本族的 canonical 记录。
           required: true

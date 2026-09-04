@@ -2,14 +2,14 @@
 
 [中文](README.zh-CN.md)
 
-A bilingual, strictly scoped index of research that **generates games rather than plays them**. The collection contains **151 canonical records**: direct game-generation methods and formal benchmarks for those generation tasks. Each paper or version family has one canonical record; cross-listing is not counted twice.
+A bilingual, strictly scoped index of research that **generates games rather than plays them**. The collection contains **143 canonical records**: direct game-generation methods and formal benchmarks for those generation tasks. Each paper or version family has one canonical record; cross-listing is not counted twice.
 
 ## Browse the collection
 
 | Collection | English | 中文 | Included output |
 | --- | --- | --- | --- |
-| End-to-end games and code | [39 records](docs/en/end-to-end.md) | [39 条记录](docs/zh-CN/end-to-end.md) | Runnable games, engine projects/code, executable rules and mechanics |
-| Automated design and PCG | [89 records](docs/en/pcg.md) | [89 条记录](docs/zh-CN/pcg.md) | Complete games/rules and playable levels, maps, quests, puzzles, or charts |
+| End-to-end games and code | [34 records](docs/en/end-to-end.md) | [34 条记录](docs/zh-CN/end-to-end.md) | Runnable games, engine projects/code, executable rules and mechanics |
+| Automated design and PCG | [86 records](docs/en/pcg.md) | [86 条记录](docs/zh-CN/pcg.md) | Complete games/rules and playable levels, maps, quests, puzzles, or charts |
 | Interactive game worlds | [23 records](docs/en/interactive-worlds.md) | [23 条记录](docs/zh-CN/interactive-worlds.md) | Generated game worlds controlled step by step by player input |
 | Scope and evidence | [Scope](SCOPE.md) | [Strict audit](research/strict-method-benchmark-scope-audit.md) | Inclusion rules and primary-source-backed decisions |
 
@@ -26,9 +26,9 @@ The generated artifact—not an agent's score, policy return, or playing ability
 
 - Game-playing agents, NPC/player policies, and gameplay benchmarks.
 - Dataset/corpus-only papers, surveys, taxonomies, and position papers.
-- General infrastructure, authoring tools without substantive automatic generation, and metric-only studies.
-- Standalone verification, repair, QA, or parameter tuning without a direct generator.
-- Standalone images, textures, 3D assets, music, dialogue, stories, cards, or other isolated components.
+- General infrastructure, framework-only proposals, ordinary coding-agent tasks in existing game repositories, and metric-only studies.
+- Standalone verification, repair, QA, balancing, or parameter tuning without a direct generator.
+- Non-playable environments, reskins, or standalone images, textures, 3D assets, music, dialogue, stories, cards, and narrative JSON.
 - Prompted game video without a stepwise player-control loop, and world models centered on planning or policy learning.
 
 When a paper mixes generation with playtesting, search, RL, or self-play, it is included only if those techniques generate or evaluate the generated artifact itself. See [SCOPE.md](SCOPE.md) for the full decision rule.

@@ -23,9 +23,9 @@ Search all three public collections first. The same paper must not be added to m
 
 ## Automatic rejection / 自动拒绝
 
-Do not propose dataset/corpus-only work, surveys, taxonomies, position papers, infrastructure, metric-only studies, standalone repair/QA/tuning, isolated asset generation, NPC/player agents, or policy/planning-centered world models.
+Do not propose dataset/corpus-only work, surveys, taxonomies, position papers, framework-only proposals, ordinary coding-agent tasks in existing game repositories, metric-only studies, standalone repair/QA/balancing/tuning, non-playable scenes, reskins, isolated asset or narrative generation, NPC/player agents, or policy/planning-centered world models.
 
-不要提交纯数据集/语料库、综述、分类、立场论文、基础设施、纯指标研究、独立修复/QA/调参、孤立资产生成、NPC/玩家智能体，或以策略/规划为核心的 world model。
+不要提交纯数据集/语料库、综述、分类、立场论文、纯框架设想、既有游戏仓库中的普通 coding-agent 任务、纯指标研究、独立修复/QA/平衡/调参、不可玩场景、换皮、孤立资产或叙事生成、NPC/玩家智能体，或以策略/规划为核心的 world model。
 
 ## Quality rules / 质量规则
 

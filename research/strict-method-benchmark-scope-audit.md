@@ -1,8 +1,10 @@
 # Strict Method / Benchmark Scope Audit
 
 > Audit cutoff: **2026-09-04 (Asia/Shanghai)**  
-> Audited surface: the 198 public English rows and their Chinese mirrors: 50
+> First-pass surface: 198 public English rows and their Chinese mirrors: 50
 > end-to-end, 115 PCG, and 33 interactive-world rows.
+> Second-pass surface: all 151 canonical English records left after the first
+> cleanup: 39 end-to-end, 89 PCG, and 23 interactive-world records.
 
 ## Decision rule
 
@@ -35,7 +37,7 @@ pre-cleanup snapshot. The original files remain recoverable in Git history.
 The three current source dossiers are renumbered one-to-one with current public
 IDs, while removal determinations are preserved in this audit.
 
-## Result
+## First-pass result: 198 candidates to 151 canonical records
 
 | Action | End-to-end | PCG | Interactive worlds | Total |
 | --- | ---: | ---: | ---: | ---: |
@@ -45,9 +47,9 @@ IDs, while removal determinations are preserved in this audit.
 | Canonical qualifying records after cleanup | 39 | 89 | 23 | **151** |
 
 Thus the pre-cleanup headline count of 198 was inflated by 39 out-of-scope rows
-and 8 duplicate rows. The generation-only result is **151 canonical records**;
-some records intentionally consolidate versions or a directly related paper
-family, so this is not a claim of exactly 151 individual publications.
+and 8 duplicate rows. The first-pass result was **151 canonical records**. A
+second, narrower paper-by-paper check of those 151 records appears at the end
+of this file and supersedes that count for the current public collection.
 
 ## Exact removal and consolidation lists
 
@@ -389,3 +391,141 @@ its 23rd canonical qualifying record.
 - Apply identical removals and moves to English and Chinese pages.
 - Prune source dossiers to the accepted canonical records and preserve removal
   decisions in this audit; recompute all public counts from the cleaned rows.
+
+## Second-pass recheck of the first-pass 151 canonical records
+
+This second pass re-read every record remaining after the first cleanup. IDs in
+this section are the **first-pass 151-row IDs**, not the 198-row pre-cleanup IDs
+used above or the final 143-row IDs. The narrower test retains a paper only when its central research
+contribution directly generates one of the following, or formally benchmarks
+that generation task:
+
+- a playable game or executable game project;
+- executable rules, mechanics, or gameplay behavior;
+- a playable level, map, task, or rhythm chart; or
+- a player-controllable generative game engine or world model.
+
+A method does not have to invent a new commercial title or IP. A learned engine
+that simulates an existing game remains in scope when player input advances the
+generated world. Conversely, editing tasks inside existing repositories,
+player/NPC policies, offline prompted video, rendering alone, datasets,
+framework descriptions, fixed-parameter tuning, asset reskinning, and
+non-executable narrative structures remain out of scope. An automated player or
+playtesting agent may be used as an evaluator without changing the paper's
+scope: the decisive question is whether the scored research object is the
+generated game/content/world or the playing agent.
+
+### Second-pass result
+
+| Current section | Rechecked | `KEEP` | `REMOVE` |
+| --- | ---: | ---: | ---: |
+| End-to-end | 39 | 34 | 5 |
+| PCG | 89 | 86 | 3 |
+| Interactive worlds | 23 | 23 | 0 |
+| **Total** | **151** | **143** | **8** |
+
+The resulting public collection therefore contains **143 canonical records**.
+The exact first-pass-ID decisions are:
+
+- **End-to-end `KEEP`:** `#1`, `#3`, `#5`–`#13`, `#15`–`#29`,
+  `#31`–`#37`, `#39`.
+- **End-to-end `REMOVE`:** `#2`, `#4`, `#14`, `#30`, `#38`.
+- **PCG `KEEP`:** `#1`–`#10`, `#12`–`#17`, `#19`–`#86`,
+  `#88`–`#89`.
+- **PCG `REMOVE`:** `#11`, `#18`, `#87`.
+- **Interactive worlds `KEEP`:** `#1`–`#23`.
+- **Interactive worlds `REMOVE`:** none.
+
+### Eight records removed in the second pass
+
+#### End-to-end
+
+- `#2` — **GameDevBench**: the
+  [paper](https://arxiv.org/abs/2602.11103) constructs 333 tasks by turning
+  tutorials into edits of existing Godot repositories. Its evaluated object is
+  a multimodal coding agent's success on scoped repository tasks, not a method
+  or benchmark for generating a game.
+- `#4` — **GameEngineBench**: the
+  [paper](https://arxiv.org/abs/2607.03525) evaluates scoped native-C++
+  implementation tasks inside nine existing Unreal Engine 5 repositories. It
+  is explicitly a software-engineering-agent benchmark, not a game-generation
+  benchmark.
+- `#14` — **GameGPT**: the
+  [paper](https://arxiv.org/abs/2310.08067) proposes a multi-agent architecture,
+  but its body proceeds from the framework description directly to references:
+  it supplies no experiment section, generated-game evidence, fixed generation
+  task, or official implementation. It is framework-only evidence, not a
+  demonstrated generation method.
+- `#30` — **RuleSmith**: the
+  [paper](https://arxiv.org/abs/2602.06232) runs self-play and Bayesian
+  optimization over CivMini's fixed multidimensional parameter space. Its
+  output is a balance-oriented parameter configuration; it does not generate
+  new rules, mechanics, content, or a game.
+- `#38` — **DreamGarden**: section 2.4 of the
+  [paper](https://arxiv.org/abs/2410.01791) states that “DreamGarden is
+  restricted to generating 0-player simulations” and presents playable game
+  snippets as future work. The reported system therefore does not directly
+  produce a playable game under this audit's rule.
+
+#### PCG
+
+- `#11` — **A Rogue Dream: Automatically Generating Meaningful Content for
+  Games**: the [official paper PDF](https://ojs.aaai.org/index.php/AIIDE/article/download/12745/12593)
+  describes dynamic reskinning of one fixed roguelite. It replaces the images
+  for the player, enemies, items, and goal and selects from pre-authored
+  abilities; it does not generate rules, mechanics, levels, or a complete game.
+  See also the [AIIDE record](https://doi.org/10.1609/aiide.v10i3.12745).
+- `#18` — **Procedural Level Design for Platform Games**: the
+  [official paper PDF](https://ojs.aaai.org/index.php/AIIDE/article/download/18755/18531)
+  says the prototype implements only a single-pattern builder, while the cell
+  structure and full-level generator remain unimplemented. The demonstrated
+  contribution is therefore an isolated construction component rather than a
+  method that directly generates playable levels. See also the
+  [AIIDE record](https://doi.org/10.1609/aiide.v2i1.18755).
+- `#87` — **From World-Gen to Quest-Line**: the
+  [paper](https://arxiv.org/abs/2604.25482) outputs narrative JSON describing a
+  world, NPCs, player, quest, dialogue, choices, and outcomes. It supplies no
+  engine execution, gameplay logic, or playable artifact and describes the
+  evaluation as application-driven rather than benchmark-driven. It is thus
+  non-executable narrative generation, not game generation.
+
+### Canonical citation correction for PCG `#8`
+
+PCG `#8` remains a `KEEP`, but its canonical citation had pointed to the wrong
+paper about the same system. It was corrected from **The Micro-Rhetorics of
+Game-o-Matic** ([old DOI](https://doi.org/10.1145/2282338.2282347)) to
+**Game-O-Matic**
+([method-paper DOI](https://doi.org/10.1145/2538528.2538537)), presented at the
+Third Workshop on Procedural Content Generation in Games in 2012. The latter is
+the system paper describing how the generator selects and combines
+micro-rhetorics from a concept map to produce coherent playable games. This is
+a same-system citation correction, not an additional canonical record.
+
+### Explicit boundary keeps
+
+The following potentially confusing records remain in scope after primary-
+source review:
+
+- End-to-end `#21` **IDGE** accepts free-form rules and player actions and
+  generates successive gameplay states. It acts as a customizable generative
+  game engine, not a poker-playing policy.
+- End-to-end `#25` **STORY2GAME** generates executable action code and evaluates
+  complete interactive playthroughs; its narrative input does not make the
+  output merely a story.
+- End-to-end `#28` **Real-Time World Crafting** and `#37` **Open Role-Playing
+  with Delta-Engines** generate new executable behaviors, abilities, and
+  mechanics code inside base engines. They do more than tune fixed parameters.
+- Interactive-world `#1`–`#21` all generate world observations or state
+  step-by-step in response to player controls. Training or data-collection
+  agents are auxiliary and do not turn these papers into player-agent work.
+- Interactive-world `#22` **WildBench** and `#23` **PlayWorld** formally score
+  generated worlds. Their agent players are test probes, not the research
+  object being optimized.
+- PCG `#53` **Marahel** uses scripts as stochastic level-generator
+  specifications whose interpreter directly emits maps; it is not merely an
+  authoring language. The implementation claim is documented in the
+  [official paper PDF](https://ojs.aaai.org/index.php/AIIDE/article/download/12970/12818).
+- PCG `#57` formally compares seven Mario generator families under a shared
+  evaluation and therefore qualifies as a generator benchmark. PCG `#59` both
+  runs a unified benchmark study and proposes substantive changes to a Sokoban
+  generation method; neither is a metric-only paper.
