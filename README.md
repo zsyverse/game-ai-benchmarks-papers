@@ -1,6 +1,6 @@
 # Game Generation Methods & Benchmarks
 
-[中文](README.zh-CN.md) · [All papers](docs/en/paper-list.md) · [Research guide](docs/en/research-guide.md) · [Contribute](CONTRIBUTING.md)
+[中文](README.zh-CN.md) · [Web UI](https://zsyverse.github.io/game-ai-benchmarks-papers/) · [All papers](docs/en/paper-list.md) · [Research guide](docs/en/research-guide.md) · [Contribute](CONTRIBUTING.md)
 
 [![Validate bibliography](https://github.com/zsyverse/game-ai-benchmarks-papers/actions/workflows/validate.yml/badge.svg)](https://github.com/zsyverse/game-ai-benchmarks-papers/actions/workflows/validate.yml) [![GitHub stars](https://img.shields.io/github/stars/zsyverse/game-ai-benchmarks-papers?style=flat)](https://github.com/zsyverse/game-ai-benchmarks-papers/stargazers) [![License](https://img.shields.io/github/license/zsyverse/game-ai-benchmarks-papers?style=flat)](https://github.com/zsyverse/game-ai-benchmarks-papers/blob/main/LICENSE)
 
