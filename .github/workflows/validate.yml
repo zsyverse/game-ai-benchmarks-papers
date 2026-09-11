@@ -23,8 +23,14 @@ jobs:
       - name: Validate bilingual index
         run: python scripts/validate_index.py
 
+      - name: Test index search
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: Check generated paper lists
+        run: python scripts/build_paper_list.py --check
+
       - name: Validate YAML syntax
-        run: ruby -e 'require "yaml"; YAML.load_file(".github/ISSUE_TEMPLATE/resource.yml"); YAML.load_file(".github/workflows/validate.yml")'
+        run: ruby -e 'require "yaml"; YAML.load_file(".github/ISSUE_TEMPLATE/resource.yml"); YAML.load_file(".github/workflows/validate.yml"); YAML.load_file(".github/workflows/link-check.yml")'
 
       - name: Lint Markdown
-        run: npx --yes markdownlint-cli2@0.23.2 "**/*.md"
+        run: npx --yes markdownlint-cli2@0.23.2 "*.md" "docs/**/*.md" "research/**/*.md"

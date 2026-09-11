@@ -1,0 +1,156 @@
+# Independent adversarial audit of interactive-world additions
+
+Audit date: 2026-09-05. Targets are the previous public interactive-world rows 22–32 and 35–36, plus the Matrix family in row 7 and, by follow-up request, Hunyuan-GameCraft in row 8. Row numbers below refer to that 36-record snapshot, not to any subsequent renumbering.
+
+This review reread [SCOPE](../SCOPE.md), the public index and source dossier, then independently requested primary paper HTML, official README files, project pages, model manifests, and a released benchmark ZIP. Prior coverage notes were not used as factual evidence. The evidence-only review preceded integration of its corrections into the public index. Model execution and training were not attempted.
+
+## Findings that materially change the previous account
+
+1. **WorldRoamBench was wrongly classified Closed.** The website's “Download link is not configured yet” text is a hidden fallback, while its JavaScript contains a configured, working dataset URL. The ZIP was already last-modified **2026-08-27**, before the preceding audit. HTTP range inspection establishes 1,006 real JSON/image input pairs. Correct to **Partial: inputs released; evaluator not verified**.
+2. **Matrix-Game merges four distinct papers, and Hunyuan merges two.** Different arXiv identifiers alone are not the deciding test: the full texts establish substantive new methods and experiments. The repository's own canonical rule requires separate records for distinct follow-ups. Matrix's throughput results also belong to different hardware/model configurations.
+3. **Some experimental scopes were compressed inaccurately.** Vid2World's CS:GO test uses four context frames and generation **until total length 16**, hence 12 predicted frames, not 16 predicted after four. Neural Game Engine's 500-step, 100×100 generalization is a Sokoban experiment, not the ten-game evaluation. WorldPlay's user study uses 300 image/case inputs **and** 300 customized trajectories with 30 assessors; the bare “300-case human study” omits the construction.
+
+The scoped review does **not** support wholesale removal of the 13 additions. Navigation and camera movement can qualify under the existing definition when the model causally continues a generated world in response to player controls. There is no new requirement here for combat, inventory, win/loss, or a complete conventional engine. Conversely, a fixed offline camera clip alone would not suffice. Benchmarks that submit specified control sequences are valid tests of interactive generators even though their evaluation runs replay predetermined inputs.
+
+## Per-record audit
+
+### 22. Learning to Simulate Dynamic Environments with GameGAN — 2020 — KEEP, narrow implementation claims
+
+- **Primary paper:** <https://arxiv.org/html/2005.12126>; **release:** <https://github.com/nv-tlabs/GameGAN_code>; exact README: <https://raw.githubusercontent.com/nv-tlabs/GameGAN_code/master/readme.md>.
+- **Evidence:** abstract: “Given a key pressed by the agent, GameGAN ‘renders’ the next screen”; **Figure 3** explicitly shows “a human playing with GameGAN” and capsule-triggered ghost behavior. The dynamics engine and memory generate the next observation; this is not a conventional engine with only a neural renderer.
+- **Evaluation:** **Table 1** evaluates transfer of agents trained in generated simulators back to real environments, on 100 test environments, with Pacman/VizDoom scores. The come-back-home test checks remembered layout consistency; human-play imagery demonstrates interaction. These are generator evaluations, even though an RL agent is one probe.
+- **Artifacts:** exact README offers VizDoom extraction and `vizdoom_multi.sh`/`vizdoom_single.sh` training. It explicitly warns the upstream extraction environment is deprecated. It does not supply a verified Pac-Man training corpus or pretrained weights. The README's own “Project Page” link mistakenly points to lift-splat-shoot; retain the correct NVIDIA GameGAN link already in the public row.
+- **Conclusion / replacement:** retain **Partial**, preferably “Official VizDoom extraction/training implementation; pretrained weights and the demonstrated Pac-Man corpus not verified.” Do not imply a complete released Pac-Man simulator from the public repository.
+
+### 23. Playable Video Generation (CADDY) — 2021 — KEEP
+
+- **Primary paper:** <https://arxiv.org/html/2101.12195>; **official release:** <https://raw.githubusercontent.com/willi-menapace/PlayableVideoGeneration/main/README.md>; live demo: <https://willi-menapace.github.io/playable-video-generation-website/play.html>.
+- **Evidence:** paper/official abstract defines a user selecting “a discrete action at every time step”; README says users control generation “on-the-fly”. The recurrent dynamics network receives inferred/selected actions, rather than copying a conventional game transition.
+- **Evaluation:** **Table 3** is Atari Breakout; **Table 4** is Tennis; **Table 2** is the auxiliary BAIR robot experiment. Tables include LPIPS/FID/FVD, displacement Δ-MSE/Δ-Acc and detection metrics. Do not present BAIR as a game or Tennis as an original commercial simulator: Tennis is learned from real broadcast video, transformed into an interactive generated experience.
+- **Artifacts:** README offers Breakout data and model downloads, `train.py`, `play.py`, and evaluation procedures. Checkpoint download links are author-hosted Google Drive, not bundled weights. Their binaries were not downloaded in this independent pass.
+- **Conclusion / replacement:** **KEEP Open with external-download/legacy-dependency caveat**. Current scope wording is supported. The record's canonical title is *Playable Video Generation*; CADDY is its method name, not another paper.
+
+### 24. Playable Environments: Video Manipulation in Space and Time — 2022 — KEEP
+
+- **Primary paper:** <https://arxiv.org/html/2203.01914>; **official release:** <https://raw.githubusercontent.com/willi-menapace/PlayableEnvironments/master/README.md>.
+- **Evidence:** abstract: “allows the user to move objects in 3D ... by providing a sequence of desired actions”; the learned action module manipulates environment state **before** volumetric rendering. This is decisive against a renderer-only exclusion.
+- **Evaluation:** dataset section reports **1 h of two sparring Minecraft players**, separate **Minecraft Camera** trajectories for camera-control ground truth, and **43 broadcast Tennis matches / 12 h**. **Table 2** compares action learning on Static Tennis, so Minecraft movement, camera control, and real-video action learning should not be collapsed into one undifferentiated gaming score.
+- **Artifacts:** official README gives Minecraft data/checkpoints via Google Drive, ReplayMod collection, three training stages (feature renderer, synthesis, action module), and interactive use. The external binaries were not fetched in this independent pass.
+- **Conclusion / replacement:** **KEEP Open**, with external Minecraft/video assets and legacy environment requirements. Existing public summary is defensible; a refined evaluation cell should distinguish the three datasets and camera-only diagnostic from the independently controlled objects.
+
+### 25. Model as a Game: On Numerical and Spatial Consistency for Generative Games — 2025 — KEEP
+
+- **Primary paper:** <https://arxiv.org/html/2503.21172>.
+- **Evidence:** abstract describes a DiT generator with “a numerical module that integrates a LogicNet to determine event triggers” and a map memory that retrieves location-specific information “during generation”. External arithmetic is an internal stage of the generator, not a standalone balancing or repair product.
+- **Evaluation:** **Table 1** compares baseline and consistency modules on **Traveler, Pong and Pac-Man**, with ActAcc/NumCon and spatial consistency where applicable; **Table 2** examines denoising steps/prediction lengths. Appendix G describes additional validation models. The paper's evidence supports improved consistency in these three controlled games, not universal rule correctness or indefinite stable gameplay.
+- **Artifacts:** no official implementation/model/data link was verified from the paper in this pass.
+- **Conclusion / replacement:** **KEEP Closed**. Existing row is supported. Avoid repeating the paper's extrapolation from 64–256-frame tests to “indefinite” gameplay as a measured result.
+
+### 26. Vid2World: Crafting Video Diffusion Models to Interactive World Models — 2025 — KEEP, CORRECT test horizon
+
+- **Primary paper:** <https://arxiv.org/html/2505.14357>; **release:** <https://raw.githubusercontent.com/thuml/Vid2World/main/README.md>; **weight manifest:** <https://huggingface.co/api/models/thuml/Vid2World-CSGO>.
+- **Evidence:** abstract names robot manipulation, **3D game simulation**, and navigation as separate tested domains. **Section 5.2** explicitly evaluates action-conditioned CS:GO generation against DIAMOND; it is a substantive generation track, not a paper whose only result is a robot policy.
+- **Exact correction:** **Appendix C.5**: “we autoregressively generate frames from four consecutive history frames, until a sequence length of 16 is reached”; “metrics are calculated only on the predicted frames, excluding frames used for conditioning.” Therefore this is **4 context + 12 predicted**, not 4 + 16. The test holdout is **0.5M frames / 500 episodes / 8 h**. Separately, a 4+16 configuration appears in navigation discussion; do not transfer it to CS:GO.
+- **Evaluation:** CS:GO visual metrics and action-guidance tests; the action section also cautions about delta-normalized metrics being inflated by random-action quality collapse in a baseline. This limits interpreting a larger score as universally better control.
+- **Artifacts:** official README announces training/inference/evaluation release in December 2025 and explicitly lists the CSGO checkpoint. The live Hugging Face manifest is ungated and contains `model_checkpoint_100000.ckpt`.
+- **Conclusion / replacement:** retain **Open, external data/dependencies**. Dossier sentence: “CS:GO evaluation autoregressively predicts 12 frames after four context frames (16 total), scoring only predicted frames, on a 0.5M-frame held-out set.”
+
+### 27. Advancing Open-source World Models (LingBot-World) — 2026 — KEEP, specify runtime variant
+
+- **Primary paper:** <https://arxiv.org/html/2601.20540>; **release:** <https://raw.githubusercontent.com/robbyant/lingbot-world/main/README.md>; **fast-model manifest:** <https://huggingface.co/api/models/robbyant/lingbot-world-fast>.
+- **Evidence:** **Section 2.1.2** explicitly synchronizes native game-control signals with recorded RGB/camera data; **Sections 3.3.2 and 3.4** cover action conditioning and causal/few-step adaptation. The generated environment responds to controls; game footage is not merely an incidental visual prior.
+- **Evaluation:** **Section 4.1.1** states Fast achieves **16 fps on 480p videos using one GPU node**. **Figure 12** shows long-horizon revisit/memory examples. A node must not be rewritten as one GPU. Base and Fast are different inference configurations; the released Fast weights use camera poses, with action-to-camera utilities in the code path.
+- **Artifacts:** official README confirms inference-script/weight releases. Current README forwards future work to LingBot-World-Infinity, but that does not automatically replace this canonical paper. Fast manifest contains sixteen safetensors shards; no complete trainer/corpus was verified.
+- **Conclusion / replacement:** **KEEP Partial**. Refine runtime to “Fast variant: 16 FPS at 480p on one GPU node; paper evaluates long-horizon memory and action response.”
+
+### 28. ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU — 2026 — KEEP
+
+- **Primary paper:** <https://arxiv.org/html/2607.19191>; **release:** <https://raw.githubusercontent.com/amap-cvlab/ABot-World/main/README.md>; **model manifest:** <https://huggingface.co/api/models/acvlab/ABot-World-0-5B-LF>.
+- **Evidence:** introduction says “raw keyboard inputs to support both scene roaming and character control”; **Section 3.2** covers first-/third-person AAA game collection; the causal model and reference-character memory supply generated continuation rather than only pre-scripted camera video.
+- **Exact runtime:** **Section 4.4.1, Table 1**: one RTX 5090, batch 1, **1280×704**, “Up to 16 FPS”, **1.2 s action-to-first-frame latency**, peak VRAM **≤19.3 GiB**. The table expressly reports an **operating envelope**, not one precision-specific configuration. Throughput and latency are separate.
+- **Artifacts:** README offers causal-student inference/Gradio, announced 500-hour data release on August 3, and a prebuilt environment. Ungated model manifest contains `diffusion_pytorch_model.safetensors`, VAE and tokenizer files. A later 24-hour demo does not prove error-free 24-hour physics or full training reproducibility.
+- **Conclusion / replacement:** **KEEP Partial**. Existing 16 FPS / 1.2 s statement is correct; add 1280×704 and operating-envelope caveat if presenting a hardware comparison.
+
+### 29. ReWorld: An Interactive World Model with Long-Horizon Memory — 2026 — KEEP, describe navigation scope
+
+- **Primary paper:** <https://arxiv.org/html/2608.23565>; **project:** <https://zhifeichen097.github.io/ReWorld/>.
+- **Evidence:** introduction defines a “stream of user actions” generating “a coherent, explorable environment”; **Sections 2.2–2.4** specify chunked causal generation, action injection, bounded cache, landmark retrieval and real-time distillation. It is a generated navigable world, without evidence of newly generated combat/rule systems.
+- **Evaluation:** **Section 4.2 / Table 3** compares ReWorld with six baselines; **Section 4.3 / Table 4** tests long-horizon memory, including **64-second / 384-latent** out-and-back rollouts; **Table 5** measures seven VBench dimensions after normalizing clips to **32 frames / 1280×704 / 16 fps**. Those quality numbers are not native-length output comparisons. **Section 3's source table** verifies 18,387 roaming clips from 79 games.
+- **Artifacts:** independently retrieved project remains a presentation/demo page without a verified model/code/data download. Absence of release is not absence of a demonstrated method.
+- **Conclusion / replacement:** **KEEP Closed**. Use “action-controlled navigable worlds; control and 64-second revisit tests” and retain the scope limitation. No new win/loss criterion is needed to retain this method.
+
+### 30. WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling — 2025, revised 2026 — KEEP, clarify study
+
+- **Primary paper:** <https://arxiv.org/html/2512.14614> (inspected v2 dated 2026-06-09); **release:** <https://raw.githubusercontent.com/Tencent-Hunyuan/HY-WorldPlay/main/README.md>.
+- **Evidence:** **Section 3** formulates next-chunk generation from user actions; **3.2** dual action representation combines keyboard/mouse and camera geometry, **3.3** retrieves context memory, **3.4** distills through context forcing. **Appendix E.1** supports prompt changes during autoregressive generation via KV recaching. Therefore it is not a one-shot camera renderer.
+- **Evaluation correction:** **Appendix D / Figure 18**: “300 cases ... and 300 customized trajectories”; “a panel of 30 assessors”. Do not turn this into 300 participants or an unspecified 600-case union. Public replacement: “Control/visual/revisit evaluation and a 30-assessor paired study using 300 cases and 300 customized trajectories.”
+- **Runtime:** paper reports 24 FPS at 720p; any cross-model speed comparison must preserve its deployment configuration rather than equating it with single-desktop-GPU claims.
+- **Artifacts:** README verifies WorldPlay-8B training code release, 5B lightweight model and inference. It additionally describes WorldCompass post-training as **another paper**; that is not evidence that every capability in the evolving repository belongs to this WorldPlay paper. Full matched training corpus was not verified.
+- **Conclusion / replacement:** **KEEP Partial**; label year “2025, revised 2026” when summarizing the inspected v2 evidence.
+
+### 31. DreamX-World 1.0: A General-Purpose Interactive World Model — 2026 — KEEP, separate released variants
+
+- **Primary paper:** <https://arxiv.org/html/2606.16993>; **release:** <https://raw.githubusercontent.com/AMAP-ML/DreamX-World/main/README.md>; manifests: <https://huggingface.co/api/models/GD-ML/DreamX-World-5B>, <https://huggingface.co/api/models/GD-ML/DreamX-World-5B-Cam>.
+- **Evidence:** **Section 2.1.1** defines first-person free-camera exploration, third-person character-driven generation, and an event subset; **Sections 3.3–3.4** train composable events and autoregressive generation; **Section 4** implements streaming inference. Offline rendering is the training-data collection mechanism, not evidence that the learned inference model is noninteractive.
+- **Evaluation:** **Sections 5.1–5.4** cover control, long-horizon drift, revisit memory and human preference. The paper explicitly reports **up to 16 FPS on eight RTX 5090s**; this number is accurate. The E-PRoPE efficiency test in **Table 1** instead uses eight H20s and times a five-second clip; do not conflate it with the streaming FPS result.
+- **Artifacts:** both model manifests contain actual ungated weights. README labels **5B-Cam bidirectional, 5-second generation**, and **5B autoregressive, long-horizon generation**. These are not interchangeable evidence of a released live causal model.
+- **Conclusion / replacement:** **KEEP Partial**. Suggested artifact wording: “Released 5B autoregressive and 5B-Cam five-second bidirectional inference/models; full trainer, data and all 1.0 components not verified.”
+
+### 32. Neural Game Engine: Accurate learning of generalizable forward models from pixels — 2020 — KEEP, CORRECT evaluation scope
+
+- **Primary paper:** <https://arxiv.org/html/2003.10520>; **release:** <https://raw.githubusercontent.com/Bam4d/Neural-Game-Engine/master/README.md>.
+- **Evidence:** abstract's research product is learned game forward models; **Sections III–V** train/evaluate predicted pixels and rewards. Planning/RL are discussed as applications, not the measured main contribution. Official README: “you can play them using your keyboard”, with `play.py`, pretrained model IDs and training commands.
+- **Exact experiment:** **Section V-D / Table I** tests the trained **Sokoban** model on 30×30, 50×50, 70×70 and 100×100 grids for **500 steps averaged over 10 repeats**. **Section V-E / Table II** tests **ten games for 100 steps over three repeats**. Those are different experiments.
+- **Negative findings:** Table II has **clusters reward F1=0.0**, **aliens tile F1=0.73 / reward F1=0.85**. The text explains stochastic/partially observable mechanics and negative-reward limitations. A claim that all ten games are perfectly learned would be false.
+- **Conclusion / replacement:** **KEEP Open**, legacy GVGAI dependency. Replace evaluation cell with “Pixel/tile/reward accuracy on ten games (100 steps, three repeats); separate Sokoban generalization to 100×100 grids over 500 steps, plus gating ablations.”
+
+### 35. WorldMark: A Unified Benchmark Suite for Interactive Video World Models — 2026 — KEEP
+
+- **Primary paper:** <https://arxiv.org/html/2604.21686>; **release:** <https://raw.githubusercontent.com/AlayaLab/WorldMark/main/README.md>; generation contract: <https://raw.githubusercontent.com/AlayaLab/WorldMark/main/generation/README.md>.
+- **Evidence:** **Section 3.3 / Figure 3** defines **15 action sequences** with shared W/S/A/D plus L/R yaw controls. Per-model adapters translate the same semantic programs. Easy/Medium/Hard use one/two/three segments and **20/40/60 seconds**. **Table 2** defines nine metrics; empirical comparison covers ten generators.
+- **Counts:** **Section 3.2**: 50 scenes, paired first-/third-person views giving 100 images, five actions per image = **500 cases**. Official generation README independently confirms “25 images × 5 actions = 125 videos; all four = 500”. These counts are correct.
+- **Scope consistency:** measures generated motion response, revisit memory and visual quality. A benchmark need not add its own combat or win state to test a qualifying interactive-world generator. It is broader than game-mechanic evaluation, which should be stated plainly.
+- **Artifacts:** official README supplies `arena_inputs`, generation gates, evaluation workflows and native-resolution/time normalization. The authoring-adapter skill in that repository is documentation, not instructions followed during this audit.
+- **Conclusion / replacement:** **KEEP Open**, with separately installed model dependencies. “500 standardized navigation/control cases over ten interactive world generators” is accurate; avoid describing it as evaluating comprehensive gameplay-rule fidelity.
+
+### 36. WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models — 2026 — KEEP, CORRECT Closed → Partial
+
+- **Primary paper:** <https://arxiv.org/html/2606.31672>; **project:** <https://worldroam.amap.com>; **verified dataset:** <https://amap-cvlab.oss-cn-zhangjiakou.aliyuncs.com/worldroambench/worldroam.zip>.
+- **Paper evidence:** abstract defines **600+ cases**, first-/third-person views, **10–60 s** WASD interaction. Test-suite section and **Figures 7–8** characterize case counts/lengths/difficulty. Action, visual drift, controllability-gated physics and scene/subject memory are distinct protocols; **Appendices C–F** provide detailed estimators and prompts. The original public summary of the task is supported.
+- **Critical artifact error:** the website contains `<p id="datasetNote" hidden>` with “Download link is not configured yet”, but the immediately following script assigns the real ZIP URL to `DATASET_URL`. The former is fallback UI text, not the current download state.
+- **Independent HTTP verification:** ZIP responds **200**, `application/zip`, **2,681,337,989 bytes**, `Last-Modified: Thu, 27 Aug 2026 12:29:37 GMT`. Range requests returned **206** and a valid ZIP central directory (393,075 bytes at offset 2,680,944,892), with **3,054 entries**.
+- **Independent content verification:** excluding metadata, the archive has **1,006 `action.json` files and 1,006 PNGs**: action_vision 648, memory 211, physics 147. A sample JSON was individually range-fetched/decompressed: `total_time: 15`, WASD translation and IJKL rotation mappings, and `actions: [{keys: ["w"], duration: 15}]`. No evaluator `.py` files occur in this archive.
+- **Counts must be distinguished:** the paper says 600+ evaluated cases; the current released input archive has 1,006 pairs. This does not prove all 1,006 were scored in the paper or that the archive is the frozen experiment set.
+- **Replacement:** “**Partial** — official input archive is downloadable (1,006 image/action pairs checked); a complete evaluator and exact paper-to-release correspondence were not verified.” Delete the incorrect “download unconfigured” assertion from both public row and dossier.
+
+## Matrix: split row 7 into four canonical papers
+
+The existing canonical rule says a genuinely distinct follow-up remains separate. The following are not just revised versions of one paper: each has its own method contribution and experiments. Their shared repository is not a reason to merge them.
+
+| Canonical title / year | Distinct contribution and evaluation supported by primary text | Artifact conclusion |
+| --- | --- | --- |
+| **Matrix-Game: Interactive World Foundation Model**, 2025, [2506.18701](https://arxiv.org/html/2506.18701) | **Sections 3–4**: two-stage unlabeled/action-labeled Minecraft training and keyboard/mouse-conditioned image-to-world diffusion. **Section 5** introduces GameWorld Score; **Section 6** compares Oasis/MineWorld and human preference. 50-step inference with “16 training FPS” is not a measured 16-FPS real-time claim. | **Partial**: [version-specific README](https://raw.githubusercontent.com/SkyworkAI/Matrix-Game/main/Matrix-Game-1/README.md), [code](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-1), [weights](https://huggingface.co/Skywork/Matrix-Game); full matched training/data/evaluation release not established in this independent pass. |
+| **Matrix-Game 2.0: An Open-Source Real-Time and Streaming Interactive World Model**, 2025, [2508.13009](https://arxiv.org/html/2508.13009) | Abstract and method introduce few-step autoregressive diffusion, action modules and UE/GTA5 data construction. Explicit **25 FPS on a single H100** and minute-scale generation. **Table 2** evaluates wild scenes, but text says Minecraft-specific action-control scores cannot directly transfer to wild scenes. | **Partial**: [code](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-2), [weights](https://huggingface.co/Skywork/Matrix-Game-2.0); inference/models, not proven full pipeline replication. |
+| **Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory**, 2026, [2604.08995](https://arxiv.org/html/2604.08995) | Residual/self-correction training, camera-aware memory retrieval, multi-segment DMD and VAE pruning. **Section 5.2.3 / Table 1** reports up to **40 FPS** under **8 DiT GPUs + 1 VAE GPU**; **Table 2** is VAE reconstruction efficiency, not game physics. | **Partial**: [README](https://raw.githubusercontent.com/SkyworkAI/Matrix-Game/main/Matrix-Game-3/README.md) explicitly releases two 5B first-person Unreal models while mixed real/Unreal and 28B models “will be released soon”; [code](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-3), [weights](https://huggingface.co/Skywork/Matrix-Game-3.0). |
+| **Matrix-Game 3.5**, 2026, [2608.29910](https://arxiv.org/html/2608.29910) | Abstract explicitly lists **three new improvements**: 3D patch memory/tiled-PRoPE, static/dynamic disentanglement, and two-stage perceptual-flow/Self-Rollout DMD. **Table 1** evaluates the **undistilled** model on the SANA-WM one-minute benchmark; **Section 4.4** separately reports the INT8 three-step causal student at **up to 20 FPS / 1280×704 / one H100**, including memory retrieval and VAE decoding. | **Partial**: [official README](https://raw.githubusercontent.com/Riemann-Dynamics/Matrix-Game-3.5/main/README.md), [code](https://github.com/Riemann-Dynamics/Matrix-Game-3.5), [base](https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Base), [distilled](https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Distilled). Live manifests verify first-/third-person base weights and first-person distilled weights; full matched training/corpus not verified. |
+
+The verified full 3.5 title is **Matrix-Game 3.5: Enhancing Real-Time Streaming Interactive World Models with Patch Memory**. Do not borrow 3.0's 40 FPS or its availability limitations wholesale for 3.5. Citing predecessor papers as historical context does not merge their canonical identities.
+
+### GenieRedux: two independent papers, not two versions of one manuscript
+
+- [Learning Generative Interactive Environments By Trained Agent Exploration (2024), 2409.06445](https://arxiv.org/html/2409.06445) develops GenieRedux/GenieRedux-G and CoinRun generation using trained-agent exploration data. Its primary distinction is trained versus random exploration. **Partial**: the shared official repository now reflects later work; a pinned historical reproduction configuration was not independently established.
+- [Exploration-Driven Generative Interactive Environments (2025), 2504.02515](https://arxiv.org/html/2504.02515) develops reward-independent uncertainty-driven **AutoExplore** and the **RetroAct** grouping of 974 environments, with exploration/adaptation experiments beyond the earlier paper. **Open**: shared official training, generation, evaluation and model releases are present; game ROMs must be obtained separately.
+- Separate arXiv identities, algorithmic contributions and experiment sets justify two canonical records. Together with Matrix-Game's four and Hunyuan-GameCraft's two records, these corrections increase the prior 36-record index to **41 (37 methods + 4 benchmarks)** without counting a preprint and its revision twice.
+
+## Hunyuan: split row 8 into two canonical papers
+
+1. **Hunyuan-GameCraft: High-dynamic Interactive Game Video Generation with Hybrid History Condition**, **2025**, <https://arxiv.org/html/2506.17201>. **Section 4.1** maps keyboard/mouse operations into a shared camera representation; **4.2** proposes hybrid history-conditioned extension, followed by model distillation. **Section 5 / Table 2** compares visual quality, dynamics, temporal consistency and camera errors; the PCM distilled variant reaches **6.6 FPS**, versus **0.25 FPS** for its base in that table. [Official README](https://raw.githubusercontent.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0/main/README.md) verifies inference, weights and a Gradio demo; full training/corpus not verified. **Partial**. Canonical artifacts: <https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0>, <https://huggingface.co/tencent/Hunyuan-GameCraft-1.0>.
+2. **Hunyuan-GameCraft-2: Instruction-following Interactive Game World Model**, **2025, revised 2026**, <https://arxiv.org/html/2511.23429> (inspected v2 dated 2026-02-10). Method adds prompt-based instruction conditioning, autoregressive distillation/long-video tuning, and KV recaching for multi-turn control. **Section 5.2.2 and Appendix D** define **InterBench** with trigger rate, prompt alignment, fluency, scope, end-state consistency and object physics; **Section 5.3 / Table 5** separately measures environmental interaction, actor actions and object emergence. Paper reports **16 FPS**. [Official project](https://hunyuan-gamecraft-2.github.io/) provides demos; no verified downloadable code/checkpoint. **Closed**. Its new interaction method and empirical benchmark are substantive, not a renamed release of 1.0.
+
+## Verification boundaries
+
+- GitHub tree API requests encountered unauthenticated rate limiting during this pass. Empty/error API results were **not** interpreted as empty repositories. Raw author README and public manifests were used instead.
+- Hugging Face model APIs were checked for real weight-bearing entries in Vid2World-CSGO, LingBot-Fast, ABot, both DreamX variants, and both Matrix-3.5 releases. Model files were not executed or fully downloaded.
+- Google Drive checkpoint links in the two older Playable systems were independently reconfirmed in their author READMEs but not downloaded. Their openness is source-supported, not an independently reproduced run.
+- The WorldRoam ZIP was verified through HTTP headers, central-directory parsing and one actual decompressed action JSON. This is substantially stronger evidence than merely seeing a download button, without downloading the full 2.5-GiB artifact.
+- No arbitrary new requirement for goal scoring, combat, or win/loss was applied. Retention follows the repository's existing stepwise-player-input criterion; summaries should distinguish navigation-world capability from conventional game-rule fidelity.

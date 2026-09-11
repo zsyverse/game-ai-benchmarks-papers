@@ -16,25 +16,25 @@ COLLECTIONS = (
         "docs/en/end-to-end.md",
         "docs/zh-CN/end-to-end.md",
         "research/end-to-end-generation-sources.md",
-        34,
-        (8, 26),
+        38,
+        (10, 28),
     ),
     (
         "docs/en/pcg.md",
         "docs/zh-CN/pcg.md",
         "research/pcg-automated-design-sources.md",
-        86,
-        (12, 74),
+        120,
+        (18, 102),
     ),
     (
         "docs/en/interactive-worlds.md",
         "docs/zh-CN/interactive-worlds.md",
         "research/interactive-world-generation-sources.md",
-        23,
-        (21, 2),
+        45,
+        (41, 4),
     ),
 )
-EXPECTED_TOTAL = 143
+EXPECTED_TOTAL = 203
 BANNED_PUBLIC_IDENTITIES = {
     "arxiv:2310.08067",  # GameGPT: framework-only, no generation experiment
     "arxiv:2410.01791",  # DreamGarden: zero-player simulation
@@ -48,28 +48,28 @@ BANNED_PUBLIC_IDENTITIES = {
 }
 EXPECTED_SECTION_HEADINGS = {
     "docs/en/end-to-end.md": (
-        "## 1. Generation benchmarks (8)",
-        "## 2. Generation methods (26)",
+        "## 1. Generation benchmarks (10)",
+        "## 2. Generation methods (28)",
     ),
     "docs/zh-CN/end-to-end.md": (
-        "## 1. 生成 Benchmark（8 条）",
-        "## 2. 生成方法（26 条）",
+        "## 1. 生成 Benchmark（10 条）",
+        "## 2. 生成方法（28 条）",
     ),
     "docs/en/pcg.md": (
-        "## 1. Complete-game, rule, and mechanic generation methods (12)",
-        "## 2. Level/playable-content methods and generation benchmarks (74)",
+        "## 1. Complete-game, rule, and mechanic generation methods (18)",
+        "## 2. Level/playable-content methods and generation benchmarks (102)",
     ),
     "docs/zh-CN/pcg.md": (
-        "## 1. 完整游戏、规则与机制生成方法（12 条）",
-        "## 2. 关卡/可玩内容生成方法与 Benchmark（74 条）",
+        "## 1. 完整游戏、规则与机制生成方法（18 条）",
+        "## 2. 关卡/可玩内容生成方法与 Benchmark（102 条）",
     ),
     "docs/en/interactive-worlds.md": (
-        "## 1. Interactive-world generation methods (21)",
-        "## 2. Interactive-world generation benchmarks (2)",
+        "## 1. Interactive-world generation methods (41)",
+        "## 2. Interactive-world generation benchmarks (4)",
     ),
     "docs/zh-CN/interactive-worlds.md": (
-        "## 1. 交互世界生成方法（21 条）",
-        "## 2. 交互世界生成 Benchmark（2 条）",
+        "## 1. 交互世界生成方法（41 条）",
+        "## 2. 交互世界生成 Benchmark（4 条）",
     ),
 }
 

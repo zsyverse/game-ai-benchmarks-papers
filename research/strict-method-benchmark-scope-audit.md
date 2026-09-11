@@ -1,5 +1,9 @@
 # Strict Method / Benchmark Scope Audit
 
+> Historical snapshot: this audit records the **2026-09-04** cleanup to 143 records. The subsequent 184-record expansion snapshot contained errors corrected in the [2026-09-05 reliability re-audit](reliability-audit-2026-09-05.md); see the [current reconciliation](README.md). Counts and old row references below describe the historical audit, not the current index.
+>
+> 历史快照：本文记录 2026-09-04 清理到 143 条的过程。后续 184 条增补快照存在错误，已由可靠性复核纠正；当前对账见研究主页。下文数量与旧编号不表示现状。
+>
 > Audit cutoff: **2026-09-04 (Asia/Shanghai)**  
 > First-pass surface: 198 public English rows and their Chinese mirrors: 50
 > end-to-end, 115 PCG, and 33 interactive-world rows.
@@ -529,3 +533,7 @@ source review:
   evaluation and therefore qualifies as a generator benchmark. PCG `#59` both
   runs a unified benchmark study and proposes substantive changes to a Sokoban
   generation method; neither is a metric-only paper.
+
+## Later targeted scope correction — 2026-09-08
+
+This addendum does not revise the 143-record historical snapshot above. The [three-paper ANGELINA comparison](angelina-paper-identity-2026-09-08.md) changes current PCG #18 to the original ICCC 2014 *Ludus Ex Machina* method. Part II remains a separately identified follow-up evaluation/context paper, not a second counted generation method: its verified additions here are curation/creativity analysis, while the 3D method and jam experiment refer back to ICCC. The AISB 2014 precursor has runnable-output evidence but insufficient standalone generator evaluation for admission. These are scope decisions, not a declaration that the three publications are identical. [Current integration and counts](completion-review-2026-09-08.md) supersede earlier Part II admission notes.
