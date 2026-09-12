@@ -11,7 +11,7 @@
     "evaluation": "加权代码、截图和 gameplay 视频 judge 分数。",
     "status": "Open",
     "artifacts": "**Open** — [项目/排行榜](https://v-gamegym.github.io/)、[代码](https://github.com/alibaba/SKYLENAGE-GameCodeGym)、[数据集](https://huggingface.co/datasets/alibabagroup/SKYLENAGE-GameCodeGym)、[发布规模记录](https://datasets-server.huggingface.co/size?dataset=alibabagroup%2FSKYLENAGE-GameCodeGym)；依赖 judge 模型。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 15
   },
@@ -27,7 +27,7 @@
     "evaluation": "回放轨迹后执行 build gate，并按机制、内容、视觉和呈现加权评分。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [项目/demo](https://tongxuluo.github.io/gamecraft-bench-website/)、[代码、任务与 verifier](https://github.com/FreedomIntelligence/gamecraft-bench)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 16
   },
@@ -43,7 +43,7 @@
     "evaluation": "完整性/体验/视觉 rubric、回归测试、修复比例和优化分数。",
     "status": "Closed",
     "artifacts": "**截至检索日 Closed** — [官方仓库](https://github.com/Kwen-Chen/GameXpert-Bench)仍是发布脚手架，未含 benchmark 或 evaluator。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 17
   },
@@ -59,7 +59,7 @@
     "evaluation": "L1/L2/L3a 通过率、结构完整度和确定性行为对齐分数。",
     "status": "Closed",
     "artifacts": "**截至检索日 Closed** — 未核验到可用的官方工件链接。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 18
   },
@@ -75,7 +75,7 @@
     "evaluation": "浏览器执行后的 Build Health、Visual Usability 和逐需求 Intent Alignment。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://yelonhu.github.io/OpenGame-landing-page/)与[框架/demo 源码](https://github.com/leigest519/OpenGame)已公开；任务和 evaluator 尚待发布。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 19
   },
@@ -91,7 +91,7 @@
     "evaluation": "GUI agent 在不看源码的情况下试玩并计算 rubric 通过率；用 32 个游戏核对人工一致性。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://continual-game-generation.vercel.app/)和[八个 demo 的仓库](https://github.com/RunRiotComeOn/gui-agents-for-continual-game-generation)已公开，完整 arena 未公开。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 20
   },
@@ -107,7 +107,7 @@
     "evaluation": "场景、玩法和视觉分数，加图/模块/交互检查及运行时证据。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [代码](https://github.com/Pluto156/AutoUE)、[数据集、demo、资产与结果](https://huggingface.co/datasets/Pluto156/AutoUE_DataSet)；需要 UE5 和 API key。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 21
   },
@@ -123,7 +123,7 @@
     "evaluation": "运行时 Excellent/Usable/Unusable 标签，并用独立人工 gameplay 复核。",
     "status": "Closed",
     "artifacts": "**Closed** — 截至检索日未公开链接官方任务集、运行时 evaluator 或仓库。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 22
   },
@@ -139,7 +139,7 @@
     "evaluation": "编译/初始化；结构 F1 仅统计初始化成功样本，静态机制路径统计全部 858 次。无通关测试；空参考计分导致胜利路径基线 0.12。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [代码与 evaluator](https://anonymous.4open.science/r/neurips-ir-benchmark-game-scene-3F65/)、[模式、真值、输出与日志](https://huggingface.co/datasets/anon-neurips-2026-0502/scene-level-grounding-benchmark)；回放需要 Unity 2022.2。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 23
   },
@@ -155,7 +155,7 @@
     "evaluation": "有界三步运行遍历、规格/物理一致性判断及人工可通关评测。最多三次反思使运行通过率 28.1%→57.3%，人工可通关率仅 30.2%→37.5%。",
     "status": "Open",
     "artifacts": "**Open，依赖 API** — [论文](https://arxiv.org/abs/2305.14879)、[游戏、提示、生成/反思/评测代码与输出](https://github.com/cognitiveailab/BYTESIZED32)；回放受历史模型/API 和 Unix signal 支持影响。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 24
   },
@@ -171,7 +171,7 @@
     "evaluation": "比较多种上下文设置下的编译与可玩性。",
     "status": "Closed",
     "artifacts": "**Closed** — [IEEE 记录](https://doi.org/10.1109/COG60054.2024.10645597)；未核验到官方实现或固定 benchmark。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 30
   },
@@ -187,7 +187,7 @@
     "evaluation": "比较不同生成设置的语法有效性、执行情况和游戏质量。",
     "status": "Open",
     "artifacts": "**Open** — [IEEE DOI](https://doi.org/10.1109/TG.2024.3520214)、[代码与实验脚本](https://github.com/tsunehiko/ggdg)；Ludii 需另行获取。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 31
   },
@@ -203,7 +203,7 @@
     "evaluation": "QD 分数、可玩 archive 覆盖、fitness、语义新颖性和专家分析。",
     "status": "Open",
     "artifacts": "**Open** — [代码、数据与 checkpoint](https://github.com/gdrtodd/gavel)、[可玩的生成游戏](https://ludii.games/library.php)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 32
   },
@@ -219,7 +219,7 @@
     "evaluation": "编译、是否存在求解器解，以及严格的多关卡可解性。",
     "status": "Closed",
     "artifacts": "**Closed** — [IEEE DOI](https://doi.org/10.1109/COG64752.2025.11114269)；[上游 PuzzleScript 引擎](https://github.com/increpare/PuzzleScript)已公开，但未核验到 ScriptDoctor/语料发布。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 33
   },
@@ -235,7 +235,7 @@
     "evaluation": "机制新颖性/相似度、用户评分、代码 pass@3、执行一致性及辅助锦标赛。",
     "status": "Open",
     "artifacts": "**Open** — [arXiv](https://arxiv.org/abs/2502.07128)、[代码/数据](https://github.com/danruili/Cardiverse)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 34
   },
@@ -251,7 +251,7 @@
     "evaluation": "产品使用、可玩性和参与度统计；没有固定公开 baseline。",
     "status": "Closed",
     "artifacts": "**Closed** — [官方产品](https://rpggo.ai/)可访问，但代码、数据和 evaluator 未公开。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 35
   },
@@ -267,7 +267,7 @@
     "evaluation": "机制实现、结构变化、新颖性、运行时稳健性及论文报告的 LLM 质量评分。",
     "status": "Partial",
     "artifacts": "**仅 Partial demo** — [项目](https://yiweishi-cn.github.io/CreativeEvolutionGame/)、[demo 仓库](https://github.com/yiweishi-cn/CreativeEvolutionGame)、[OpenReview 记录](https://openreview.net/forum?id=VtmBAGCN7o)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 36
   },
@@ -283,7 +283,7 @@
     "evaluation": "3 个原型的功能完整度交互矩阵及人工开发耗时对比。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码](https://github.com/yxwan123/UniGen)；缺少受评工程、资产、矩阵和 evaluator。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 37
   },
@@ -299,7 +299,7 @@
     "evaluation": "可玩性、规则遵循、成功率及模型/错误分析。",
     "status": "Partial",
     "artifacts": "**Partial** — [会议 DOI](https://doi.org/10.5753/sbgames.2025.10222)、[Boardwalk API/示例](https://github.com/LabCRAIG/boardwalk)；缺少完整输出/evaluator。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 38
   },
@@ -315,7 +315,7 @@
     "evaluation": "200 个域内和 50 个域外回合上的整局/状态成功率。",
     "status": "Partial",
     "artifacts": "**Partial** — 论文链接的[仓库](https://github.com/gingasan/idge)只有 `data/train.zip`；有 demo，但没有引擎、训练和评测代码。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 39
   },
@@ -331,7 +331,7 @@
     "evaluation": "LLM 连贯性评分、传统 PCG/路径检查、模型比较和流水线消融。",
     "status": "Open",
     "artifacts": "**Open，依赖 API/操作系统** — [代码与示例](https://github.com/umair-nasir14/Word2World)；文档配置面向 Windows 和 OpenAI API。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 40
   },
@@ -347,7 +347,7 @@
     "evaluation": "用户研究、Frame Error、任务完成、自由创作分析及动机/可用性问卷。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到官方工具源码、研究数据或复现包。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 41
   },
@@ -363,7 +363,7 @@
     "evaluation": "对比 SFT baseline 的语法有效性、兼容性、功能性和概念保真。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [训练/数据/评测代码](https://github.com/tsunehiko/rlgdg)；需要 Ludii、Docker 和 GPU 训练。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 42
   },
@@ -379,7 +379,7 @@
     "evaluation": "单动作编译率、整篇故事完全编译率，以及动态动作的语义成功率。",
     "status": "Open",
     "artifacts": "**Open，依赖 API** — [第一作者公开的代码、提示词、样例与结果仓库](https://github.com/foxanon183/Story2Game)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 43
   },
@@ -395,7 +395,7 @@
     "evaluation": "AVR-Eval 的损坏/错配识别，以及相对 one-shot 生成的成对胜率。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [AVR-Agent/AVR-Eval 代码、提示词、任务与实验脚本](https://github.com/SamsungSAILMontreal/AVR-Eval-Agent)；论文资产需按各自许可证另行下载。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 44
   },
@@ -411,7 +411,7 @@
     "evaluation": "编译、GDD 遵循、最佳实践和模块化；论文报告平均 4.8/5.0。",
     "status": "Partial",
     "artifacts": "**Partial** — [合成 GDD/代码数据](https://huggingface.co/datasets/AmnaHassan/Unity-Engine-CSharp-Code-and-Game-Design-Document-Code-Pairs-Mix-and-Jam)和[真实 GDD 配对数据](https://huggingface.co/datasets/AmnaHassan/Real-Game-Design-Documents-With-AI-Generated-Code-Pairs)已公开；论文链接的[微调模型](https://huggingface.co/AmnaHassan/llama3-unity-gdd-finetuned)匿名访问返回 401，且生成器、Unity package 和 evaluator 代码未公开。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 45
   },
@@ -427,7 +427,7 @@
     "evaluation": "Gemini/GPT/Claude 提示策略比较、经验证的 LLM judge、延迟和人工 pilot 分析。",
     "status": "Open",
     "artifacts": "**Open，依赖 API** — [demo 源码、可玩工件、实验代码与数据](https://github.com/austin-the-drake/real-time-world-crafting-wordplay-demo)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 46
   },
@@ -443,7 +443,7 @@
     "evaluation": "对玩家技能排序的贡献、多样性/可玩性、组件消融和用户研究。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到官方实现、机制 archive、生成游戏语料或 evaluator。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 47
   },
@@ -459,7 +459,7 @@
     "evaluation": "200 个问题；内部 FOL validator、schema compliance、token/成本统计和 50 个精选 demo。",
     "status": "Open",
     "artifacts": "**Open** — [ACL demo 记录](https://doi.org/10.18653/v1/2026.acl-demo.84)、[50 游戏在线库](https://shivena99.github.io/GamED-AI/acl-demo/library/)、[MIT 流水线/源码](https://github.com/ShivenA99/GamED-AI)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 48
   },
@@ -475,7 +475,7 @@
     "evaluation": "结构/语义验证、执行层规则遵循，以及 SFT 与 SFT+RLVR 对比。",
     "status": "Open",
     "artifacts": "**Open** — [30 游戏数据、golden 实现、生成样本、训练与 evaluator 代码](https://github.com/tktserapio/internalizing-cwm-sft-grpo)；未声称提供现成 checkpoint。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 49
   },
@@ -491,7 +491,7 @@
     "evaluation": "4 个 held-out 家族；单候选干净启动率 8.8%→42.2%，best-of-K 覆盖 18/25→25/25，并含匹配对照。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到官方 LoRA/checkpoint、自蒸馏数据或方法代码；上游 GameCraft-Bench 发布不属于本论文工件。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 50
   },
@@ -507,7 +507,7 @@
     "evaluation": "100-case 转场基准；报告 0.99 precision、0.95 recall、0.96 F1，并检查可导航性。",
     "status": "Partial",
     "artifacts": "**Partial，环境依赖重** — [生成与评测代码](https://github.com/sereneee1201/MAGIC)已公开，但仓库说明完整 100-case benchmark 只能申请获取。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 51
   },
@@ -523,7 +523,7 @@
     "evaluation": "三种生成器的可玩性、趣味/质量观察和规则集多样性。",
     "status": "Open",
     "artifacts": "**Open** — [CIG 2017 论文](https://doi.org/10.1109/CIG.2017.8080431)；官方[GVGAI 规则生成框架与三种生成器](https://github.com/GAIGResearch/GVGAI/tree/master/src/tracks/ruleGeneration)均已公开。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 52
   },
@@ -539,7 +539,7 @@
     "evaluation": "比较学习式 RL 与静态 A* 近似器产生的规则分布，并分析人工可用性。",
     "status": "Open",
     "artifacts": "**Open，环境依赖重** — [完整 Unity 工程、规则数据、结果和已训练 ONNX agents](https://github.com/Harcurio/MechanicMiner)。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 53
   },
@@ -555,7 +555,7 @@
     "evaluation": "合成角色的执行率、GPT-4 正确率、数据分析和 10 人共创。",
     "status": "Open",
     "artifacts": "**官方案例 Open** — [引擎/UI 代码、提示词、训练/测试角色数据和 LoRA 链接](https://github.com/gingasan/delta-engine/tree/main/free-pokemon)已公开；不是通用从零游戏生成器。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 54
   },
@@ -571,7 +571,7 @@
     "evaluation": "函数级与整局执行成功率/正确率（F-ESR、F-Acc、ESR、Acc），以及交互质量。",
     "status": "Closed",
     "artifacts": "**Closed** — [arXiv](https://arxiv.org/abs/2408.09386)；未核验到官方发布包。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 55
   },
@@ -587,7 +587,7 @@
     "evaluation": "对比自动生成与人工开发版本的 CPU、内存、渲染和开发耗时；用户与学习效果尚待验证。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到论文专属官方生成器或复现包。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 56
   },
@@ -603,7 +603,7 @@
     "evaluation": "13 人探索性试玩，用问卷及开放反馈评估整体游戏体验；未单独对照生成器。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到官方源码、可玩构建或研究数据；属于有边界的机制组合，并非任意游戏代码合成。",
-    "details": "../docs/zh-CN/end-to-end.md",
+    "details": "docs/zh-CN/end-to-end.md",
     "source": "docs/zh-CN/end-to-end.md",
     "line": 57
   },
@@ -619,7 +619,7 @@
     "evaluation": "展示系统架构和生成实例；没有定义标准化定量 benchmark。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方源码、可执行程序、示例语料或复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 15
   },
@@ -635,7 +635,7 @@
     "evaluation": "每个候选做 100 局自博弈，并以平衡性、和局及多样性比较 500 次 GA 迭代与 500 个随机样本。",
     "status": "Closed",
     "artifacts": "**Closed** — 研究依赖商业软件 Zillions of Games，且未核实到论文专用代码、规则语料或实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 16
   },
@@ -651,7 +651,7 @@
     "evaluation": "展示可运行生成游戏并分析原型设计流程；系统性用户或 benchmark 研究留作未来工作。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、J2ME 库、输出语料或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 17
   },
@@ -667,7 +667,7 @@
     "evaluation": "奖励可学习但不简单、能区分玩家水平的游戏，并检查进化所得游戏是否可玩。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方历史实现或数据版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 18
   },
@@ -683,7 +683,7 @@
     "evaluation": "衡量可玩性、平衡性、深度和决断性；该过程产出了包括 Yavalath 在内的真人可玩游戏。",
     "status": "Partial",
     "artifacts": "**Partial** — 论文、期刊记录和后继生态公开，但原始 Ludi 实验不是开箱即用的 benchmark。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 19
   },
@@ -699,7 +699,7 @@
     "evaluation": "对原型的设计空间、表达力和新颖性做定性分析，方法论文另复现迷宫生成器；游戏质量优化留作后续工作。",
     "status": "Closed",
     "artifacts": "**Closed** — 论文所述公开 demo 已失效，且未核验到生成器/引擎源码或复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 20
   },
@@ -715,7 +715,7 @@
     "evaluation": "检查功能性游玩并把生成游戏作为设计作品分析，而非采用固定排行榜。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到该版 ANGELINA 的完整官方发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 21
   },
@@ -731,7 +731,7 @@
     "evaluation": "通过生成示例判断交互能否表达目标关系，没有统一自动分数。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方持续维护的端到端生成器、源码或评测器。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 22
   },
@@ -747,7 +747,7 @@
     "evaluation": "用自动游玩区分候选机制诱发的行为，并分析生成示例。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方可运行版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 23
   },
@@ -763,7 +763,7 @@
     "evaluation": "以案例检验生成机制能否执行并实现目标玩法属性。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到完整官方代码/数据包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 24
   },
@@ -779,7 +779,7 @@
     "evaluation": "先复原留出的已知游戏作为可量化代理任务，再展示新组合。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方端到端产物包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 25
   },
@@ -795,7 +795,7 @@
     "evaluation": "采用生成游戏及人机关系的反思性长期案例研究。",
     "status": "Closed",
     "artifacts": "**Closed** — 系统产物有记录，但未核实到完整复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 26
   },
@@ -811,7 +811,7 @@
     "evaluation": "检验适应度优化效果，以及生成游戏的适应度与玩家偏好的关系。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实官方生成器或实验包；已核查出版社摘要与原始两页预览，但方法/实验章节仍未取得。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 27
   },
@@ -827,7 +827,7 @@
     "evaluation": "评测 54 个演化游戏，其中 9 个从随机起点生成；实例包含有趣交互，但不少玩法过于简单或依赖运气。",
     "status": "Closed",
     "artifacts": "**Closed** — 作者全文公开；未核验到论文专属官方生成器或输出包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 28
   },
@@ -843,7 +843,7 @@
     "evaluation": "报告可玩、平衡的生成游戏；作者后续论文全文进一步确认生成器、规则表示与评测方法。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到官方生成器或受测游戏包；本轮未取得原实验数值细节。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 29
   },
@@ -859,7 +859,7 @@
     "evaluation": "8 个人工游戏、两种表示各 5 轮；以 MCTS/随机智能体的完成率、分数、步数和实例分析揭示质量不足及评测混淆。",
     "status": "Partial",
     "artifacts": "**Partial，历史环境** — [生成器、受测游戏、智能体和日志](https://github.com/HonestPretzels/RF_Adversarial_PCG)公开，但安装不完整，README 引用的训练入口文件缺失。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 30
   },
@@ -875,7 +875,7 @@
     "evaluation": "10万个随机抽象系统中约3.3万个被选入模拟游玩分析；25个设计的加权控制测试在各指标上的显著性不一致。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核验到论文专属生成器或评测发布；通用 CreativeWand 框架不能算作本方法工件。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 31
   },
@@ -891,7 +891,7 @@
     "evaluation": "单次运行 fitness 曲线及两款 Ludum Dare 作品，在 780 项中列第 500/551；规则/分区进化较弱，作者身份披露比较并非受控实验。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实论文专属官方可运行生成器或复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 32
   },
@@ -907,7 +907,7 @@
     "evaluation": "提供统一的质量、成对阈值多样性和目标满足可控性指标，以及逐样本明细向量。",
     "status": "Open",
     "artifacts": "**Open** — [框架](https://github.com/amidos2006/pcg_benchmark)和[基线实验](https://github.com/amidos2006/benchmark_experiments)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 38
   },
@@ -923,7 +923,7 @@
     "evaluation": "采用竞赛协议、玩家偏好/体验和关卡特征统计。",
     "status": "Partial",
     "artifacts": "**Partial** — 协议与结果有记录，但原始完整服务和参赛提交未被维护为开箱即用版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 39
   },
@@ -939,7 +939,7 @@
     "evaluation": "定义有效性/可玩性检查及生成竞赛协议；playing-agent 结果不收录。",
     "status": "Open",
     "artifacts": "**Open** — [引擎、游戏与关卡生成接口](https://github.com/GAIGResearch/GVGAI)持续公开维护。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 40
   },
@@ -955,7 +955,7 @@
     "evaluation": "用线性度/宽容度表达空间图分析 10,000 个生成关卡，并按编辑距离聚类节奏组。",
     "status": "Partial",
     "artifacts": "**Partial，仅遗留工件** — 官方 [Flash demo](https://users.soe.ucsc.edu/~gsmith/launchpad/platformer/)和 [Java 可视化/源码](https://users.soe.ucsc.edu/~gsmith/launchpad/viztool/)仍在线，但浏览器运行时已淘汰，且缺少完整生成器源码。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 41
   },
@@ -971,7 +971,7 @@
     "evaluation": "建模五名车手，并用控制器进度、方差、速度和定性个性化结果比较赛道表示及初始化方法。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方赛道生成器、玩家模型代码、输出或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 42
   },
@@ -987,7 +987,7 @@
     "evaluation": "用 327 名玩家/1,308 次 session 建模，再由两个控制器和真人测试自适应关卡；十名对比参与者中 60% 更偏好自适应关卡。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方自适应代码、训练模型、生成关卡或实验数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 43
   },
@@ -1003,7 +1003,7 @@
     "evaluation": "使用 211 名玩家和 2,258 次片段游玩；学习模型对难度对进行排序，论文还检查了动态选择的示例片段。",
     "status": "Closed",
     "artifacts": "**Closed** — 历史上公开过的官方 Flash 游戏/数据采集器链接现已失效，生成器源码、学习模型和实验数据均不可用。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 44
   },
@@ -1019,7 +1019,7 @@
     "evaluation": "用 10,000 个唯一生成关卡绘制线性度/宽容度表达空间，并演示响应式共创操作。",
     "status": "Closed",
     "artifacts": "**Closed，仅遗留 demo** — 官方 [Flash 演示](https://users.soe.ucsc.edu/~gsmith/tanagra/v2_demo/demo.htm)仍在，但未核实到生成器源码或可运行复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 45
   },
@@ -1035,7 +1035,7 @@
     "evaluation": "以 20 次运行比较约束搜索方法，并报告五名业界专家共 24 次设计 session。",
     "status": "Partial",
     "artifacts": "**Partial，仅遗留工件** — 官方[项目](https://sentientsketchbook.com/)和 [2014 JAR 下载](https://sentientsketchbook.com/download.php)仍在线，但没有源码或现代实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 46
   },
@@ -1051,7 +1051,7 @@
     "evaluation": "与非层级/人工层级及 Mario 竞赛生成器比较可玩性、线性度和宽容度；2015 自动层级版达到 66% Mario 可玩率。",
     "status": "Closed",
     "artifacts": "**Closed** — 历史训练集链接已不可用，且未核实到官方生成器代码、训练模型、固定数据包或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 47
   },
@@ -1067,7 +1067,7 @@
     "evaluation": "对 42 个 chunk 的 Infinite Mario 实现做批判性输出分析，约 15 秒生成一关；未做试玩且不保证可玩。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、chunk 库、生成关卡语料或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 48
   },
@@ -1083,7 +1083,7 @@
     "evaluation": "用 Pareto 前沿展示公平性、资源/基地位置、路径和地形性质之间的权衡；每个点都对应可用候选地图。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方地图生成器、StarCraft 导出包、实验数据或评测器版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 49
   },
@@ -1099,7 +1099,7 @@
     "evaluation": "以生成案例展示连贯的任务—空间映射及适配操作；没有标准化定量排行榜。",
     "status": "Closed",
     "artifacts": "**Closed** — 虽有机构作者稿，但未核实到官方生成器、语法包、输出语料或评测器。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 50
   },
@@ -1115,7 +1115,7 @@
     "evaluation": "在不止一种游戏类型中展示有效关卡与可控挑战度，并比较可行性及目标行为。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方实现、领域定义、生成关卡集或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 51
   },
@@ -1131,7 +1131,7 @@
     "evaluation": "比较表示/算子及不同生成种群的路径、连通性和结构特征。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、benchmark 实例或实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 52
   },
@@ -1147,7 +1147,7 @@
     "evaluation": "比较四种地图表示，显示它们生成有趣、可玩 FPS 布局的能力有明显差异。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方进化系统、Cube 2 地图语料、bot 配置或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 53
   },
@@ -1163,7 +1163,7 @@
     "evaluation": "与特征式/原始生成器比较表达空间、美学和相似度，再用众包体验模型评估个性化。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方 GE 实现、语法/进化包、生成语料或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 54
   },
@@ -1179,7 +1179,7 @@
     "evaluation": "分析微观、中观与宏观模式分布，展示在保留来源风格的同时产生明显几何变化。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、提取模式数据集、生成关卡或分析包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 55
   },
@@ -1195,7 +1195,7 @@
     "evaluation": "按生成瓷砖/模式分布、结构特征和表达空间行为比较不同 n-gram 阶数。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方实现、训练模型、固定语料或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 56
   },
@@ -1211,7 +1211,7 @@
     "evaluation": "每步 200 次 rollout 生成 320 切片关卡并近似保证可玩；玩家研究探查八种参数组合。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、训练语料、玩家研究数据或评测器版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 57
   },
@@ -1227,7 +1227,7 @@
     "evaluation": "检查房间可达、钥匙—门顺序、必需房型和通关约束，并展示生成的多尺度地牢。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、学习模型、Zelda 语料、输出集或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 58
   },
@@ -1243,7 +1243,7 @@
     "evaluation": "完成 540 次 chess 参数实验；两个定向条件均 30/30 达标，七组各 30 个受检输出没有重复。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、谜题语料、求解器/评测器或实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 59
   },
@@ -1259,7 +1259,7 @@
     "evaluation": "表达空间指标显示组合生成器既能模仿各来源，又能覆盖更宽、更具新颖性的内容空间。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方 NMF 生成器、五来源训练集、生成语料或分析脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 60
   },
@@ -1275,7 +1275,7 @@
     "evaluation": "以十次运行比较随机图和 CA 图耗时，并报告 3×3 基础网格为 349 ms；评的是实时可行性而非玩家得分。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方 Cave Crawler 生成器、源码、地图语料或性能测试包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 61
   },
@@ -1291,7 +1291,7 @@
     "evaluation": "对每个可行的算法—约束集组合采样 100 张地图，比较有效性、可玩性与受控结构属性。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方实现、约束定义、训练模型、固定语料或评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 62
   },
@@ -1307,7 +1307,7 @@
     "evaluation": "通过 likelihood、线性度、宽容度和表达空间覆盖比较人工、随机及自动学习的映射。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方迁移代码、映射数据、训练模型、生成语料或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 63
   },
@@ -1323,7 +1323,7 @@
     "evaluation": "通过路径似然、可玩性、线性度、宽容度和生成样例比较移动条件变体。",
     "status": "Partial",
     "artifacts": "**Partial，历史工件/无许可证** — 代码、训练数据和采样关卡仍公开，但未核实到许可证或维护中的环境。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 64
   },
@@ -1339,7 +1339,7 @@
     "evaluation": "以 Mario 和 Lode Runner 的可玩性及结构/风格特征比较不同层组合和生成地图。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、对齐多层语料、训练模型、输出或评测脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 65
   },
@@ -1355,7 +1355,7 @@
     "evaluation": "从九段视频提取 13,492 个片段，与既有生成器比较风格 likelihood，并以 73 人试玩研究评价生成关卡。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方视频处理流水线、源视频、图模型、生成器、生成语料或研究数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 66
   },
@@ -1371,7 +1371,7 @@
     "evaluation": "用 22 张地图和 4,366 个窗口做重建、噪声生成、修复与识别的概念验证分析。",
     "status": "Closed",
     "artifacts": "**Closed** — 只有归档作者稿可用；未核实到官方代码、训练模型、固定划分、输出或评测器。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 67
   },
@@ -1387,7 +1387,7 @@
     "evaluation": "以生成样例和瓷砖声部间学得的功能关系做概念验证分析，而非共享 benchmark。",
     "status": "Closed",
     "artifacts": "**Closed** — 仅核实到归档作者稿；没有公开的官方生成器、训练语料、进化网络、输出或评测器。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 68
   },
@@ -1403,7 +1403,7 @@
     "evaluation": "以 100 关集合比较生成器，绘制十组各 100 关的表达空间，并报告构造 200×15 关约需 0.057 秒。",
     "status": "Partial",
     "artifacts": "**Partial，历史 demo** — 可执行生成器和教程仍可下载；源码仅向非商业用途提供密码，且未核实到实验包或维护中的构建。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 69
   },
@@ -1419,7 +1419,7 @@
     "evaluation": "用 300 个增强样本训练、采样 10,000 个候选，并从可玩性、连通性及语料相似度分析 330 个进化关卡。",
     "status": "Partial",
     "artifacts": "**Partial，历史工件/无许可证** — notebook、A* 与数据公开，但未核实到许可证、锁定环境、checkpoint、结果或符合论文 150 代设置的配置。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 70
   },
@@ -1435,7 +1435,7 @@
     "evaluation": "每游戏 50 个输出的可解率依次为 70%、52%、54% 和 40%，并衡量跨游戏路径相似性及动作序列新颖性。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方实现、5,000 组对齐训练集、训练模型、输出或评测器发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 71
   },
@@ -1451,7 +1451,7 @@
     "evaluation": "研究 5,000 万帧训练、展示的可玩样例、收敛和关卡简单度，但未声称全数据集可解率。",
     "status": "Partial",
     "artifacts": "**Partial** — 核心训练代码和论文配置公开，但缺少 checkpoint、结果、测试与锁定的历史依赖环境。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 72
   },
@@ -1467,7 +1467,7 @@
     "evaluation": "assisted 模型在 100 个输出上达到 99.67% 成功率和 86.83% 描述符多样性，平均 0.661 秒，而进化需 12.696 秒。",
     "status": "Partial",
     "artifacts": "**Partial，无许可证** — 训练/推理代码和配置公开，但未核实到许可证、训练模型、轨迹数据、结果、精确环境或与论文一致的配置。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 73
   },
@@ -1483,7 +1483,7 @@
     "evaluation": "对每个候选的前 20 个地牢取平均，以 reckless/smart A* 评价器奖励挑战度与技能区分，属于概念验证实验。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方 ASP 程序、外层搜索、生成语料、种子或评测 harness。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 74
   },
@@ -1499,7 +1499,7 @@
     "evaluation": "报告作者非正式自评、生成器内/间多样性、每生成器十关的 A* 可玩性估计及 100 生成器速度测试，而非受控用户研究。",
     "status": "Partial",
     "artifacts": "**Partial，历史工件/无许可证** — 作者 Java 源码公开，但没有许可证、构建指南、种子数据库、实验数据或复现脚本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 75
   },
@@ -1515,7 +1515,7 @@
     "evaluation": "实现五个手写生成器，以空白比例、孤立元素和逐格熵比较其表达空间。",
     "status": "Open",
     "artifacts": "**Open 实现，许可证存疑** — runtime、文档和示例公开，但未检测到软件许可证。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 76
   },
@@ -1531,7 +1531,7 @@
     "evaluation": "与随机和构造式基线比较；AI 试玩只提供内容质量信号，不构成玩游戏排行榜。",
     "status": "Closed",
     "artifacts": "**论文特定方法 Closed** — GPL GVGAI 框架公开，但未核实到 Meta Generator 代码、参数、输出或实验数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 77
   },
@@ -1547,7 +1547,7 @@
     "evaluation": "每生成器采样 50 张图求域内适应度，在 500 个体、2,000 代下与 500 个随机生成器的最终 Pareto 前沿比较。",
     "status": "Open",
     "artifacts": "**Open 研究快照，许可证/封装存疑** — 核心代码和最佳脚本公开，但两个仓库均未检测到许可证或一键复现指南。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 78
   },
@@ -1563,7 +1563,7 @@
     "evaluation": "在各 1,000 次 genotype 评价下比较进化与随机搜索；迷宫明显改善，Zelda 全局约束仍困难，且每个 genotype 只采样一次。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方进化代码、genotype 集、生成语料、运行日志或实验数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 79
   },
@@ -1579,7 +1579,7 @@
     "evaluation": "比较生成分布、参数效应、可控性和指标关系，为新生成器及新指标提供基线。",
     "status": "Closed",
     "artifacts": "**Closed，仅余归档落地页** — 论文和项目页尚存，但其代码/关卡压缩包已不可用，未核实到可运行包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 80
   },
@@ -1595,7 +1595,7 @@
     "evaluation": "五个提交通过自动检查；11 个评审小组按趣味、创造性和难度平衡打分，过度相似可另行扣分。",
     "status": "Partial",
     "artifacts": "**Partial，GPL 获胜生成器已发布** — [IratusAves/MSG](https://github.com/stepmat/IratusAves)与 [Science Birds runtime](https://github.com/lucasnfe/science-birds)公开，但五个原始提交、任务输入、抽样输出、逐评审数据和被移除的分析功能没有统一打包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 81
   },
@@ -1611,7 +1611,7 @@
     "evaluation": "以统一实验协议比较生成质量、多样性、可控性和 control confusion。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方统一实现、模型集、生成语料、种子或评测包；开放上游基线不等于本论文实验发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 82
   },
@@ -1627,7 +1627,7 @@
     "evaluation": "衡量可玩性、目标属性及潜空间多样性/覆盖度。",
     "status": "Open",
     "artifacts": "**Open** — [实验代码](https://github.com/icaros-usc/MarioGAN-LSI)和 [VGLC 训练语料](https://github.com/TheVGLC/TheVGLC)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 83
   },
@@ -1643,7 +1643,7 @@
     "evaluation": "在多种游戏中评估瓷砖模式/风格相似性、多样性和领域特定可玩性。",
     "status": "Open",
     "artifacts": "**Open** — 官方[训练/生成代码与示例](https://github.com/Mawiszus/TOAD-GAN)公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 84
   },
@@ -1659,7 +1659,7 @@
     "evaluation": "比较训练效率、内容有效性/质量、多样性及不同表示下的行为。",
     "status": "Open",
     "artifacts": "**Open** — [环境、表示、指标与训练代码](https://github.com/amidos2006/gym-pcgrl)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 85
   },
@@ -1675,7 +1675,7 @@
     "evaluation": "相对无目标条件的生成器，衡量目标误差/覆盖度、多样性和质量。",
     "status": "Partial",
     "artifacts": "**Partial** — 工作建立在开放 PCGRL 上，但未核实到单独打包的官方实验版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 86
   },
@@ -1691,7 +1691,7 @@
     "evaluation": "评估可玩/存活约束、档案覆盖度及行为描述子上的多样性。",
     "status": "Open",
     "artifacts": "**Open** — 作者公开了[领域运行时与生成代码](https://github.com/amidos2006/Talakat)。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 87
   },
@@ -1707,7 +1707,7 @@
     "evaluation": "用差异可解性判断成功是否必须依赖目标机制；代理只负责评价。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方维护的实现。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 88
   },
@@ -1723,7 +1723,7 @@
     "evaluation": "衡量功能性/可解生成率、数据规模效应和初步可控性。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到完整官方训练/评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 89
   },
@@ -1739,7 +1739,7 @@
     "evaluation": "评估提示—属性对齐、新颖性/多样性及可玩性/可解性。",
     "status": "Open",
     "artifacts": "**Open** — 作者公开了[训练/推理代码与模型产物](https://github.com/shyamsn97/mario-gpt)。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 90
   },
@@ -1755,7 +1755,7 @@
     "evaluation": "比较字符串表示，再从四个个人模型和一个组合模型各采样 4,000 关做特征空间分析。",
     "status": "Partial",
     "artifacts": "**Partial，仅有历史输出** — 生成关卡语料仍可下载；未核实到生成器、模型、视频处理、训练或评测发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 91
   },
@@ -1771,7 +1771,7 @@
     "evaluation": "衡量与人工关卡的拓扑/分布相似性，并定性检查输出。",
     "status": "Open",
     "artifacts": "**Open** — 官方[预处理、模型、生成数据与实验代码](https://github.com/edoardogiacomello/DoomGAN)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 92
   },
@@ -1787,7 +1787,7 @@
     "evaluation": "在 10,000 个初始地图上与 PCGRL 比较成功率、多样性/复杂度和编辑步数效率。",
     "status": "Closed",
     "artifacts": "**Closed** — 论文称 3,000 张地图数据公开，却没有给出可用产物链接，也未核实到作者发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 93
   },
@@ -1803,7 +1803,7 @@
     "evaluation": "二次调度 moderate/coarse 的编辑距离/coverage/A* 可解率分别为 41.89/0.33/0.70 和 61.89/0.02/0.62，MarioGPT 基线为 50.78/0.20/0.74；公开 evaluator 按每组 100 个样本、coverage 阈值 10 计算。",
     "status": "Partial",
     "artifacts": "**Partial，无许可证作者代码** — 预处理、训练、采样、评价、原始关卡、模拟器和输出拼图公开，但缺许可证、依赖清单、所需处理后 NPZ、checkpoint、被评样本数组/基线包和正式 release。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 94
   },
@@ -1819,7 +1819,7 @@
     "evaluation": "定义稳定性与字符相似度；初步实验用 5 种提示在 I/L/U 上生成 150 个关卡，不等同于拟定的 26 字母竞赛协议。",
     "status": "Open",
     "artifacts": "**Open** — 官方[竞赛网站](https://chatgpt4pcg.github.io/)与[评测仓库集合](https://github.com/orgs/chatgpt4pcg/repositories)公开；实质修订的 2024 协议独立列为 #112。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 95
   },
@@ -1835,7 +1835,7 @@
     "evaluation": "对比不同生成/选择设置下的指令对齐与关卡质量。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方代码、任务集、训练模型或评测器版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 96
   },
@@ -1851,7 +1851,7 @@
     "evaluation": "衡量有效性、条件准确度、新颖性、瓷砖分布/风格保真度和多样性。",
     "status": "Closed",
     "artifacts": "**Closed** — 论文使用专有工业关卡数据与脚本 bot，但未提供官方可运行版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 97
   },
@@ -1867,7 +1867,7 @@
     "evaluation": "用户研究将其挑战性、趣味性、创意与质量同《纽约时报》已发布谜题比较。",
     "status": "Partial",
     "artifacts": "**Partial** — 官方[提示与生成/已发布谜题语料](https://github.com/TimMerino1710/making-new-connections)公开，但完整生成和用户研究流水线未公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 98
   },
@@ -1883,7 +1883,7 @@
     "evaluation": "比较多样性、文本/地图准确性、质量、连通性、CLIP 对齐和人工判断。",
     "status": "Partial",
     "artifacts": "**Partial** — 官方[地图—描述数据集](https://huggingface.co/datasets/DolphinNie/dungeon-dataset)公开，但代码、checkpoint 与完整评测流程未公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 99
   },
@@ -1899,7 +1899,7 @@
     "evaluation": "报告模拟速度、长时训练行为、可控性及向更大未见地图的泛化。",
     "status": "Open",
     "artifacts": "**Open** — 作者公开了 [PCGRL-JAX 代码、环境、训练与评测脚本](https://github.com/smearle/pcgrl-jax)。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 100
   },
@@ -1915,7 +1915,7 @@
     "evaluation": "用寻路检查敌人遭遇指令准确率与钥匙—门依赖可玩性，并比较反馈消融、推理策略和人工奖励。",
     "status": "Open",
     "artifacts": "**Open** — [训练/评测实现](https://github.com/bic4907/pcgrl-llm)公开；独立的 2024 ChatPCG 前作调整角色数值，不计为关卡生成方法。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 101
   },
@@ -1931,7 +1931,7 @@
     "evaluation": "采用结构指标及人类对连贯性、美学、目标和地图趣味性的评分。",
     "status": "Open",
     "artifacts": "**Open** — 官方[生成/游玩代码与示例](https://github.com/JMZ-kk/Word2Minecraft/tree/word2mc_v0)公开；需要外部 LLM API 与 Minecraft 工具。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 102
   },
@@ -1947,7 +1947,7 @@
     "evaluation": "在多种二维关卡属性上测试可控性及对未见指令的泛化。",
     "status": "Open",
     "artifacts": "**Open** — 官方[指令数据、环境、编码器、训练与评测代码](https://github.com/bic4907/language-instructed-pcgrl)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 103
   },
@@ -1963,7 +1963,7 @@
     "evaluation": "通过量化指标和人工评价比较可控性、类人程度与跨模态对齐。",
     "status": "Open",
     "artifacts": "**Open** — 官方[代码、多模态数据、训练与评测脚本](https://github.com/bic4907/VIPCGRL)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 104
   },
@@ -1979,7 +1979,7 @@
     "evaluation": "检查多样性、连通/可导航性、空间约束满足和可配置玩法进程。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方数据库、实现、生成语料或评测器版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 105
   },
@@ -1995,7 +1995,7 @@
     "evaluation": "新建指令遵循 benchmark，并与单代理基线比较结构有效性和对齐。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到作者关联的代码、benchmark、地图输出或评测器；不把第三方复刻计入官方产物。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 106
   },
@@ -2011,7 +2011,7 @@
     "evaluation": "评价几何质量、可编辑性、运行时间及生成赛道能否支持真实驾驶。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方创作工具、赛道语料或玩法评测版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 107
   },
@@ -2027,7 +2027,7 @@
     "evaluation": "报告各乐器 onset F1、30 首歌 benchmark、混淆分析和组件消融。",
     "status": "Open",
     "artifacts": "**Open** — 官方[流水线、训练/评测代码与 manifest](https://github.com/opria123/strum)及[模型权重](https://huggingface.co/opria123/strum)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 108
   },
@@ -2043,7 +2043,7 @@
     "evaluation": "衡量混合质量、指令对齐、同/跨类型表现和零样本组合。",
     "status": "Open",
     "artifacts": "**Open** — 官方[数据集、模型、训练、推理与评测代码](https://github.com/bic4907/Multiverse-multigame-pcg)均公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 109
   },
@@ -2059,7 +2059,7 @@
     "evaluation": "与六种 PCG 方法比较有效率和解法多样性。",
     "status": "Closed",
     "artifacts": "**Closed at cutoff** — 论文链接的[官方仓库](https://github.com/emily-halina/PRP-Sokoban)为空，无法复现代码、表示或评测数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 110
   },
@@ -2075,7 +2075,7 @@
     "evaluation": "完成 160 次搜索，比较最终适应度、库采用率、helper 调用及领域/API 消融。",
     "status": "Partial",
     "artifacts": "**Partial demo** — 官方[项目页与四个示例生成器](https://github.com/matt-quant-heads-io/procedural-content-metageneration)公开，但搜索系统、160 次运行数据与评测器未公开。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 111
   },
@@ -2091,7 +2091,7 @@
     "evaluation": "在 Fraxtil 与 In The Groove 数据上比较踩点 F-score/AUC、动作困惑度和准确率，并与回归、MLP、CNN、n-gram 基线对照。",
     "status": "Open",
     "artifacts": "**Open，旧版依赖** — [MIT 官方代码](https://github.com/chrisdonahue/ddc)包含数据构建、训练、推理与实验脚本；本地 demo 依赖 TensorFlow 0.12.1，歌曲包需另行下载。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 112
   },
@@ -2107,7 +2107,7 @@
     "evaluation": "在 10 首留出歌曲上，将二值节奏模式统计与 DDC、随机噪声及相应人工 Taiko/DDR 谱面对比；不是玩家偏好研究。",
     "status": "Partial",
     "artifacts": "**Partial，未检测到许可证** — [官方源码](https://github.com/emily-halina/TaikoNationV1)含训练、谱面、输出和 TensorFlow 检查点，但文档未完成，硬编码输入/模型路径与发布目录不符。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 113
   },
@@ -2123,7 +2123,7 @@
     "evaluation": "比较 micro-F1，并消融节拍对齐、数据规模、预训练与微调；论文为 ISMIR LBD 扩展摘要。",
     "status": "Open",
     "artifacts": "**Open code** — [MIT 代码](https://github.com/stet-stet/goct_ismir2023)与[作者演示](https://stet-stet.github.io/goct/)公开，含预处理和数据划分；README 链接外部模型压缩包，本轮未下载。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 114
   },
@@ -2139,7 +2139,7 @@
     "evaluation": "与重新实现的 DDC 比较 precision/recall/F1、动作及长按准确率；固定 0.5 阈值与逐谱面 oracle 最优 F1 阈值需区分，不能直接宣称优于前作已发表分数。",
     "status": "Open",
     "artifacts": "**Open** — [官方代码](https://github.com/miguelomalley/DDCL)包含 `.sm` 生成、预处理和训练流程；未检测到许可证，未复现完整实验。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 115
   },
@@ -2155,7 +2155,7 @@
     "evaluation": "在扩展 Fraxtil 数据上比较踩点、动作/top-k/长按准确率与计算成本，并对模型规模做对照。",
     "status": "Open",
     "artifacts": "**Open** — [MIT 官方代码](https://github.com/miguelomalley/ITGPT)提供训练、预处理、依赖和谱面生成；歌曲包需外部下载。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 116
   },
@@ -2171,7 +2171,7 @@
     "evaluation": "基于 90 个 xSokoban 问题比较生成器变体，通过求解开销与冲突指标对照人工谜题。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方 Beta 源码或生成实例实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 117
   },
@@ -2187,7 +2187,7 @@
     "evaluation": "分析表达范围，并用程序化玩家画像模拟游玩生成关卡。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到论文专用实现或固定实验版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 118
   },
@@ -2203,7 +2203,7 @@
     "evaluation": "30 名参与者对比三类地牢；GAN 房间组织性较差、复杂度较高，并未普遍提高乐趣。",
     "status": "Open",
     "artifacts": "**Open，历史依赖** — 作者 [MM-NEAT 论文专属实验目录](https://github.com/schrum2/MM-NEAT/tree/master/batch/Experiments-2020-CEC-ZeldaGAN)、GAN 加载器及研究/游玩脚本公开；依赖旧 Java/Maven/Python，未重新复现实验。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 119
   },
@@ -2219,7 +2219,7 @@
     "evaluation": "比较生成器档案的质量、多样性及新随机种子上的稳定性，并对照 CPPN 表示与训练设置。",
     "status": "Open",
     "artifacts": "**Open，旧版配置** — [MIT 代码](https://github.com/smearle/control-pcgrl)明确提供该论文演化与评测流程；部分说明过时，含集群专用配置。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 120
   },
@@ -2235,7 +2235,7 @@
     "evaluation": "每个生成器运行 10,000 次，在三个游戏和不同数据量/超参数下统计可玩率与唯一性。",
     "status": "Closed",
     "artifacts": "**Closed at check** — 论文链接的[官方仓库](https://github.com/matt-quant-heads-io/path_of_destruction)在 2026-09-05 返回 GitHub API 404。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 121
   },
@@ -2251,7 +2251,7 @@
     "evaluation": "检查地牢可玩率、多样性/重复率和目标可控性；不计其独立 Lego 资产实验。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到独立可用的官方实现与评测包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 122
   },
@@ -2267,7 +2267,7 @@
     "evaluation": "在 Sokoban、Zelda、Danger Dave 上比较可解性、多样性、可控性、速度与未见尺寸泛化。",
     "status": "Open",
     "artifacts": "**Open，依赖限制** — [MIT 代码](https://github.com/yahiaetman/ms-level-gen)含训练/生成/分析并链接权重；Sokoban 需要 `sokosolve`，条件生成需要拟合条件模型，环境未精确锁定。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 123
   },
@@ -2283,7 +2283,7 @@
     "evaluation": "计算分析档案，并收集 96 名玩家、74 份完整问卷和 121 次关卡游玩反馈；属于探索性研究，并非受控优越性结论。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 124
   },
@@ -2299,7 +2299,7 @@
     "evaluation": "每个方向比较三种算法，以求解器轨迹量化可达性、可控性、结构、鲁棒性和耗时；Unity 展示支持人工游玩，但不是用户研究或多机制联合验证。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到作者实现或项目版本。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 125
   },
@@ -2315,7 +2315,7 @@
     "evaluation": "结合拓扑描述符与实际游戏模拟产生的行为指标，比较四种表示的地图质量和多样性。",
     "status": "Closed",
     "artifacts": "**Closed at check** — 论文链接的[生成器仓库](https://github.com/SimoDedo/MAPElites_FPS_Maps)返回 API 404；底层游戏运行时不等于论文生成器。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 126
   },
@@ -2331,7 +2331,7 @@
     "evaluation": "生成后用求解器测可解率，并分析局部模式分布、记忆、温度与单墙修复；试玩脚本也会筛选可解实例。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方仓库](https://github.com/sinabaghal/SokobanPlayground)提供权重、生成与浏览器试玩导出；未核实完整训练/评测包，且未检测到许可证。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 127
   },
@@ -2347,7 +2347,7 @@
     "evaluation": "用 16 人探索性研究比较参与感、连贯性及情感感知，并结合访谈和情绪分析。",
     "status": "Closed",
     "artifacts": "**Closed** — 未核实到官方生成器、可玩构建或用户研究数据。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 128
   },
@@ -2363,7 +2363,7 @@
     "evaluation": "跨多组训练与评测种子比较生成质量、编辑预算及未见矩形/方形地图泛化。",
     "status": "Open",
     "artifacts": "**Open，共享实现** — [Apache-2.0 官方代码](https://github.com/smearle/pcgrl-jax)提供训练、批量实验与评测说明；未核实论文精确快照及全部结果。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 129
   },
@@ -2379,7 +2379,7 @@
     "evaluation": "与 Markov/随机基线比较新颖性、错误序列、温度和量子比特预算；真实量子硬件训练/生成及实时部署仍是未来工作。",
     "status": "Partial",
     "artifacts": "**Partial** — [Apache-2.0 论文专属数据与 notebook](https://github.com/moth-quantum/OpenData/tree/main/Level_Generation_with_Quantum_Reservoir_Computing)含分析，但依赖未公开的本地 `archeo` 模块，不是完整可运行的 QRC 训练发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 130
   },
@@ -2395,7 +2395,7 @@
     "evaluation": "新增同字符多样性、基于字体的相似度分类器及函数签名消融，并评测高级提示示例。",
     "status": "Open",
     "artifacts": "**Open** — 官方[代码与原始数据](https://github.com/chatgpt4pcg/experiments-2024)和[竞赛网站](https://chatgpt4pcg.github.io/)公开；协议有实质变化，不是 #76 的重复引用。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 131
   },
@@ -2411,7 +2411,7 @@
     "evaluation": "比较代码量、风格控制及固定示例输入下的 1,000 次随机种子运行；ASP 搜索耗时与 grounding 开销须分开。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实官方论文专属生成器或实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 132
   },
@@ -2427,7 +2427,7 @@
     "evaluation": "用四个概念约束实例及构建/搜索计时展示可行性；不是大样本或玩家研究。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 文中提供转换器片段，未核实完整官方游戏专属生成包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 133
   },
@@ -2443,7 +2443,7 @@
     "evaluation": "4,500 个候选中 335个通过设计约束，报告 123个可玩产物；仅 36%的组件用于解法，有界搜索失败不代表确实无解。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实官方论文专属生成与实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 134
   },
@@ -2459,7 +2459,7 @@
     "evaluation": "每种设置 20次运行，与随机选择比较任务图适应度及表达范围；指标在后处理前计算，复杂最终布局可能产生过多空房间。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实公开的论文专属生成器或实验发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 135
   },
@@ -2475,7 +2475,7 @@
     "evaluation": "851 次运行产生 819 个无错误、827 个可玩冒险；仍有数据错误和推理可被遍历绕过的问题，未做用户研究。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实官方生成器、客户端或实验包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 136
   },
@@ -2491,7 +2491,7 @@
     "evaluation": "30 名参与者试玩两个生成案件；挑战不足、解法直接和开放数据事实不连贯限制结果。",
     "status": "Closed",
     "artifacts": "**Closed/unverified** — 未核实官方论文专属生成器或可玩构建。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 137
   },
@@ -2507,7 +2507,7 @@
     "evaluation": "三类场景上的渲染/几何对比、组件消融、引擎运行测试与可玩交互展示；FPS 是引擎渲染而非神经视频生成速度。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码/游戏框架](https://github.com/video2game/video2game)、[项目/游戏](https://video2game.github.io/)；baking 微调与 GPT-4 查询模块尚未发布。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 138
   },
@@ -2523,7 +2523,7 @@
     "evaluation": "每个尺寸/箱数设置 10 个样本，测离线生成耗时和求解步数；较大设置平均 24.5–26 小时。模板网格尺寸不是格子数，未验证玩家兴趣/主观难度。",
     "status": "Partial",
     "artifacts": "**Partial** — 作者可玩关卡及[实验数据/日志](https://ianparberry.com/research/sokoban/SokobanPaperData.zip)可取得；未核实核心生成器源码或一键复现包。",
-    "details": "../docs/zh-CN/pcg.md",
+    "details": "docs/zh-CN/pcg.md",
     "source": "docs/zh-CN/pcg.md",
     "line": 139
   },
@@ -2539,7 +2539,7 @@
     "evaluation": "视频 LPIPS/FID/FVD，以及动画 L2/Fréchet distance；数据含 15.5 小时 Tennis 与 1.21 小时 Minecraft。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://snap-research.github.io/promptable-game-models/)、[仓库](https://github.com/snap-research/promptable-game-models)；承诺的数据、模型和框架并未出现在近乎空白的仓库中。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 15
   },
@@ -2555,7 +2555,7 @@
     "evaluation": "FVD、动作影响 `ΔPSNR`、缩放实验及分布外提示测试。",
     "status": "Closed",
     "artifacts": "**Closed** — [arXiv](https://arxiv.org/abs/2402.15391)、[项目](https://sites.google.com/view/genie-2024/home)；未公开数据集、权重或实现。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 16
   },
@@ -2571,7 +2571,7 @@
     "evaluation": "CoinRun 视觉保真度与可控性，比较训练后智能体与随机探索。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/insait-institute/GenieRedux), [模型/平台](https://huggingface.co/INSAIT-Institute/GenieRedux); 共享代码与模型，未锁定本篇历史实验配置。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 17
   },
@@ -2587,7 +2587,7 @@
     "evaluation": "视觉/动作指标、探索与适配；RetroAct 标注 974 个环境。",
     "status": "Open",
     "artifacts": "**Open** — [官方资源](https://github.com/insait-institute/GenieRedux), [模型/平台](https://huggingface.co/INSAIT-Institute/GenieRedux); 训练/生成/评测公开，ROM 需另行取得。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 18
   },
@@ -2603,7 +2603,7 @@
     "evaluation": "teacher-forced/自回归 PSNR 与 LPIPS、16/32 帧 FVD、速度及真人盲测。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://gamengen.github.io/)、[项目页源码](https://github.com/GameNGen/GameNGen.github.io)；只有展示素材，没有模型、数据、实现或权重。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 19
   },
@@ -2619,7 +2619,7 @@
     "evaluation": "相机位姿/光流误差、CLIP 相似度、FID/FVD、域分数、稀有动作组合及自回归 rollout。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://yujiwen.github.io/gamefactory/)、[仓库](https://github.com/KlingAIResearch/GameFactory)、[GF-Minecraft 数据](https://huggingface.co/datasets/KwaiVGI/GameFactory-Dataset)；数据/工具已公开，模型代码与权重未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 20
   },
@@ -2635,7 +2635,7 @@
     "evaluation": "FVD/视觉指标、逆动力学动作分类、相机运动误差及解码吞吐。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码与评测](https://github.com/microsoft/mineworld)、[模型位置](https://huggingface.co/microsoft/mineworld)；checkpoint 已下架，训练代码/数据也未发布。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 21
   },
@@ -2651,7 +2651,7 @@
     "evaluation": "GameWorld Score、Oasis/MineWorld 对比与玩家偏好；训练帧率不是推理速度。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-1), [模型/平台](https://huggingface.co/Skywork/Matrix-Game); 推理/权重公开，未核实完整匹配训练/数据。第一版 README 声明单次 65 帧推理需 ≥80 GB 显存。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 22
   },
@@ -2667,7 +2667,7 @@
     "evaluation": "Minecraft/GameWorld 与开放场景测试；单 H100 25 FPS，Minecraft 动作指标不能直接迁移。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-2), [模型/平台](https://huggingface.co/Skywork/Matrix-Game-2.0); 推理/权重公开，未核实完整训练/语料。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 23
   },
@@ -2683,7 +2683,7 @@
     "evaluation": "记忆/重访与 VAE 消融；最高 40 FPS/720p 使用八张 DiT GPU 加一张 VAE GPU。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/SkyworkAI/Matrix-Game/tree/main/Matrix-Game-3), [模型/平台](https://huggingface.co/Skywork/Matrix-Game-3.0); 发布两个 5B Unreal 第一人称模型；混合/28B 模型与完整训练/数据未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 24
   },
@@ -2699,7 +2699,7 @@
     "evaluation": "基础模型一分钟控制/重访测试；另以 INT8 三步学生在单 H100 达到 20 FPS/1280×704。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/Riemann-Dynamics/Matrix-Game-3.5), [模型/平台](https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Base), [蒸馏权重](https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Distilled); 发布第一/第三人称基础权重及第一人称因果权重；未核实完整训练/语料。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 25
   },
@@ -2715,7 +2715,7 @@
     "evaluation": "FVD、视觉/动态/时序质量、相机 RPE 与偏好；PCM 6.6 FPS，基础版 0.25 FPS。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方资源](https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0), [模型/平台](https://huggingface.co/tencent/Hunyuan-GameCraft-1.0); 推理、权重与 Gradio demo 公开，完整训练器/语料未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 26
   },
@@ -2731,7 +2731,7 @@
     "evaluation": "InterBench 触发/对齐/流畅/范围/终态/物理与视频/相机指标；报告 16 FPS。",
     "status": "Closed",
     "artifacts": "**Closed** — [官方资源](https://hunyuan-gamecraft-2.github.io/), [模型/平台](https://hunyuan.tencent.com/game/game-craft); 未核实到可下载官方代码或检查点。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 27
   },
@@ -2747,7 +2747,7 @@
     "evaluation": "FPS、motion-to-photon 延迟、FID/LPIPS、延迟分解和控制敏感度；论文报告 racing 26.4 FPS、platformer 48.3 FPS。",
     "status": "Closed",
     "artifacts": "**Closed** — 仅有论文；未找到官方项目、仓库、模型、数据或 evaluator。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 28
   },
@@ -2763,7 +2763,7 @@
     "evaluation": "留出的 Movement、Grounding、Memory、Building、Consistency episode，FID 及已发布的 VLM 自一致性指标。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://solaris-wm.github.io/)、[训练/推理/评测](https://github.com/solaris-wm/solaris)、[采集引擎](https://github.com/solaris-wm/solaris-engine)、[模型与数据](https://huggingface.co/collections/nyu-visionx/solaris-models)；完整预训练还需要单独分发的 VPT 数据。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 29
   },
@@ -2779,7 +2779,7 @@
     "evaluation": "对模拟器帧的 SSIM/PSNR/LPIPS，VLM 对手可见性 accuracy/precision/recall，记忆/上下文消融，以及每名玩家约 20 FPS。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://ryanpo.com/multigen/)；只有论文/项目页，没有代码、模型、数据或 evaluator。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 30
   },
@@ -2795,7 +2795,7 @@
     "evaluation": "平移/旋转 RPE、VBench++、PSNR/LPIPS/MEt3R/DINO、清晰度、200 帧测试、速度及盲测。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://cvlab-kaist.github.io/WorldCam/)、[推理](https://github.com/cvlab-kaist/WorldCam)、[权重](https://huggingface.co/worldcam/worldcam)、[开放游戏录像](https://huggingface.co/datasets/worldcam/worldcam-dataset)；训练代码和论文训练数据未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 31
   },
@@ -2811,7 +2811,7 @@
     "evaluation": "Movement Accuracy、Effect Accuracy、PSNR/LPIPS/FVD、身份/动作绑定及 230 个 rollout 的评测。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://action-party.github.io/)、[仓库](https://github.com/action-party/action-party)；官方仓库标注代码即将发布，目前没有模型/数据。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 32
   },
@@ -2827,7 +2827,7 @@
     "evaluation": "CrossFPS 的 1,378 个片段、动态/光流、平滑度/深度、JEPA/FVD/LPIPS、动作组合、缩放及零样本场景。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://z2tong.github.io/SCOPE/)、[推理](https://github.com/z2tong/SCOPE)、[权重](https://huggingface.co/zizhaotong/SCOPE)、[CrossFPS](https://huggingface.co/collections/zizhaotong/crossfps)；没有训练代码。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 33
   },
@@ -2843,7 +2843,7 @@
     "evaluation": "动作响应、多人/物理一致性、感知质量、20-FPS 吞吐，以及最长 5 分钟的稳定 rollout。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://mira-wm.com/)、[训练/推理/评测](https://github.com/mira-wm/mira)、[Rocket Science 数据](https://huggingface.co/datasets/kyutai/rocket-science)；完整代码与 1 万小时数据已公开，但未找到可下载的作者 checkpoint。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 34
   },
@@ -2859,7 +2859,7 @@
     "evaluation": "SSIM/LPIPS、Move/Attack 准确率、归一化状态距离/对齐，以及 Gemini/GPT 机制保真判断。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://jimntu.github.io/stateplay_page/)、[训练/推理](https://github.com/Jimntu/StatePlay)、[模型](https://huggingface.co/onepiece1999/StatePlay)、[数据集](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset)；VLM judge 依赖专有模型版本。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 35
   },
@@ -2875,7 +2875,7 @@
     "evaluation": "LPIPS/SSIM/DINOv2、动作准确率、VLM 身份绑定一致性、长时 rollout 及运行速度。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://humanaigc.github.io/wantofight/)、[仓库](https://github.com/HumanAIGC/wantofight)；仓库只有项目页素材。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 36
   },
@@ -2891,7 +2891,7 @@
     "evaluation": "LPIPS、字段/完整状态恢复、跨视角一致、结构有效性，以及 1,024 名玩家连续 10,000 tick 的压力测试。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://alaya-lab.github.io/MASS/)；没有官方代码、模型、数据或 evaluator。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 37
   },
@@ -2907,7 +2907,7 @@
     "evaluation": "VBench、LPIPS/光流、键鼠准确率、延迟/FPS、回放保真、41 人研究及 7 款游戏迁移。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://asdfo123.github.io/ForgeWM/)、[完整代码](https://github.com/asdfo123/ForgeWM)、[模型](https://huggingface.co/ForgeWM/ForgeWM)、[预处理数据](https://huggingface.co/datasets/ForgeWM/ForgeWM-data)。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 38
   },
@@ -2923,7 +2923,7 @@
     "evaluation": "关节误差、角色分离、地面穿透、规则式状态修复及观察 FVD。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://alayalab.github.io/Marionette/)、[推理/运行时](https://github.com/AlayaLab/Marionette)、[权重](https://huggingface.co/AlayaLab/Marionette)、[源语料](https://github.com/AlayaLab/WildWorld)；训练代码与完整派生语料未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 39
   },
@@ -2939,7 +2939,7 @@
     "evaluation": "视觉保真、动作/动力学对齐、长时一致性和实时可玩性。",
     "status": "Partial",
     "artifacts": "**Partial** — [官方实现](https://github.com/GreatX3/Playable-Game-Generation)已公开，但完整训练数据/复现链路未公开。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 40
   },
@@ -2955,7 +2955,7 @@
     "evaluation": "规则/事件行为、模拟器迁移保真与往返像素一致性。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://research.nvidia.com/labs/toronto-ai/gameGAN/)、[训练/数据采集](https://github.com/nv-tlabs/GameGAN_code)；未找到预训练权重或完整 Pac-Man 语料。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 41
   },
@@ -2971,7 +2971,7 @@
     "evaluation": "LPIPS/FID/FVD、动作空间位移预测与真人动作一致性判断。",
     "status": "Open",
     "artifacts": "**Open** — [项目/实时 demo](https://willi-menapace.github.io/playable-video-generation-website/)、[训练/游玩/评测](https://github.com/willi-menapace/PlayableVideoGeneration)；提供作者数据/权重链接，网球视频需另行采集。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 42
   },
@@ -2987,7 +2987,7 @@
     "evaluation": "LPIPS/FID/FVD、动作 Δ-MSE/Δ-Acc、相机操控、检测缺失与用户研究。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://willi-menapace.github.io/playable-environments-website/)、[训练/游玩/评测](https://github.com/willi-menapace/PlayableEnvironments)；提供作者 Minecraft 数据/模型链接及 ReplayMod 采集，依赖外部游戏/视频。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 43
   },
@@ -3003,7 +3003,7 @@
     "evaluation": "ActAcc、数值事件 F-measure（NumCon）、空间一致性、数字渲染准确率与运行开销。",
     "status": "Closed",
     "artifacts": "**Closed** — 仅有论文；未找到官方实现、模型或数据发布。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 44
   },
@@ -3019,7 +3019,7 @@
     "evaluation": "CS:GO 上与 DIAMOND 比较 FID/FVD/SSIM/PSNR/LPIPS/DreamSim，以及自回归 rollout 与动作引导消融。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://knightnemo.github.io/vid2world/)、[训练/推理/评测](https://github.com/thuml/Vid2World)、[CS:GO 权重](https://huggingface.co/thuml/Vid2World-CSGO)；游戏数据预处理依赖另行取得的源数据。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 45
   },
@@ -3035,7 +3035,7 @@
     "evaluation": "视觉动态、长时一致性、动作条件对比与运行效率/延迟。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码](https://github.com/robbyant/lingbot-world)、[基础权重](https://huggingface.co/robbyant/lingbot-world-base-cam)、[快速权重](https://huggingface.co/robbyant/lingbot-world-fast)；推理已公开，缺完整训练器/语料。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 46
   },
@@ -3051,7 +3051,7 @@
     "evaluation": "WorldRoamBench、长时漂移、LongForcing 消融；单张 RTX 5090 最高 16 FPS、输入延迟 1.2 秒。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码/demo](https://github.com/amap-cvlab/ABot-World)、[权重](https://huggingface.co/acvlab/ABot-World-0-5B-LF)、[500 小时数据](https://huggingface.co/datasets/acvlab/ABot-World-Explorer-500h)；未确认完整训练/语料与论文等价。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 47
   },
@@ -3067,7 +3067,7 @@
     "evaluation": "与六个基线比较相机控制、七项 VBench 维度、64 秒往返及缓存/训练消融。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://zhifeichen097.github.io/ReWorld/)；只有论文/视频，没有可下载代码、权重或数据。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 48
   },
@@ -3083,7 +3083,7 @@
     "evaluation": "控制误差、VBench、重访几何/MEt3R、含 300 案例、300 条自定义轨迹及 30 名评估者的用户研究（2026 年 6 月 v2）与 720p/24 FPS 效率。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码/训练](https://github.com/Tencent-Hunyuan/HY-WorldPlay)、[权重](https://huggingface.co/tencent/HY-WorldPlay)、[项目](https://3d-models.hunyuan.tencent.com/world/)；完整训练语料未发布。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 49
   },
@@ -3099,7 +3099,7 @@
     "evaluation": "相机/视觉分数、长时漂移、多层次重访一致性、用户偏好及八张 RTX 5090 上最高 16 FPS。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://amap-ml.github.io/DreamX_World/)、[推理](https://github.com/AMAP-ML/DreamX-World)、[5B 模型](https://huggingface.co/GD-ML/DreamX-World-5B)、[5B-Cam 模型](https://huggingface.co/GD-ML/DreamX-World-5B-Cam)；5B 为自回归，5B-Cam 为生成五秒片段的双向模型；尚不能据此确认完整 1.0 复现。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 50
   },
@@ -3115,7 +3115,7 @@
     "evaluation": "十款游戏像素/tile/奖励评测为 100 步、重复 3 次（表 II）；另测 Sokoban 最大 100×100 网格泛化，500 步、重复 10 次（表 I），并做门控消融。",
     "status": "Open",
     "artifacts": "**Open** — [训练/游玩/预训练模型](https://github.com/Bam4d/Neural-Game-Engine)；需作者 GVGAI Gym 依赖，随机/隐藏状态动态仍有限制。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 51
   },
@@ -3131,7 +3131,7 @@
     "evaluation": "70 输入 Yume-Bench 控制/视觉指标、Wan/MatrixGame 对比、18 秒续生成与采样/蒸馏消融；游戏域证据为定性展示。",
     "status": "Partial",
     "artifacts": "**Partial** — [训练/推理](https://github.com/stdstu12/YUME)、[14B/540p 权重](https://huggingface.co/stdstu123/Yume-I2V-540P)；未核实完整处理后语料及匹配 evaluator。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 52
   },
@@ -3147,7 +3147,7 @@
     "evaluation": "Simple/Hard 各 80 场景，含 20 个游戏风格场景；60 秒相机、VBench、重访测试及独立双向/AR 对比。",
     "status": "Partial",
     "artifacts": "**Partial** — [代码](https://github.com/NVlabs/Sana)、[WM 文档](https://nvlabs.github.io/Sana/docs/sana_wm/)、[流式权重](https://huggingface.co/Efficient-Large-Model/SANA-WM_streaming)；已发布 Stage-1 训练，未核实完整匹配流程/语料。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 53
   },
@@ -3163,7 +3163,7 @@
     "evaluation": "1,000 图像×5 轨迹、500 视频×6 轨迹评测；视觉/RPE 指标、重访记忆及原生 16 FPS 报告。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://wonder-world-model.github.io/)；代码/权重仍为 coming soon，未核实可下载官方复现包。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 54
   },
@@ -3179,7 +3179,7 @@
     "evaluation": "100 组五轮交互的 GPT-4 成对评判；5,000 视觉三元组、角色/环境一致性与蒸馏消融。",
     "status": "Closed",
     "artifacts": "**Closed** — [项目](https://generative-infinite-game.github.io/)；未核实可下载官方代码、模型或数据。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 55
   },
@@ -3195,7 +3195,7 @@
     "evaluation": "1.08 亿帧；Action Following 与 State Alignment；benchmark 验证报告 85% 人类一致率和 43.23% 坐标准确率。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目](https://alaya-studio.github.io/wildworld-project/)、[仓库](https://github.com/AlayaLab/WildWorld)、[数据集](https://huggingface.co/datasets/AlayaLab/WildWorld)；受限访问的 Part 1 含 574 小时，Parts 2/3 与 WildBench 代码仍待发布。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 61
   },
@@ -3211,7 +3211,7 @@
     "evaluation": "171 个场景，覆盖几何、交互、洞察演化，以及可见/视野外世界演化。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://kxding.github.io/project/PlayWorld/)、[代码](https://github.com/hku-sail/PlayWorld)、[benchmark 数据](https://huggingface.co/datasets/jocelynd/playworld-bench)、[排行榜](https://huggingface.co/spaces/jocelynd/PlayWorld-Leaderboard)；执行/评判仍调用专有世界服务及 Claude/Gemini。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 62
   },
@@ -3227,7 +3227,7 @@
     "evaluation": "第一/第三人称世界中的逐轴动作方向/纯度、响应延迟、运动稳定性、记忆与视觉质量。",
     "status": "Open",
     "artifacts": "**Open** — [项目](https://alayalab.github.io/WorldMark/)、[输入/生成/评测](https://github.com/AlayaLab/WorldMark)；外部生成器需另行安装。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 63
   },
@@ -3243,7 +3243,7 @@
     "evaluation": "逐帧动作响应、视觉漂移、控制有效性约束下的交互物理及场景/角色记忆；比较十个模型。",
     "status": "Partial",
     "artifacts": "**Partial** — [项目/排行榜](https://worldroam.amap.com)、[已发布输入 ZIP](https://amap-cvlab.oss-cn-zhangjiakou.aliyuncs.com/worldroambench/worldroam.zip)；已核实 1,006 组动作/图像，未核实评测代码。",
-    "details": "../docs/zh-CN/interactive-worlds.md",
+    "details": "docs/zh-CN/interactive-worlds.md",
     "source": "docs/zh-CN/interactive-worlds.md",
     "line": 64
   }

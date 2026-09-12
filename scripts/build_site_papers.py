@@ -19,7 +19,7 @@ def paper_url(record: dict) -> str:
 
 def details_url(record: dict) -> str:
     source = Path(record["source"])
-    return f"../docs/zh-CN/{source.name}"
+    return f"docs/zh-CN/{source.name}"
 
 
 def export() -> list[dict]:
