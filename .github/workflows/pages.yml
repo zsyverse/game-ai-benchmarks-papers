@@ -1,6 +1,8 @@
 name: Deploy paper index UI
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
